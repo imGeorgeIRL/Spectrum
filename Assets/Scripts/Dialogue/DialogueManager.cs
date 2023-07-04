@@ -4,9 +4,13 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
+using Ink.UnityIntegration;
 
 public class DialogueManager : MonoBehaviour
 {
+    [Header("Globals Ink File")]
+    [SerializeField] private InkFile globalsInkFile;
+
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialogueBubble;
     [SerializeField] private TextMeshProUGUI dialogueText;
@@ -24,7 +28,7 @@ public class DialogueManager : MonoBehaviour
 
     private static DialogueManager instance;
 
-
+    private DialogueVariables dialogueVariables;
     private void Start()
     {
         dialogueIsPlaying = false;
@@ -46,6 +50,7 @@ public class DialogueManager : MonoBehaviour
             Debug.LogWarning("Found more than one DialogueManager instance in the scene");
         }
         instance = this;
+        dialogueVariables = new DialogueVariables(globalsInkFile.filePath);
     }
 
     public static DialogueManager GetInstance()
@@ -58,6 +63,8 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialogueBubble.SetActive(true);
+
+        dialogueVariables.StartListening(currentStory);
 
         ContinueStory();
     }
@@ -79,6 +86,8 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialogueBubble.SetActive(false);
         dialogueText.text = "";
+
+        dialogueVariables.StopListening(currentStory);
     }
 
     private void ContinueStory()
