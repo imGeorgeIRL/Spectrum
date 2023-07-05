@@ -4,12 +4,12 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
-using Ink.UnityIntegration;
+
 
 public class DialogueManager : MonoBehaviour
 {
-    [Header("Globals Ink File")]
-    [SerializeField] private InkFile globalsInkFile;
+    [Header("Globals JSON")]
+    [SerializeField] private TextAsset loadGlobalsJSON;
 
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialogueBubble;
@@ -50,7 +50,7 @@ public class DialogueManager : MonoBehaviour
             Debug.LogWarning("Found more than one DialogueManager instance in the scene");
         }
         instance = this;
-        dialogueVariables = new DialogueVariables(globalsInkFile.filePath);
+        dialogueVariables = new DialogueVariables(loadGlobalsJSON);
     }
 
     public static DialogueManager GetInstance()
@@ -76,7 +76,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (Input.GetButtonDown("Submit"))
+        if (currentStory.currentChoices.Count == 0 && Input.GetButtonDown("Submit"))
         {
             ContinueStory();
         }
@@ -137,6 +137,15 @@ public class DialogueManager : MonoBehaviour
     public void MakeChoice(int choiceIndex)
     {
         currentStory.ChooseChoiceIndex(choiceIndex);
+        ContinueStory();
 
+    }
+
+    public void OnApplicationQuit()
+    {
+        if (dialogueVariables != null)
+        {
+            dialogueVariables.SaveVariables();
+        }
     }
 }
