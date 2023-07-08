@@ -41,11 +41,17 @@ public class DoorController : MonoBehaviour
             switch (gameObject.tag)
             {
                 case "BedroomDoor":
-                    SceneManager.LoadScene(bedroomSceneName);
+                    SceneManager.UnloadSceneAsync(GameManager.loadedScene);
+                    SceneManager.LoadSceneAsync(bedroomSceneName, LoadSceneMode.Additive);
+                    GameManager.loadedScene = bedroomSceneName;
+                    GameManager.SaveSensoryMetre();
                     break;
 
                 case "LivingRoomDoor":
-                    SceneManager.LoadScene(LoungeSceneName);
+                    SceneManager.UnloadSceneAsync(GameManager.loadedScene);
+                    SceneManager.LoadSceneAsync(LoungeSceneName, LoadSceneMode.Additive);
+                    GameManager.loadedScene = LoungeSceneName;
+                    GameManager.SaveSensoryMetre();
                     break;
 
                 default:
