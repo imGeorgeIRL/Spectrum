@@ -11,6 +11,8 @@ public class DoorController : MonoBehaviour
 
     public string bedroomSceneName = "Bedroom";
     public string LoungeSceneName = "LoungeKitchen";
+
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         visualCue.SetActive(true);
@@ -38,6 +40,7 @@ public class DoorController : MonoBehaviour
     {
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {
+
             switch (gameObject.tag)
             {
                 case "BedroomDoor":
@@ -62,4 +65,5 @@ public class DoorController : MonoBehaviour
             }
         }
     }
+
 }
