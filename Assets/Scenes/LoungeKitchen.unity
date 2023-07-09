@@ -762,7 +762,7 @@ GameObject:
   - component: {fileID: 503380702}
   - component: {fileID: 503380701}
   m_Layer: 0
-  m_Name: door
+  m_Name: Front Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -831,8 +831,7 @@ Transform:
   m_LocalPosition: {x: 7.0743914, y: 1.2904913, z: 0.3133289}
   m_LocalScale: {x: 0.626225, y: 0.626225, z: 0.626225}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1982036485}
+  m_Children: []
   m_Father: {fileID: 1018962944}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1907,7 +1906,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 503380702}
+    m_TransformParent: {fileID: 2023170212}
     m_Modifications:
     - target: {fileID: 4021538660714308184, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
       propertyPath: m_SortingOrder
@@ -1942,32 +1941,44 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4021538660932786421, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8461356
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021538660932786421, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1568712
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021538660932786421, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8461356
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021538660932786421, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.66
+      value: -1.1740258
       objectReference: {fileID: 0}
     - target: {fileID: 4021538660932786421, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.04
+      value: 0.4514073
       objectReference: {fileID: 0}
     - target: {fileID: 4021538660932786421, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.50168896
       objectReference: {fileID: 0}
     - target: {fileID: 4021538660932786421, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4021538660932786421, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4021538660932786421, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4021538660932786421, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4021538660932786421, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2174,9 +2185,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2023170212}
   - component: {fileID: 2023170211}
+  - component: {fileID: 2023170213}
   m_Layer: 0
-  m_Name: SOS_Bedroom_Door
-  m_TagString: Untagged
+  m_Name: Bedroom Door
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2244,10 +2256,37 @@ Transform:
   m_LocalPosition: {x: -6.1060886, y: -0.8575835, z: 0.6846289}
   m_LocalScale: {x: 0.7401, y: 0.5413092, z: 0.7401}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1982036485}
   m_Father: {fileID: 1018962944}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!61 &2023170213
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023170210}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.0679704, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.66, y: 13.28}
+    newSize: {x: 0.66, y: 13.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.7959406, y: 13.28}
+  m_EdgeRadius: 0
 --- !u!1 &2032314015
 GameObject:
   m_ObjectHideFlags: 0

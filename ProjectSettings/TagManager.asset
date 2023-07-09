@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LivingRoomDoor
   - BedroomDoor
+  - Door
   layers:
   - Default
   - TransparentFX

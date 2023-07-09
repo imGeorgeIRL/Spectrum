@@ -30,11 +30,8 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         currentSceneName = GameManager.loadedScene;
-        if (HasSavedXCoordinate())
-        {
-            savedXCoordinate = LoadSavedXCoordinate();
-            ReenterRoom();
-        }
+        savedXCoordinate = LoadSavedXCoordinate();
+        ReenterRoom();
     }
 
 
@@ -77,11 +74,18 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-
-    private void OnDestroy()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        LeaveRoom();
+        if (collision.CompareTag("Door"))
+        {
+            LeaveRoom();
+        }
     }
+
+    //private void OnDestroy()
+    //{
+    //    LeaveRoom();
+    //}
 
 
 
