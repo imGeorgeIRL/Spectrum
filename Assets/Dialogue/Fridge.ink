@@ -3,21 +3,21 @@ INCLUDE globals.ink
 {fridge_Interactions > 0: -> AlreadyDone | ->Main}
 === Main ===
 what should I eat for breakfast?
-    * [Cereal]
+    * Cereal
         which cereal?
-            ** [Fruity loops]
+            ** Fruity loops
                  So tasty!
                 ~ fridge_Interactions++
                 -> DONE
-            ** [Corn Flakes]
+            ** Corn Flakes
                  okay I suppose...
                 ~ fridge_Interactions++
                 -> DONE
-    * [Toast]
+    * Toast
          <dangle a=0.5> yummy toast!</dangle>
         ~ fridge_Interactions++
         -> DONE
-    * [Nothing]
+    * Nothing
          Not feeling that hungry this morning...
         ~ fridge_Interactions++
         -> DONE
