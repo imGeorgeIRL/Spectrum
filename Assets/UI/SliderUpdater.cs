@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class SliderUpdater : MonoBehaviour
 {
 
-    public Slider slider;
+    public Slider sensoryMetreSlider;
+    public Slider socialBatterySlider;
 
     private void UpdateSliderValue()
     {
-        slider.value = GameManager.sensoryMetre;
+        sensoryMetreSlider.value = GameManager.sensoryMetre;
+        socialBatterySlider.value = GameManager.socialBattery;
     }
 
 
@@ -22,7 +24,13 @@ public class SliderUpdater : MonoBehaviour
 
     public void SaveSensoryMeter()
     {
-        GameManager.sensoryMetre = slider.value; // Update the sensory meter value from the slider
+        GameManager.sensoryMetre = sensoryMetreSlider.value; // Update the sensory meter value from the slider
         GameManager.SaveSensoryMetre(); // Save the sensory meter value to PlayerPrefs
+    }
+
+    public void SaveSocialBattery()
+    {
+        GameManager.socialBattery = socialBatterySlider.value;
+        GameManager.SaveSocialBattery();
     }
 }

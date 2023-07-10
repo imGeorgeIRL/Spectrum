@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     public static string loadedScene;
     private const string SENSORY_METRE_KEY = "SensoryMetre";
+    private const string SOCIAL_BATTERY_KEY = "SocialBattery";
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -37,6 +38,11 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    public static void SaveSocialBattery()
+    {
+        PlayerPrefs.SetFloat(SOCIAL_BATTERY_KEY, socialBattery);
+        PlayerPrefs.Save();
+    }
     public static void LoadSensoryMetre()
     {
         if (PlayerPrefs.HasKey(SENSORY_METRE_KEY))
@@ -51,6 +57,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public static void LoadSocialBattery()
+    {
+        if (PlayerPrefs.HasKey(SOCIAL_BATTERY_KEY))
+        {
+            socialBattery = PlayerPrefs.GetFloat(SOCIAL_BATTERY_KEY); //loads the value of the key
+            Debug.Log("Loaded value of Social Battery: " + GameManager.socialBattery);
+        }
+        else
+        {
+            socialBattery = 0f; //if there is no value, set it to 0
+            Debug.Log("No value for Social Battery, set to 0");
+        }
+    }
     private static void OnDestroy()
     {
         SceneManager.UnloadSceneAsync("ManagementScene");
