@@ -269,6 +269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 10108077}
   - component: {fileID: 10108078}
+  - component: {fileID: 10108079}
   m_Layer: 5
   m_Name: SocialBattery
   m_TagString: Untagged
@@ -345,11 +346,27 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
-  m_WholeNumbers: 1
+  m_WholeNumbers: 0
   m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &10108079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10108076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbda88c760888bb48a76d22d257cb135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 10108078}
+  increaseRate: 0
+  decreaseRate: 0.5
+  increaseInterval: 5
 --- !u!1 &133817655
 GameObject:
   m_ObjectHideFlags: 0
@@ -4348,6 +4365,7 @@ GameObject:
   - component: {fileID: 1534118844}
   - component: {fileID: 1534118845}
   - component: {fileID: 1534118846}
+  - component: {fileID: 1534118847}
   m_Layer: 5
   m_Name: SensoryMetre
   m_TagString: Untagged
@@ -4424,7 +4442,7 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
-  m_WholeNumbers: 1
+  m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4455,6 +4473,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensoryMetreSlider: {fileID: 1534118845}
   socialBatterySlider: {fileID: 10108078}
+--- !u!114 &1534118847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534118843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbda88c760888bb48a76d22d257cb135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1534118845}
+  increaseRate: 0.5
+  decreaseRate: 0
+  increaseInterval: 3
 --- !u!1 &1535175270
 GameObject:
   m_ObjectHideFlags: 0

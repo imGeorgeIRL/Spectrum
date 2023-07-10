@@ -7,7 +7,9 @@ public class SliderUpdater : MonoBehaviour
 {
 
     public Slider sensoryMetreSlider;
+
     public Slider socialBatterySlider;
+
 
     private void UpdateSliderValue()
     {
@@ -20,6 +22,7 @@ public class SliderUpdater : MonoBehaviour
     void Update()
     {
         UpdateSliderValue();
+
     }
 
     public void SaveSensoryMetre()
@@ -33,4 +36,5 @@ public class SliderUpdater : MonoBehaviour
         GameManager.socialBattery = socialBatterySlider.value;
         GameManager.SaveSocialBattery();
     }
+
 }
