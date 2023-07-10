@@ -14,5 +14,6 @@ public class SceneLoader : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
     {
         GameManager.LoadSensoryMetre();
+        GameManager.LoadSocialBattery();
     }
 }

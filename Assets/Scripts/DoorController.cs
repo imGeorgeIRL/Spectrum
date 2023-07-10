@@ -48,6 +48,7 @@ public class DoorController : MonoBehaviour
                     SceneManager.LoadSceneAsync(bedroomSceneName, LoadSceneMode.Additive);
                     GameManager.loadedScene = bedroomSceneName;
                     GameManager.SaveSensoryMetre();
+                    GameManager.SaveSocialBattery();
                     break;
 
                 case "LivingRoomDoor":
@@ -55,6 +56,7 @@ public class DoorController : MonoBehaviour
                     SceneManager.LoadSceneAsync(LoungeSceneName, LoadSceneMode.Additive);
                     GameManager.loadedScene = LoungeSceneName;
                     GameManager.SaveSensoryMetre();
+                    GameManager.SaveSocialBattery();
                     break;
 
                 default:

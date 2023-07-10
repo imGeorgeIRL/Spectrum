@@ -22,7 +22,7 @@ public class SliderUpdater : MonoBehaviour
         UpdateSliderValue();
     }
 
-    public void SaveSensoryMeter()
+    public void SaveSensoryMetre()
     {
         GameManager.sensoryMetre = sensoryMetreSlider.value; // Update the sensory meter value from the slider
         GameManager.SaveSensoryMetre(); // Save the sensory meter value to PlayerPrefs

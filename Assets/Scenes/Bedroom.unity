@@ -3534,7 +3534,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1277093229}
-  - component: {fileID: 1277093230}
   m_Layer: 0
   m_Name: StatsSliders
   m_TagString: Untagged
@@ -3559,20 +3558,6 @@ Transform:
   m_Father: {fileID: 1535175271}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1277093230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277093228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a46c79c42f5e6c4db39a987931ed7d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensoryMetreSlider: {fileID: 1534118845}
-  socialBatterySlider: {fileID: 10108078}
 --- !u!1 &1296380797
 GameObject:
   m_ObjectHideFlags: 0
@@ -4362,6 +4347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1534118844}
   - component: {fileID: 1534118845}
+  - component: {fileID: 1534118846}
   m_Layer: 5
   m_Name: SensoryMetre
   m_TagString: Untagged
@@ -4442,7 +4428,33 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1534118846}
+        m_TargetAssemblyTypeName: SliderUpdater, Assembly-CSharp
+        m_MethodName: SaveSensoryMetre
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1534118846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534118843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a46c79c42f5e6c4db39a987931ed7d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensoryMetreSlider: {fileID: 1534118845}
+  socialBatterySlider: {fileID: 10108078}
 --- !u!1 &1535175270
 GameObject:
   m_ObjectHideFlags: 0
