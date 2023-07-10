@@ -148,4 +148,13 @@ public class DialogueManager : MonoBehaviour
             dialogueVariables.SaveVariables();
         }
     }
+
+
+    public void OnDestroy()
+    {
+        if (dialogueVariables != null)
+        {
+            dialogueVariables.SaveVariables();
+        }
+    }
 }

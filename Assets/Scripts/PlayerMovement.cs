@@ -15,8 +15,6 @@ public class PlayerMovement : MonoBehaviour
     private float savedXCoordinate;
     private Vector3 startingPosition;
 
-
-
     // ******************************************************************************************
     private void Awake()
     {
