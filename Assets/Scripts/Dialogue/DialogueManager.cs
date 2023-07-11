@@ -63,6 +63,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EnterDialogueMode(TextAsset inkJSON)
     {
+
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialogueBubble.SetActive(true);
@@ -91,6 +92,7 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
 
         dialogueVariables.StopListening(currentStory);
+
     }
 
     private void ContinueStory()

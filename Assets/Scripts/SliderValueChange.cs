@@ -12,10 +12,12 @@ public class SliderValueChange : MonoBehaviour
     public float increaseInterval;
     
     private bool isIncreasing = false;
+    public DialogueManager dialogueManager;
+
 
     private void Update()
     {
-        if (!isIncreasing)
+        if (!isIncreasing && !dialogueManager.dialogueIsPlaying)
         {
             StartCoroutine(IncreaseSliderValue());
         }
@@ -25,16 +27,9 @@ public class SliderValueChange : MonoBehaviour
     {
         isIncreasing = true;
 
-        if (increaseRate > 0f)
-        {
-            slider.value += increaseRate;
-            yield return new WaitForSeconds(increaseInterval);
-        }
-        else if (decreaseRate > 0f)
-        {
-            slider.value -= decreaseRate;
-            yield return new WaitForSeconds(increaseInterval);
-        }
+        slider.value += increaseRate;
+        yield return new WaitForSeconds(increaseInterval);
+
         isIncreasing = false;
     }
 }

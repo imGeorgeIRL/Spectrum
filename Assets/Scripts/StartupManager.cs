@@ -10,8 +10,11 @@ public class StartupManager : MonoBehaviour
         if (!GameManager.gameManagerLoaded)
         {
             SceneManager.LoadSceneAsync("ManagementScene", LoadSceneMode.Additive);
+
             GameManager.loadedScene = "Bedroom";
+
             GameManager.gameManagerLoaded = true;
+            
         }
         else
         {
@@ -20,4 +23,7 @@ public class StartupManager : MonoBehaviour
         // Load the game manager scene asynchronously
 
     }
+
+
+
 }

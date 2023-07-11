@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private float savedXCoordinate;
     private Vector3 startingPosition;
 
+    
     // ******************************************************************************************
     private void Awake()
     {
@@ -29,10 +30,14 @@ public class PlayerMovement : MonoBehaviour
     {
         currentSceneName = GameManager.loadedScene;
         savedXCoordinate = LoadSavedXCoordinate();
+        SaveXCoordinate(transform.position.x);
         ReenterRoom();
     }
 
-
+    //private void OnEnable()
+    //{
+    //    ReenterRoom();
+    //}
 
 
     private void Update()
@@ -68,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
     public void LeaveRoom()
     {
         SaveXCoordinate(transform.position.x);
+        Debug.Log("position saved at " + transform.position);
     }
 
 
@@ -80,10 +86,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    //private void OnDestroy()
-    //{
-    //    LeaveRoom();
-    //}
+    private void OnDestroy()
+    {
+        LeaveRoom();
+    }
 
 
 
@@ -92,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 newPosition = startingPosition;
         newPosition.x = savedXCoordinate;
         transform.position = newPosition;
-        Debug.Log("Reentered Room");
+        Debug.Log("Reentered Room at " + transform.position);
     }
 
 

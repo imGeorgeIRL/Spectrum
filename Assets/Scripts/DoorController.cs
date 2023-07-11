@@ -29,6 +29,8 @@ public class DoorController : MonoBehaviour
         isPlayerInRange = false;
     }
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,16 +47,38 @@ public class DoorController : MonoBehaviour
             {
                 case "BedroomDoor":
                     SceneManager.UnloadSceneAsync(GameManager.loadedScene);
-                    SceneManager.LoadSceneAsync(bedroomSceneName, LoadSceneMode.Additive);
-                    GameManager.loadedScene = bedroomSceneName;
+                    GameManager.loadedScene = "Bedroom";
+
+                    StartCoroutine(WaitForLoad());
+                    
+                    SceneManager.LoadSceneAsync("Bedroom", LoadSceneMode.Additive);
+                    
+
+
                     GameManager.SaveSensoryMetre();
                     GameManager.SaveSocialBattery();
                     break;
 
                 case "LivingRoomDoor":
                     SceneManager.UnloadSceneAsync(GameManager.loadedScene);
-                    SceneManager.LoadSceneAsync(LoungeSceneName, LoadSceneMode.Additive);
-                    GameManager.loadedScene = LoungeSceneName;
+                    GameManager.loadedScene = "LoungeKitchen";
+                    StartCoroutine(WaitForLoad());
+                    SceneManager.LoadSceneAsync("LoungeKitchen", LoadSceneMode.Additive);
+                    
+
+
+                    GameManager.SaveSensoryMetre();
+                    GameManager.SaveSocialBattery();
+                    break;
+
+                case "FrontDoor":
+                    SceneManager.UnloadSceneAsync(GameManager.loadedScene);
+                    GameManager.loadedScene = "Outside";
+                    StartCoroutine(WaitForLoad());
+                    SceneManager.LoadSceneAsync("Outside", LoadSceneMode.Additive);
+                    
+
+
                     GameManager.SaveSensoryMetre();
                     GameManager.SaveSocialBattery();
                     break;
@@ -66,6 +90,11 @@ public class DoorController : MonoBehaviour
 
             }
         }
+    }
+
+    private IEnumerator WaitForLoad()
+    {
+        yield return new WaitForSeconds(0.2f);
     }
 
 }

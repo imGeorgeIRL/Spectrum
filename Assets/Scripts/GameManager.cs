@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,9 +12,28 @@ public class GameManager : MonoBehaviour
     public static float sensoryMetre;
     public static float socialBattery = 100f;
 
-    public static string loadedScene;
+    private static string _loadedScene;
+    public static string loadedScene 
+    {
+        get { return _loadedScene; }
+        set
+        {
+            if (_loadedScene != value)
+            {
+                _loadedScene = value;
+                if (instance != null)
+                {
+                    instance.StartCoroutine(instance.StartLoadingScreen());
+                }
+            }
+        }
+    }
+
+
     private const string SENSORY_METRE_KEY = "SensoryMetre";
     private const string SOCIAL_BATTERY_KEY = "SocialBattery";
+
+    public GameObject loadingScreen;
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -32,11 +52,26 @@ public class GameManager : MonoBehaviour
             return instance;
         }
     }
+    private void Start()
+    {
+        StartCoroutine(StartLoadingScreen());
+    }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            StartCoroutine(StartLoadingScreen());
+        }
 
+    }
 
-
-
+    public IEnumerator StartLoadingScreen()
+    {
+        loadingScreen.SetActive(true);
+        yield return new WaitForSeconds(2);
+        loadingScreen.SetActive(false);
+    }
 
     public static void SaveSensoryMetre()
     {
