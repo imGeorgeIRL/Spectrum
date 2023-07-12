@@ -170,6 +170,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  leftIdle: {fileID: 0}
+  rightIdle: {fileID: 0}
 --- !u!114 &5604564897348981338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,3 +184,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5659e3f260483ee4885c4e1801562a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialXPos: 0

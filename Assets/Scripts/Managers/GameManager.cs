@@ -9,9 +9,15 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public static bool gameManagerLoaded = false;
 
+    //Player stats *******************************************
     public static float sensoryMetre;
     public static float socialBattery = 100f;
 
+    //Time of day ******************************************
+    public static bool isDayTime = true;
+
+    
+    //Scene loading *****************************************
     private static string _loadedScene;
     public static string loadedScene 
     {
@@ -63,7 +69,18 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(StartLoadingScreen());
         }
-
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            if (!isDayTime)
+            {
+                isDayTime = true;
+            }
+            else
+            {
+                isDayTime = false;
+            }
+            
+        }
     }
 
     public IEnumerator StartLoadingScreen()

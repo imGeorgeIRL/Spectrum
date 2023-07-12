@@ -15,7 +15,8 @@ public class PlayerMovement : MonoBehaviour
     private float savedXCoordinate;
     private Vector3 startingPosition;
 
-    
+    public Animation leftIdle;
+    public Animation rightIdle;
     // ******************************************************************************************
     private void Awake()
     {
@@ -44,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (DialogueManager.GetInstance().dialogueIsPlaying)
         {
+            animator.SetBool("isWalking", false);
             return;
         }
         else
@@ -69,7 +71,6 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-
     public void LeaveRoom()
     {
         SaveXCoordinate(transform.position.x);
@@ -83,6 +84,11 @@ public class PlayerMovement : MonoBehaviour
         if (collision.CompareTag("Door"))
         {
             LeaveRoom();
+        }
+        if (collision.gameObject.tag == "Border")
+        {
+            animator.SetBool("isWalking", false);
+            Debug.Log("Stopped Movement animation");
         }
     }
 

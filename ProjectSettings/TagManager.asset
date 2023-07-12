@@ -17,7 +17,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - HighBloom
   - PostProcessing
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2326659689
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
