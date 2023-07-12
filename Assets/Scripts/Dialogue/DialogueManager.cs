@@ -26,6 +26,7 @@ public class DialogueManager : MonoBehaviour
     private Story currentStory;
 
     public bool dialogueIsPlaying { get; private set; }
+    private bool canContinueToNextLine = false;
 
     private static DialogueManager instance;
 
@@ -80,7 +81,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (currentStory.currentChoices.Count == 0 && Input.GetButtonDown("Submit"))
+        if (canContinueToNextLine && currentStory.currentChoices.Count == 0 && Input.GetButtonDown("Submit"))
         {
             ContinueStory();
         }
@@ -107,6 +108,11 @@ public class DialogueManager : MonoBehaviour
         {
             ExitDialogueMode();
         }
+        canContinueToNextLine = false;
+    }
+    public void CanContinue()
+    {
+        canContinueToNextLine = true;
     }
 
     private void HandleTags(List<string> currentTags)
@@ -166,9 +172,11 @@ public class DialogueManager : MonoBehaviour
 
     public void MakeChoice(int choiceIndex)
     {
-        currentStory.ChooseChoiceIndex(choiceIndex);
-        ContinueStory();
-
+        if (canContinueToNextLine)
+        {
+            currentStory.ChooseChoiceIndex(choiceIndex);
+            ContinueStory();
+        }
     }
 
     public void OnApplicationQuit()
