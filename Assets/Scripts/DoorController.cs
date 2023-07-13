@@ -40,6 +40,8 @@ public class DoorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {
 
@@ -47,40 +49,40 @@ public class DoorController : MonoBehaviour
             {
                 case "BedroomDoor":
                     SceneManager.UnloadSceneAsync(GameManager.loadedScene);
-                    GameManager.loadedScene = "Bedroom";
-
-                    StartCoroutine(WaitForLoad());
-                    
+                    GameManager.loadedScene = "Bedroom";                    
                     SceneManager.LoadSceneAsync("Bedroom", LoadSceneMode.Additive);
+                    //StartCoroutine(WaitForLoad());
                     
-
 
                     GameManager.SaveSensoryMetre();
                     GameManager.SaveSocialBattery();
+                    
+                    
                     break;
 
                 case "LivingRoomDoor":
                     SceneManager.UnloadSceneAsync(GameManager.loadedScene);
-                    GameManager.loadedScene = "LoungeKitchen";
-                    StartCoroutine(WaitForLoad());
+                    GameManager.loadedScene = "LoungeKitchen";                    
                     SceneManager.LoadSceneAsync("LoungeKitchen", LoadSceneMode.Additive);
+                    //StartCoroutine(WaitForLoad());
                     
-
 
                     GameManager.SaveSensoryMetre();
                     GameManager.SaveSocialBattery();
+                    
                     break;
 
                 case "FrontDoor":
                     SceneManager.UnloadSceneAsync(GameManager.loadedScene);
-                    GameManager.loadedScene = "Outside";
-                    StartCoroutine(WaitForLoad());
+                    GameManager.loadedScene = "Outside";                    
                     SceneManager.LoadSceneAsync("Outside", LoadSceneMode.Additive);
+                    //StartCoroutine(WaitForLoad());
                     
-
 
                     GameManager.SaveSensoryMetre();
                     GameManager.SaveSocialBattery();
+
+                    
                     break;
 
                 default:
@@ -94,7 +96,8 @@ public class DoorController : MonoBehaviour
 
     private IEnumerator WaitForLoad()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1f);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(GameManager.loadedScene));                
     }
 
 }

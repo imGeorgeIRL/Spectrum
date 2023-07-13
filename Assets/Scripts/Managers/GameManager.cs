@@ -65,10 +65,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            StartCoroutine(StartLoadingScreen());
-        }
+        //if (Input.GetKeyDown(KeyCode.O))
+        //{
+        //    StartCoroutine(StartLoadingScreen());
+        //}
         if (Input.GetKeyDown(KeyCode.T))
         {
             if (!isDayTime)
