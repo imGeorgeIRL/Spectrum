@@ -8,7 +8,7 @@ public class SkyManager : MonoBehaviour
     public GameObject daySky;
     public GameObject nightSky;
 
-    [SerializeField] private GameObject stars;
+    
 
     //private SpriteRenderer skyRenderer;
     // Start is called before the first frame update
@@ -26,13 +26,13 @@ public class SkyManager : MonoBehaviour
         {
             daySky.SetActive(true);
             nightSky.SetActive(false);
-            stars.SetActive(false);
+
         }
         else
         {
             nightSky.SetActive(true);
             daySky.SetActive(false);
-            stars.SetActive(true);
+
         }
     }
 }

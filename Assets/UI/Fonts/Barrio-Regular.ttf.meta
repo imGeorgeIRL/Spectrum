@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 54a3dcfdbb38afa449c799997d60dcb7
+guid: fd6d638ec4e6796438d3cf350459c8b5
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,9 +9,8 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - TrashHand
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: b64924c663e90b44bac197aa323cec04, type: 3}
+  - Barrio
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
