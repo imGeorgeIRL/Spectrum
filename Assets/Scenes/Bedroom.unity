@@ -2153,6 +2153,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Managers
       objectReference: {fileID: 0}
+    - target: {fileID: 4502435458703237022, guid: 9d0b4ebc641893f4886346a42c3d3940, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4502435458703237023, guid: 9d0b4ebc641893f4886346a42c3d3940, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2199,6 +2203,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d0b4ebc641893f4886346a42c3d3940, type: 3}
+--- !u!1 &1642444689 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5302032995872183164, guid: 9d0b4ebc641893f4886346a42c3d3940, type: 3}
+  m_PrefabInstance: {fileID: 1642444688}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1642444690 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5417077311642787557, guid: 9d0b4ebc641893f4886346a42c3d3940, type: 3}
+  m_PrefabInstance: {fileID: 1642444688}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1642444691 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4502435458499820903, guid: 9d0b4ebc641893f4886346a42c3d3940, type: 3}
+  m_PrefabInstance: {fileID: 1642444688}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1722359520
 GameObject:
   m_ObjectHideFlags: 0
@@ -2521,6 +2546,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Austin
       objectReference: {fileID: 0}
+    - target: {fileID: 117615555137660408, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+      propertyPath: rhythmGame
+      value: 
+      objectReference: {fileID: 117615553992633993}
+    - target: {fileID: 117615555137660408, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+      propertyPath: rhythmVisualCue
+      value: 
+      objectReference: {fileID: 1642444690}
     - target: {fileID: 117615555137660413, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2565,8 +2598,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 1642444691}
+    - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+      propertyPath: cueObject
+      value: 
+      objectReference: {fileID: 1642444689}
+    - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+      propertyPath: ringPrefab
+      value: 
+      objectReference: {fileID: 6830379857877301846, guid: dc9f25bd358f62b4686a9b0632e9d892, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+--- !u!114 &117615553992633993 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+  m_PrefabInstance: {fileID: 117615553992633992}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a29f493d382d92478c7bece40977878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1042192149739918236
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -17,6 +17,11 @@ public class PlayerMovement : MonoBehaviour
 
     public Animation leftIdle;
     public Animation rightIdle;
+
+    public RhythmGame rhythmGame;
+    public GameObject rhythmVisualCue;
+
+    
     // ******************************************************************************************
     private void Awake()
     {
@@ -33,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         savedXCoordinate = LoadSavedXCoordinate();
         SaveXCoordinate(transform.position.x);
         ReenterRoom();
+        rhythmVisualCue.SetActive(false);
     }
 
     //private void OnEnable()
@@ -66,6 +72,18 @@ public class PlayerMovement : MonoBehaviour
             {
                 animator.SetBool("isWalking", false);
             }
+        }
+
+        if (GameManager.sensoryMetre > 75f)
+        {
+            rhythmVisualCue.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                rhythmVisualCue.SetActive(false);
+                rhythmGame.StartGame();
+                
+            }
+            
         }
     }
 
