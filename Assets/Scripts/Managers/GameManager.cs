@@ -16,8 +16,10 @@ public class GameManager : MonoBehaviour
     //Time of day ******************************************
     public static bool isDayTime = true;
 
-    
+
     //Scene loading *****************************************
+    public static bool transitionFromBedroom;
+
     private static string _loadedScene;
     public static string loadedScene 
     {

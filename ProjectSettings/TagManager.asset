@@ -9,6 +9,7 @@ TagManager:
   - Door
   - Border
   - FrontDoor
+  - GoInsideAustinsHouse
   layers:
   - Default
   - TransparentFX

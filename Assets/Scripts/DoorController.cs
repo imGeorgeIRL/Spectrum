@@ -48,11 +48,12 @@ public class DoorController : MonoBehaviour
             switch (gameObject.tag)
             {
                 case "BedroomDoor":
+                    GameManager.transitionFromBedroom = true;
                     SceneManager.UnloadSceneAsync(GameManager.loadedScene);
                     GameManager.loadedScene = "Bedroom";                    
                     SceneManager.LoadSceneAsync("Bedroom", LoadSceneMode.Additive);
                     //StartCoroutine(WaitForLoad());
-                    
+
 
                     GameManager.SaveSensoryMetre();
                     GameManager.SaveSocialBattery();
@@ -61,6 +62,7 @@ public class DoorController : MonoBehaviour
                     break;
 
                 case "LivingRoomDoor":
+                    GameManager.transitionFromBedroom = true;
                     SceneManager.UnloadSceneAsync(GameManager.loadedScene);
                     GameManager.loadedScene = "LoungeKitchen";                    
                     SceneManager.LoadSceneAsync("LoungeKitchen", LoadSceneMode.Additive);
@@ -72,6 +74,18 @@ public class DoorController : MonoBehaviour
                     
                     break;
 
+                case "GoInsideAustinsHouse": //Load the living room scene, but from the OUTSIDE, not coming from the bedroom.
+                    GameManager.transitionFromBedroom = false;
+                    SceneManager.UnloadSceneAsync(GameManager.loadedScene);
+                    GameManager.loadedScene = "LoungeKitchen";
+                    SceneManager.LoadSceneAsync("LoungeKitchen", LoadSceneMode.Additive);
+                    //StartCoroutine(WaitForLoad());
+
+
+                    GameManager.SaveSensoryMetre();
+                    GameManager.SaveSocialBattery();
+
+                    break;
                 case "FrontDoor":
                     SceneManager.UnloadSceneAsync(GameManager.loadedScene);
                     GameManager.loadedScene = "Outside";                    
