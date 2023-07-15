@@ -18,8 +18,8 @@ public class PlayerMovement : MonoBehaviour
     public Animation leftIdle;
     public Animation rightIdle;
 
-    public RhythmGame rhythmGame;
-    public GameObject rhythmVisualCue;
+
+    
 
     
     // ******************************************************************************************
@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         savedXCoordinate = LoadSavedXCoordinate();
         SaveXCoordinate(transform.position.x);
         ReenterRoom();
-        rhythmVisualCue.SetActive(false);
+        
     }
 
     //private void OnEnable()
@@ -74,17 +74,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (GameManager.sensoryMetre > 75f)
-        {
-            rhythmVisualCue.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                rhythmVisualCue.SetActive(false);
-                rhythmGame.StartGame();
-                
-            }
-            
-        }
+
     }
 
 
