@@ -37,11 +37,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public static int choiceSelected;
+
 
     private const string SENSORY_METRE_KEY = "SensoryMetre";
     private const string SOCIAL_BATTERY_KEY = "SocialBattery";
 
     public GameObject loadingScreen;
+
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -67,10 +71,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.O))
-        //{
-        //    StartCoroutine(StartLoadingScreen());
-        //}
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            Debug.Log("choice selected was " + choiceSelected);
+        }
         if (Input.GetKeyDown(KeyCode.T))
         {
             if (!isDayTime)

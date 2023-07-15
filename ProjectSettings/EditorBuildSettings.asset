@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Outside.unity
     guid: aedcc94885b79fe4db0f7eb0a4c892da
+  - enabled: 1
+    path: Assets/Scenes/BusTerminal.unity
+    guid: 67e46572141217441b2103f4ea819103
   m_configObjects: {}

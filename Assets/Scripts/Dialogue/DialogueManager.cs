@@ -33,6 +33,7 @@ public class DialogueManager : MonoBehaviour
     private const string SPEAKER_TAG = "speaker";
 
     private DialogueVariables dialogueVariables;
+    private InkExternalFunctions inkExternalFunctions;
     private void Start()
     {
         dialogueIsPlaying = false;
@@ -55,6 +56,7 @@ public class DialogueManager : MonoBehaviour
         }
         instance = this;
         dialogueVariables = new DialogueVariables(loadGlobalsJSON);
+        inkExternalFunctions = new InkExternalFunctions();
     }
 
     public static DialogueManager GetInstance()
@@ -70,6 +72,7 @@ public class DialogueManager : MonoBehaviour
         dialogueBubble.SetActive(true);
 
         dialogueVariables.StartListening(currentStory);
+        inkExternalFunctions.Bind(currentStory);
 
         ContinueStory();
     }
@@ -93,6 +96,7 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
 
         dialogueVariables.StopListening(currentStory);
+        inkExternalFunctions.Unbind(currentStory);
 
     }
 

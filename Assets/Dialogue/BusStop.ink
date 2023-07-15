@@ -1,11 +1,13 @@
 INCLUDE globals.ink 
 
-hmm #speaker:Austin
-...
-this sure is a bus stop
-I think it would take me somewhere
-...
-if I had anywhere to go
-...
-<pend a=0.5> anyways</pend>
+Phew, I made it in time #speaker:Austin
+now which bus did I have to catch again?
+    *[519]
+    ~ makeChoice(1)
+    *[838]
+    ~ makeChoice(2)
+    *[827]
+    ~ makeChoice(3)
+-oh! here it comes now!
+
 -> DONE
