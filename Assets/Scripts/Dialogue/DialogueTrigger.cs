@@ -42,6 +42,11 @@ public class DialogueTrigger : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             playerInRange = true;
+
+            if (gameObject.tag == "BusStop")
+            {
+                GameManager.isbusChosen = true;
+            }
         }
         
     }
@@ -51,6 +56,11 @@ public class DialogueTrigger : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             playerInRange = false;
+
+            if (gameObject.tag == "BusStop")
+            {
+                GameManager.isbusChosen = false;
+            }
         }
     }
 }

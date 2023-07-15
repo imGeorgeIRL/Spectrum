@@ -10,6 +10,8 @@ TagManager:
   - Border
   - FrontDoor
   - GoInsideAustinsHouse
+  - BusStop
+  - BusTrigger
   layers:
   - Default
   - TransparentFX

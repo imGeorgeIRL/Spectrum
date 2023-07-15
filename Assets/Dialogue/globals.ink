@@ -10,4 +10,10 @@ VAR bedside_Interactions = 0
 
 VAR fridge_Interactions = 0
 
+//BUS 
+VAR bus_Chosen = false
+
+
+
+
 EXTERNAL makeChoice(choice)

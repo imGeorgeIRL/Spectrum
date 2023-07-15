@@ -19,7 +19,6 @@ public class GameManager : MonoBehaviour
 
     //Scene loading *****************************************
     public static bool transitionFromBedroom;
-
     private static string _loadedScene;
     public static string loadedScene 
     {
@@ -37,7 +36,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    //Bus stuff***************************************************
+
     public static int choiceSelected;
+    public static bool isbusChosen = false;
 
 
     private const string SENSORY_METRE_KEY = "SensoryMetre";
@@ -145,6 +147,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("No value for Social Battery, set to 100");
         }
     }
+
+   
 
 
 

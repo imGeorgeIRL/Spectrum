@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SliderValueChange : MonoBehaviour
+public class SocialBatteryChange : MonoBehaviour
 {
     public Slider slider;
-    private float increaseRate = 0.5f;
+    private float decreaseRate = 0.5f;
 
     public float increaseInterval;
-    
+
     private bool isIncreasing = false;
     public DialogueManager dialogueManager;
 
@@ -23,7 +23,7 @@ public class SliderValueChange : MonoBehaviour
 
         if (GameManager.loadedScene == "BusTerminal")
         {
-            increaseRate = 2f;
+
         }
     }
 
@@ -31,7 +31,7 @@ public class SliderValueChange : MonoBehaviour
     {
         isIncreasing = true;
 
-        slider.value += increaseRate;
+        slider.value -= decreaseRate;
         yield return new WaitForSeconds(increaseInterval);
 
         isIncreasing = false;

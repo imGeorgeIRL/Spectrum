@@ -122,7 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 700372442843526861}
   - component: {fileID: 700372442843526863}
-  - component: {fileID: 700372442843526862}
+  - component: {fileID: 5007442167504676204}
   m_Layer: 5
   m_Name: SocialBattery
   m_TagString: Untagged
@@ -217,7 +217,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &700372442843526862
+--- !u!114 &5007442167504676204
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,12 +226,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 700372442843526860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbda88c760888bb48a76d22d257cb135, type: 3}
+  m_Script: {fileID: 11500000, guid: 98ca6a06badd5e44e93769b9aa134d4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 700372442843526863}
-  increaseRate: -0.5
-  decreaseRate: 0
   increaseInterval: 5
   dialogueManager: {fileID: 4502435457891224747}
 --- !u!1 &700372442922618831
@@ -2520,8 +2518,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 4502435458499820903}
-  increaseRate: 0.5
-  decreaseRate: 0
   increaseInterval: 3
   dialogueManager: {fileID: 4502435457891224747}
 --- !u!114 &4502435458499820920
