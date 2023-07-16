@@ -13,12 +13,15 @@ Phew, I made it in time #speaker:Austin
 now which bus did I have to catch again?
     *[519]
     ~ makeChoice(1)
+    ~isLateToClass = true
 
     *[838]
     ~ makeChoice(2)
+    ~isLateToClass = false
 
     *[827]
     ~ makeChoice(3)
+    ~isLateToClass = true
 
 -oh! here it comes now!
 

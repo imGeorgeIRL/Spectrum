@@ -100,6 +100,15 @@ public class DoorController : MonoBehaviour
                     break;
                 case "UniFrontDoor":
                     SceneManager.UnloadSceneAsync(GameManager.loadedScene);
+                    GameManager.loadedScene = "UniClassroom";
+                    SceneManager.LoadSceneAsync("UniClassroom", LoadSceneMode.Additive);
+
+                    GameManager.SaveSensoryMetre();
+                    GameManager.SaveSocialBattery();
+                    break;
+
+                case "UniInteriorDoor":
+                    SceneManager.UnloadSceneAsync(GameManager.loadedScene);
                     GameManager.loadedScene = "UniEntrance";
                     SceneManager.LoadSceneAsync("UniEntrance", LoadSceneMode.Additive);
 

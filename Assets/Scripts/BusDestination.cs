@@ -72,7 +72,7 @@ public class BusDestination : MonoBehaviour
                         break;
                     case 2:
                         //leads to university
-                        sceneToLoad = "UniversityEntrance";
+                        sceneToLoad = "UniEntrance";
                         StartCoroutine(waitForBus());
                         break;
                     case 3:
@@ -97,12 +97,20 @@ public class BusDestination : MonoBehaviour
                         break;
                     case 2:
                         //Go to Town Centre
-                        sceneToLoad = "UniversityEntrance";
+                        sceneToLoad = "TownCentre";
                         StartCoroutine(waitForBus());
                         break;
                     default:
                         Debug.Log("there was no value for choiceSelected!");
                         break;
+                }
+            }
+            else if (GameManager.loadedScene == "BusTerminal" || GameManager.loadedScene == "TownCentre")
+            {
+                if (GameManager.choiceSelected == 1)
+                {
+                    sceneToLoad = "UniEntrance";
+                    StartCoroutine(waitForBus());
                 }
             }
 
@@ -113,13 +121,13 @@ public class BusDestination : MonoBehaviour
     {
         GameManager.choiceSelected = 0;
         yield return new WaitForSeconds(3f);
+        
         SceneManager.UnloadSceneAsync(GameManager.loadedScene);
         GameManager.loadedScene = sceneToLoad;
         SceneManager.LoadSceneAsync(sceneToLoad, LoadSceneMode.Additive);
 
         GameManager.SaveSensoryMetre();
         GameManager.SaveSocialBattery();
-        yield return new WaitForSeconds(1f);
-        GameObject.Destroy(this);
+        GameObject.Destroy(gameObject);
     }
 }

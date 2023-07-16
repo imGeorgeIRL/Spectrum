@@ -35,6 +35,11 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    //Task Manager **********************************************
+
+    public static bool eatenBreakfast, goneToUni, madeAFriend;
+
+
 
     //Bus stuff***************************************************
 

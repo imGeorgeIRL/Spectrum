@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 0d3c2becab3054a44ac8a246ce1303b4
+  - enabled: 1
+    path: Assets/Scenes/UniClassroom.unity
+    guid: 3b49e09955b20044bb0a6151090ce5da
   m_configObjects: {}

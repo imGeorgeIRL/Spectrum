@@ -12,10 +12,18 @@ VAR fridge_Interactions = 0
 
 //BUS 
 VAR bus_Chosen = false
+VAR isLateToClass = false
+VAR FoundBus = false
 
+//NOAH 
+VAR noah_Interractions = 0
 
 
 
 EXTERNAL makeChoice(choice)
 
 EXTERNAL spokeTo(person)
+
+EXTERNAL turnNight(time)
+
+EXTERNAL dailyTasks(task)

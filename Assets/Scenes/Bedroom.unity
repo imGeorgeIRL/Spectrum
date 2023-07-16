@@ -2142,6 +2142,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4313906298476311265, guid: 9d0b4ebc641893f4886346a42c3d3940, type: 3}
+      propertyPath: planner
+      value: 
+      objectReference: {fileID: 1986425512}
     - target: {fileID: 4439215245220490039, guid: 9d0b4ebc641893f4886346a42c3d3940, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2503,6 +2507,11 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7617308004424274783, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
   m_PrefabInstance: {fileID: 117615553992633992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1986425512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5325105580545011050, guid: 9d0b4ebc641893f4886346a42c3d3940, type: 3}
+  m_PrefabInstance: {fileID: 1642444688}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2007830403
 GameObject:

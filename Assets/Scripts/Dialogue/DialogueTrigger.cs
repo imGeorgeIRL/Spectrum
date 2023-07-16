@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
@@ -10,6 +11,9 @@ public class DialogueTrigger : MonoBehaviour
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
     private bool playerInRange;
+
+    private bool triggerDialogueInRange = false;
+    private bool isCoolDown = false;
 
     private void Awake()
     {
@@ -26,12 +30,25 @@ public class DialogueTrigger : MonoBehaviour
             {
                 TriggerDialogue();
             }
-            
+            if (playerInRange && triggerDialogueInRange)
+            {
+                if (!isCoolDown)
+                {
+                    isCoolDown = true;
+                    TriggerDialogue();
+                    StartCoroutine(CoolDown());
+                }                    
+            }            
         }
         else
         {
             visualCue.SetActive(false);
         }
+    }
+    private IEnumerator CoolDown()
+    {
+        yield return new WaitForSeconds(15);
+        isCoolDown = false;
     }
     private void TriggerDialogue()
     {
@@ -47,8 +64,12 @@ public class DialogueTrigger : MonoBehaviour
             {
                 GameManager.isbusChosen = true;
             }
-        }
-        
+
+            if (gameObject.tag == "TriggeredDialogue")
+            {
+                triggerDialogueInRange = true;
+            }
+        }        
     }
 
     private void OnTriggerExit2D(Collider2D collision)

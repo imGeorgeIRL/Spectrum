@@ -33,6 +33,32 @@ public class InkExternalFunctions
                 person -= 1;
             }
         });
+        story.BindExternalFunction("turnNight", (int time) =>
+        {
+            if (time == 0)
+            {
+                GameManager.isDayTime = true;
+            }
+            else if (time == 1)
+            {
+                GameManager.isDayTime = false;
+            }
+        });
+        story.BindExternalFunction("dailyTasks", (int task) =>
+        {
+            if (task == 1)
+            {
+                GameManager.eatenBreakfast = true;
+            }
+            if (task == 2)
+            {
+                GameManager.goneToUni = true;
+            }
+            if (task == 3)
+            {
+                GameManager.madeAFriend = true;
+            }
+        });
     }
 
     public void Unbind(Story story)
@@ -40,6 +66,7 @@ public class InkExternalFunctions
         story.UnbindExternalFunction("makeChoice");
         //Debug.Log("Choice made was " + GameManager.choiceSelected);
         story.UnbindExternalFunction("spokeTo");
+        story.UnbindExternalFunction("turnNight");
     }
 
 }

@@ -13,6 +13,8 @@ TagManager:
   - BusStop
   - BusTrigger
   - UniFrontDoor
+  - UniInteriorDoor
+  - TriggeredDialogue
   layers:
   - Default
   - TransparentFX

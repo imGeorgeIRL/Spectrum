@@ -7,19 +7,16 @@ public class AudioManager : MonoBehaviour
 {
     private AudioSource audioSource;
     public AudioClip[] musicClips;
-    
+
+   
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
 
-        
-    }
-    private void OnEnable()
-    {
-        string sceneName = GameManager.loadedScene;
+        //string sceneName = GameManager.loadedScene;
 
-        AudioClip clip = GetSceneClip(sceneName);
+        AudioClip clip = GetSceneClip();
 
         if (clip != null)
         {
@@ -27,31 +24,32 @@ public class AudioManager : MonoBehaviour
             audioSource.Play();
         }
     }
+
     
-    private AudioClip GetSceneClip(string sceneName)
+    private AudioClip GetSceneClip()
     {
-        switch (sceneName)
+        Debug.Log("Scene Name: " + GameManager.loadedScene);
+        Debug.Log("musicClips Length: " + musicClips.Length);
+        AudioClip clip = null;
+
+        switch (GameManager.loadedScene)
         {
             case "Bedroom":
-                return musicClips[0];
-                
+                clip = musicClips[0];
+                break;
+
             case "LivingRoom":
                 if (!GameManager.transitionFromBedroom)
                 {
-                    return musicClips[0];
+                    clip = musicClips[0];
                 }
-                else
-                {
-                    return null;
-                }
-                           
-                
+                break;
+
             case "Outside":
-                return musicClips[1];
-                
-            default:
-                return null;
-                
+                clip = musicClips[1];
+                break;
         }
+
+        return clip;
     }
 }
