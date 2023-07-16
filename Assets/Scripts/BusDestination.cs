@@ -61,28 +61,51 @@ public class BusDestination : MonoBehaviour
             // Stop the prefab from moving
             isMoving = false;
             Debug.Log("Choice selected: " + GameManager.choiceSelected);
-            switch (GameManager.choiceSelected)
+            if (GameManager.loadedScene == "Outside")
             {
-                case 1:
-                    //leads to town centre
-                    sceneToLoad = "TownCentre";
-                    StartCoroutine(waitForBus());
-                    break;
-                case 2:
-                    //leads to university
-                    sceneToLoad = "UniversityEntrance";
-                    Debug.Log("once set up, will lead to " + sceneToLoad);
-                    break;
-                case 3:
-                    //leads to bus terminal
-                    sceneToLoad = "BusTerminal";
-                    StartCoroutine(waitForBus());
-                    break;
+                switch (GameManager.choiceSelected)
+                {
+                    case 1:
+                        //leads to town centre
+                        sceneToLoad = "TownCentre";
+                        StartCoroutine(waitForBus());
+                        break;
+                    case 2:
+                        //leads to university
+                        sceneToLoad = "UniversityEntrance";
+                        StartCoroutine(waitForBus());
+                        break;
+                    case 3:
+                        //leads to bus terminal
+                        sceneToLoad = "BusTerminal";
+                        StartCoroutine(waitForBus());
+                        break;
 
-                default:
-                    Debug.Log("there was no value for choiceSelected!");
-                    break;
+                    default:
+                        Debug.Log("there was no value for choiceSelected!");
+                        break;
+                }
             }
+            else if (GameManager.loadedScene == "UniEntrance")
+            {
+                switch (GameManager.choiceSelected)
+                {
+                    case 1:
+                        //Go home
+                        sceneToLoad = "Outside";
+                        StartCoroutine(waitForBus());
+                        break;
+                    case 2:
+                        //Go to Town Centre
+                        sceneToLoad = "UniversityEntrance";
+                        StartCoroutine(waitForBus());
+                        break;
+                    default:
+                        Debug.Log("there was no value for choiceSelected!");
+                        break;
+                }
+            }
+
         }
     }
 
@@ -96,5 +119,7 @@ public class BusDestination : MonoBehaviour
 
         GameManager.SaveSensoryMetre();
         GameManager.SaveSocialBattery();
+        yield return new WaitForSeconds(1f);
+        GameObject.Destroy(this);
     }
 }

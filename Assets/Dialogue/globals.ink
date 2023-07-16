@@ -3,7 +3,7 @@ VAR Day_Of_Week = "0"
 
 // BEDROOM
 
-VAR calendar_Interactions = 2
+VAR calendar_Interactions = 0
 VAR bedside_Interactions = 0
 
 //KITCHEN

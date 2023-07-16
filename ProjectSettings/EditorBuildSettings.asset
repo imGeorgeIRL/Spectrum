@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BusTerminal.unity
     guid: 67e46572141217441b2103f4ea819103
+  - enabled: 1
+    path: Assets/Scenes/TownCentre.unity
+    guid: 043e1a1ee6740ce4abb1178386c30b15
+  - enabled: 1
+    path: Assets/Scenes/UniEntrance.unity
+    guid: dac89a43a0f325041a0f8a816fb3d2b3
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 0d3c2becab3054a44ac8a246ce1303b4
   m_configObjects: {}

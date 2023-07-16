@@ -23,8 +23,6 @@ Hi sweatheart, can I  help you? #speaker:Woman
 ===Tuesday===
 ->DONE
 
-
-
 ===Wednesday===
 ->DONE
 

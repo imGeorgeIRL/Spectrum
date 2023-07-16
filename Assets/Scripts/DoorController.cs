@@ -98,6 +98,15 @@ public class DoorController : MonoBehaviour
 
                     
                     break;
+                case "UniFrontDoor":
+                    SceneManager.UnloadSceneAsync(GameManager.loadedScene);
+                    GameManager.loadedScene = "UniEntrance";
+                    SceneManager.LoadSceneAsync("UniEntrance", LoadSceneMode.Additive);
+
+                    GameManager.SaveSensoryMetre();
+                    GameManager.SaveSocialBattery();
+                    break;
+                    
 
                 default:
                     Debug.LogWarning("No scene assigned for this door.");

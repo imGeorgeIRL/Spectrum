@@ -11,7 +11,7 @@ public class BusSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        busSpawned = false;
     }
 
     // Update is called once per frame
@@ -28,5 +28,6 @@ public class BusSpawner : MonoBehaviour
     {
         Instantiate(busPrefab, targetBusPosition.position, Quaternion.identity);
         GameManager.isbusChosen = true;
+        busSpawned = false;
     }
 }
