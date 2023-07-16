@@ -113,6 +113,11 @@ public class DialogueManager : MonoBehaviour
             ExitDialogueMode();
         }
         canContinueToNextLine = false;
+        //string nextLine = currentStory.Continue();
+        //if (nextLine.Equals("") && !currentStory.canContinue)
+        //{
+        //    ExitDialogueMode();
+        //}
     }
     public void CanContinue()
     {

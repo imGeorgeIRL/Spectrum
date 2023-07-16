@@ -25,12 +25,21 @@ public class InkExternalFunctions
                 Debug.Log("Choice 3");
             }
         });
+        story.BindExternalFunction("spokeTo", (int person) =>
+        {
+            if (person == 1)
+            {
+                GameManager.sensoryMetre += 5f;
+                person -= 1;
+            }
+        });
     }
 
     public void Unbind(Story story)
     {
         story.UnbindExternalFunction("makeChoice");
         //Debug.Log("Choice made was " + GameManager.choiceSelected);
+        story.UnbindExternalFunction("spokeTo");
     }
 
 }

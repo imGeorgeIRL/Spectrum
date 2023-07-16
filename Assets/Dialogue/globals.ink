@@ -1,5 +1,5 @@
 // GENERAL
-VAR Day_Of_Week = "2"
+VAR Day_Of_Week = "0"
 
 // BEDROOM
 
@@ -17,3 +17,5 @@ VAR bus_Chosen = false
 
 
 EXTERNAL makeChoice(choice)
+
+EXTERNAL spokeTo(person)

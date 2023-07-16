@@ -69,6 +69,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         StartCoroutine(StartLoadingScreen());
+        LoadSensoryMetre();
+        LoadSocialBattery();
     }
 
     private void Update()
@@ -156,5 +158,7 @@ public class GameManager : MonoBehaviour
     private static void OnDestroy()
     {
         SceneManager.UnloadSceneAsync("ManagementScene");
+        SaveSensoryMetre();
+        SaveSocialBattery();
     }
 }

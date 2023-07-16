@@ -66,7 +66,7 @@ public class BusDestination : MonoBehaviour
                 case 1:
                     //leads to town centre
                     sceneToLoad = "TownCentre";
-                    Debug.Log("once set up, will lead to " + sceneToLoad);
+                    StartCoroutine(waitForBus());
                     break;
                 case 2:
                     //leads to university
