@@ -9,8 +9,8 @@ INCLUDE globals.ink
 }
 
 ===Monday===
-um... hi?
-hi
+um... hi? #speaker: Guy 
+hi #speaker: Austin 
 can I help you? #speaker: Guy 
     * do you know which bus takes me to Cygnus University? # speaker: Austin 
         oh you go to cygnus?! #speaker: Guy 
@@ -21,6 +21,8 @@ can I help you? #speaker: Guy
         no worries, good luck pal #speaker: Guy 
         ~spokeTo(1)
         ~FoundBus = true
+    - you too! #speaker:Austin
+    wait..
     ->DONE
 
 ===Tuesday===

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,7 +20,10 @@ public class PlayerMovement : MonoBehaviour
     public Animation rightIdle;
 
 
-    
+    public Transform sitTransform;
+    private Vector3 positionBeforeSit;
+    private bool hasSat;
+
 
     
     // ******************************************************************************************
@@ -67,17 +71,50 @@ public class PlayerMovement : MonoBehaviour
             {
                 animator.SetBool("isWalking", true);
                 animator.SetFloat("Direction", moveHorizontal);
+                
             }
             else
             {
                 animator.SetBool("isWalking", false);
+                
+            }
+
+
+        }
+        if (GameManager.isSitting && GameManager.loadedScene == "UniClassroom" && !hasSat)
+        {
+            positionBeforeSit = transform.position;
+            Debug.Log("Position saved at " + positionBeforeSit);
+            SitDown();
+            hasSat = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.A))
+        {
+            if (hasSat)
+            {
+                GameManager.isSitting = false;
+                StandUp();
             }
         }
 
-
     }
 
-
+    private void StandUp()
+    {
+        hasSat = false;
+        transform.position = new Vector3(-4.68f, 0.94f, 0f);
+        rb.constraints = RigidbodyConstraints2D.None;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        animator.SetBool("isSitting", false);
+    }
+    private void SitDown()
+    {
+        transform.position = new Vector3(-4.68f, 0.36f, 0f);
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        animator.SetBool("isSitting", true);
+        //animator.Play("ANIM_Austin_Sit");
+    }
 
     public void LeaveRoom()
     {

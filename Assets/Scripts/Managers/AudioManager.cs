@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class AudioManager : MonoBehaviour
 {
     private AudioSource audioSource;
-    public AudioClip[] musicClips;
+    public AudioClip clip;
 
    
     // Start is called before the first frame update
@@ -14,9 +14,6 @@ public class AudioManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
 
-        //string sceneName = GameManager.loadedScene;
-
-        AudioClip clip = GetSceneClip();
 
         if (clip != null)
         {
@@ -25,31 +22,8 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    
-    private AudioClip GetSceneClip()
+    private void OnDestroy()
     {
-        Debug.Log("Scene Name: " + GameManager.loadedScene);
-        Debug.Log("musicClips Length: " + musicClips.Length);
-        AudioClip clip = null;
-
-        switch (GameManager.loadedScene)
-        {
-            case "Bedroom":
-                clip = musicClips[0];
-                break;
-
-            case "LivingRoom":
-                if (!GameManager.transitionFromBedroom)
-                {
-                    clip = musicClips[0];
-                }
-                break;
-
-            case "Outside":
-                clip = musicClips[1];
-                break;
-        }
-
-        return clip;
+        audioSource.Stop();
     }
 }

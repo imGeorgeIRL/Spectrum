@@ -1,6 +1,7 @@
 // GENERAL
 VAR Day_Of_Week = "0"
 
+
 // BEDROOM
 
 VAR calendar_Interactions = 0
@@ -17,6 +18,7 @@ VAR FoundBus = false
 
 //NOAH 
 VAR noah_Interractions = 0
+VAR spokenToNoah = false
 
 
 
@@ -24,6 +26,11 @@ EXTERNAL makeChoice(choice)
 
 EXTERNAL spokeTo(person)
 
-EXTERNAL turnNight(time)
+EXTERNAL turnNight(night)
 
 EXTERNAL dailyTasks(task)
+
+EXTERNAL sittingDown(sit)
+
+
+

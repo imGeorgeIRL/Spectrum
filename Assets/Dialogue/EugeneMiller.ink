@@ -10,7 +10,6 @@ INCLUDE globals.ink
 
 ===Monday===
 {isLateToClass : ->MondayLATE}
-~ dailyTasks(2)
 Hi, what can I do you for? #speaker: Miller
 Hi sir #speaker: Austin
 I just wanted to talk to you about something
@@ -27,7 +26,6 @@ thank you. #speaker: Austin
     ->DONE
 
 ===MondayLATE===
-~ dailyTasks(2)
 You're late. #speaker: Miller
     * [I'm so sorry, I caught the wrong bus]
         Are you new in town? #speaker: Miller

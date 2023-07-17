@@ -15,26 +15,29 @@ INCLUDE globals.ink
 {noah_Interractions >= 2: ->Noah3}
 
 Hey, what's up? #speaker:??? 
-
     *[Dr. Miller told me to ask if I can sit here,]
         is that okay? #speaker:Austin
         yeah! that's totally fine
         seat's all yours.
-        
+        ~sittingDown(1)
         ~noah_Interractions += 1
-        ->DONE
+        ~spokenToNoah = true
+ 
     *[Can I sit here?]
         no... #speaker:??? 
         oh, okay, sorry #speaker:Austin
         dude, I was kidding#speaker:??? 
         of course you can sit here.
-        ...Thank you. #speaker:Austin
+        ~sittingDown(1)
         ~noah_Interractions += 1
-        -> DONE
+        ~spokenToNoah = true
+
+    -...Thank you. #speaker:Austin        
+      -> DONE
 
 ===Noah2===
-~ dailyTasks(3)
 What's your name? #speaker:???
+~ dailyTasks(3)
 Austin #speaker:Austin
 ... #speaker:???
 Mine's Noah! #speaker:Noah
@@ -47,11 +50,16 @@ Mine's Noah! #speaker:Noah
         That was a good one!!
         Thanks #speaker:Austin
         ~noah_Interractions += 1
+        ~spokenToNoah = true
+        
         ->DONE
 
 ===Noah3===
 Cant wait to get started #speaker: Noah
+~turnNight(1)
 me too #speaker: Austin
+~spokenToNoah = true
+
 ->DONE
 
 

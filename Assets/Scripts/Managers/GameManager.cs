@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public static float sensoryMetre;
     public static float socialBattery = 100f;
 
+    public static bool isSitting = false;
+
     //Time of day ******************************************
     public static bool isDayTime = true;
 

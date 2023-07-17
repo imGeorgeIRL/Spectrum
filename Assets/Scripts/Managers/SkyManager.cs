@@ -34,5 +34,7 @@ public class SkyManager : MonoBehaviour
             daySky.SetActive(false);
 
         }
+
+
     }
 }

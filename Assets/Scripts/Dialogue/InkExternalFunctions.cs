@@ -33,13 +33,13 @@ public class InkExternalFunctions
                 person -= 1;
             }
         });
-        story.BindExternalFunction("turnNight", (int time) =>
+        story.BindExternalFunction("turnNight", (int night) =>
         {
-            if (time == 0)
+            if (night == 0)
             {
                 GameManager.isDayTime = true;
             }
-            else if (time == 1)
+            else if (night == 1)
             {
                 GameManager.isDayTime = false;
             }
@@ -57,6 +57,17 @@ public class InkExternalFunctions
             if (task == 3)
             {
                 GameManager.madeAFriend = true;
+            }
+        });
+        story.BindExternalFunction("sittingDown", (int sit) =>
+        {
+            if (sit == 1)
+            {
+                GameManager.isSitting = true;
+            }
+            else if (sit == 1)
+            {
+                GameManager.isSitting = false;
             }
         });
     }
