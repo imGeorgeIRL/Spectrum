@@ -70,6 +70,16 @@ public class InkExternalFunctions
                 GameManager.isSitting = false;
             }
         });
+
+        story.BindExternalFunction("bedTime", (int value) =>
+        {
+            if (value == 1)
+            {
+                GameManager.goToSleep = true;
+                Debug.Log("going to sleep");
+            }
+
+        });
     }
 
     public void Unbind(Story story)
@@ -80,4 +90,5 @@ public class InkExternalFunctions
         story.UnbindExternalFunction("turnNight");
     }
 
+    
 }

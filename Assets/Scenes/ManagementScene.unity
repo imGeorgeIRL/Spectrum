@@ -1988,11 +1988,11 @@ MonoBehaviour:
   - sceneName: LoungeKitchen
     audioClip: {fileID: 8300000, guid: ec9c24b089a393442bc0098fa33eccbc, type: 3}
   - sceneName: Outside
-    audioClip: {fileID: 8300000, guid: 1cc73765f23659a4c88eec9813624291, type: 3}
+    audioClip: {fileID: 8300000, guid: f4bf1526490b45d4d8ffce108bc365da, type: 3}
   - sceneName: BusTerminal
     audioClip: {fileID: 8300000, guid: 9af165ecb784fb140a2883ceb217a708, type: 3}
   - sceneName: TownCentre
-    audioClip: {fileID: 8300000, guid: 87cf67d3b6559364db7c3b917204c94f, type: 3}
+    audioClip: {fileID: 8300000, guid: a7953208d5da0a94e9681ef70ca657b6, type: 3}
   - sceneName: UniEntrance
     audioClip: {fileID: 8300000, guid: 82796e76556a9f04f9a91c27291bbd7a, type: 3}
   - sceneName: UniClassroom

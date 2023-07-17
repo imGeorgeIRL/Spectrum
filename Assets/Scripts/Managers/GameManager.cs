@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     //Time of day ******************************************
     public static bool isDayTime = true;
-
+    public static bool goToSleep = false;
 
     //Scene loading *****************************************
     public static bool transitionFromBedroom;
@@ -157,8 +157,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-   
-
+    
+    
 
 
 

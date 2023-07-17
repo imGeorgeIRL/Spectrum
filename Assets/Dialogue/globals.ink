@@ -6,6 +6,8 @@ VAR Day_Of_Week = "0"
 
 VAR calendar_Interactions = 0
 VAR bedside_Interactions = 0
+VAR isBedTime = false
+EXTERNAL bedTime(value)
 
 //KITCHEN
 

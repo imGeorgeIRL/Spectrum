@@ -231,6 +231,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2084444404}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &61729677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,6 +378,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 672276683}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2084444404}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -916,6 +940,7 @@ GameObject:
   - component: {fileID: 834509729}
   - component: {fileID: 834509731}
   - component: {fileID: 834509730}
+  - component: {fileID: 834509732}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1040,6 +1065,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 834509728}
   m_CullTransparentMesh: 1
+--- !u!114 &834509732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834509728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ace8ced0e81c847968cdca0aeda757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typewriterStartsAutomatically: 0
+  animationLoop: 0
+  timeScale: 0
+  _text: Settings
+  useDynamicScaling: 1
+  referenceFontSize: 10
+  isResettingTimeOnNewText: 1
+  useDefaultDatabases: 1
+  databaseBehaviors: {fileID: 11400000, guid: ef9c3218785e10e409ec7d8f991eb080, type: 2}
+  databaseAppearances: {fileID: 11400000, guid: f111ec980c86bc74ba6d4210c86c3ba0, type: 2}
+  databaseActions: {fileID: 11400000, guid: 509d51cf9dbc54049913963bff1cc9de, type: 2}
+  defaultAppearancesTags: []
+  defaultDisappearancesTags:
+  - fade
+  defaultBehaviorsTags:
+  - wiggle a=0.02
+  defaultTagsMode: 0
 --- !u!1 &910199897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1238,6 +1292,7 @@ GameObject:
   - component: {fileID: 1141271566}
   - component: {fileID: 1141271568}
   - component: {fileID: 1141271567}
+  - component: {fileID: 1141271569}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1362,6 +1417,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141271565}
   m_CullTransparentMesh: 1
+--- !u!114 &1141271569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141271565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ace8ced0e81c847968cdca0aeda757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typewriterStartsAutomatically: 0
+  animationLoop: 0
+  timeScale: 0
+  _text: Back
+  useDynamicScaling: 1
+  referenceFontSize: 10
+  isResettingTimeOnNewText: 1
+  useDefaultDatabases: 1
+  databaseBehaviors: {fileID: 11400000, guid: ef9c3218785e10e409ec7d8f991eb080, type: 2}
+  databaseAppearances: {fileID: 11400000, guid: f111ec980c86bc74ba6d4210c86c3ba0, type: 2}
+  databaseActions: {fileID: 11400000, guid: 509d51cf9dbc54049913963bff1cc9de, type: 2}
+  defaultAppearancesTags: []
+  defaultDisappearancesTags:
+  - fade
+  defaultBehaviorsTags:
+  - wiggle a=0.02
+  defaultTagsMode: 0
 --- !u!1 &1141858939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,6 +1457,7 @@ GameObject:
   - component: {fileID: 1141858940}
   - component: {fileID: 1141858942}
   - component: {fileID: 1141858941}
+  - component: {fileID: 1141858943}
   m_Layer: 5
   m_Name: Title Name
   m_TagString: Untagged
@@ -1497,6 +1582,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1141858939}
   m_CullTransparentMesh: 1
+--- !u!114 &1141858943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141858939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ace8ced0e81c847968cdca0aeda757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typewriterStartsAutomatically: 0
+  animationLoop: 0
+  timeScale: 0
+  _text: Spectrum of Starlight
+  useDynamicScaling: 1
+  referenceFontSize: 10
+  isResettingTimeOnNewText: 1
+  useDefaultDatabases: 1
+  databaseBehaviors: {fileID: 11400000, guid: ef9c3218785e10e409ec7d8f991eb080, type: 2}
+  databaseAppearances: {fileID: 11400000, guid: f111ec980c86bc74ba6d4210c86c3ba0, type: 2}
+  databaseActions: {fileID: 11400000, guid: 509d51cf9dbc54049913963bff1cc9de, type: 2}
+  defaultAppearancesTags: []
+  defaultDisappearancesTags:
+  - fade
+  defaultBehaviorsTags:
+  - wave a=0.01
+  defaultTagsMode: 0
 --- !u!1 &1177884501
 GameObject:
   m_ObjectHideFlags: 0
@@ -2128,6 +2242,7 @@ GameObject:
   - component: {fileID: 1973429597}
   - component: {fileID: 1973429599}
   - component: {fileID: 1973429598}
+  - component: {fileID: 1973429600}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2252,6 +2367,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973429596}
   m_CullTransparentMesh: 1
+--- !u!114 &1973429600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973429596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ace8ced0e81c847968cdca0aeda757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typewriterStartsAutomatically: 0
+  animationLoop: 0
+  timeScale: 0
+  _text: Quit Game
+  useDynamicScaling: 1
+  referenceFontSize: 10
+  isResettingTimeOnNewText: 1
+  useDefaultDatabases: 1
+  databaseBehaviors: {fileID: 11400000, guid: ef9c3218785e10e409ec7d8f991eb080, type: 2}
+  databaseAppearances: {fileID: 11400000, guid: f111ec980c86bc74ba6d4210c86c3ba0, type: 2}
+  databaseActions: {fileID: 11400000, guid: 509d51cf9dbc54049913963bff1cc9de, type: 2}
+  defaultAppearancesTags: []
+  defaultDisappearancesTags:
+  - fade
+  defaultBehaviorsTags:
+  - wiggle a=0.02
+  defaultTagsMode: 0
 --- !u!1 &2001974374
 GameObject:
   m_ObjectHideFlags: 0
@@ -2263,6 +2407,7 @@ GameObject:
   - component: {fileID: 2001974375}
   - component: {fileID: 2001974377}
   - component: {fileID: 2001974376}
+  - component: {fileID: 2001974378}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2387,6 +2532,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001974374}
   m_CullTransparentMesh: 1
+--- !u!114 &2001974378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2001974374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ace8ced0e81c847968cdca0aeda757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typewriterStartsAutomatically: 0
+  animationLoop: 0
+  timeScale: 0
+  _text: Play Game
+  useDynamicScaling: 1
+  referenceFontSize: 10
+  isResettingTimeOnNewText: 1
+  useDefaultDatabases: 1
+  databaseBehaviors: {fileID: 11400000, guid: ef9c3218785e10e409ec7d8f991eb080, type: 2}
+  databaseAppearances: {fileID: 11400000, guid: f111ec980c86bc74ba6d4210c86c3ba0, type: 2}
+  databaseActions: {fileID: 11400000, guid: 509d51cf9dbc54049913963bff1cc9de, type: 2}
+  defaultAppearancesTags: []
+  defaultDisappearancesTags:
+  - fade
+  defaultBehaviorsTags:
+  - wiggle a=0.02
+  defaultTagsMode: 0
 --- !u!1 &2057419720
 GameObject:
   m_ObjectHideFlags: 0
