@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 510628778238934133}
   - component: {fileID: 4717966836091943169}
   - component: {fileID: 6477968107928155683}
+  - component: {fileID: 6616796673252904820}
   m_Layer: 0
   m_Name: Austin 1
   m_TagString: Player
@@ -258,8 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  leftIdle: {fileID: 0}
-  rightIdle: {fileID: 0}
+  sitTransform: {fileID: 0}
 --- !u!114 &510628778238934133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,6 +300,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac8794b97ef131543805a986acd1c4e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  busPrefab: {fileID: 0}
+  targetBusPosition: {fileID: 0}
+--- !u!114 &6616796673252904820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117615555137660391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b5a4f644a83bfc4483c37b97789019f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1731178772919400174

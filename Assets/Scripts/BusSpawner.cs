@@ -21,6 +21,7 @@ public class BusSpawner : MonoBehaviour
         {
             SpawnBus();
             busSpawned = true;
+            GameManager.isbusChosen = false;
         }
     }
 

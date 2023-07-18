@@ -78,7 +78,9 @@ public class AudioManager : MonoBehaviour
                 audioSource.Stop();
 
                 // Play the new clip
-                audioSource.PlayOneShot(audioClip);
+                audioSource.clip = audioClip;
+                audioSource.Play();
+                audioSource.loop = true;
                 return;
             }
         }

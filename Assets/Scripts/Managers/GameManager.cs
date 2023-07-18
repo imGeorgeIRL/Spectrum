@@ -11,9 +11,11 @@ public class GameManager : MonoBehaviour
 
     //Player stats *******************************************
     public static float sensoryMetre;
-    public static float socialBattery = 100f;
+    public static float socialBattery;
 
     public static bool isSitting = false;
+
+    public static bool isTalking;
 
     //Time of day ******************************************
     public static bool isDayTime = true;
@@ -37,6 +39,9 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    public static bool timeSkip;
+    public static string timeSkipDestination;
     //Task Manager **********************************************
 
     public static bool eatenBreakfast, goneToUni, madeAFriend;
@@ -53,6 +58,10 @@ public class GameManager : MonoBehaviour
     private const string SOCIAL_BATTERY_KEY = "SocialBattery";
 
     public GameObject loadingScreen;
+
+    //LIVING ROOM*************************************************
+    public static bool watchingTv = false;
+
 
 
     private void Awake()
@@ -102,6 +111,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.N))
         {
             sensoryMetre += 10f;
+            socialBattery -= 10f;
         }
     }
 
@@ -134,7 +144,7 @@ public class GameManager : MonoBehaviour
         if (PlayerPrefs.HasKey(SENSORY_METRE_KEY))
         {
             sensoryMetre = PlayerPrefs.GetFloat(SENSORY_METRE_KEY); //loads the value of the key
-            Debug.Log("Loaded value of Sensory meter: " + GameManager.sensoryMetre);
+            Debug.Log("Loaded value of Sensory meter: " + sensoryMetre);
         }
         else
         {
@@ -148,7 +158,7 @@ public class GameManager : MonoBehaviour
         if (PlayerPrefs.HasKey(SOCIAL_BATTERY_KEY))
         {
             socialBattery = PlayerPrefs.GetFloat(SOCIAL_BATTERY_KEY); //loads the value of the key
-            Debug.Log("Loaded value of Social Battery: " + GameManager.socialBattery);
+            Debug.Log("Loaded value of Social Battery: " + socialBattery);
         }
         else
         {

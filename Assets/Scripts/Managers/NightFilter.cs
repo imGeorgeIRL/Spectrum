@@ -15,17 +15,21 @@ public class NightFilter : MonoBehaviour
     void Update()
     {
         if (GameManager.isDayTime)
+        {            
+            nightFilter.SetActive(false);          
+        }
+        else
         {
             if (GameManager.loadedScene == "Bedroom" || GameManager.loadedScene == "LoungeKitchen" ||
                 GameManager.loadedScene == "BusTerminal" || GameManager.loadedScene == "UniClassroom")
             {
                 nightFilter.SetActive(false);
             }
-                
-        }
-        else
-        {            
-            nightFilter.SetActive(true);          
+            else
+            {
+                nightFilter.SetActive(true);
+            }
+         
         }
     }
 }

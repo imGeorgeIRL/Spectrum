@@ -17,6 +17,7 @@ is...is that allowed?
 hrmmph...#speaker:Charles
 I guess...
 Curse the day this good for nothing town built that bus stop!
+~spokeTo(1)
 sorry...?#speaker:Austin
 ->DONE
 

@@ -66,7 +66,6 @@ public class DialogueManager : MonoBehaviour
 
     public void EnterDialogueMode(TextAsset inkJSON)
     {
-
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialogueBubble.SetActive(true);
@@ -91,12 +90,14 @@ public class DialogueManager : MonoBehaviour
     }
     private void ExitDialogueMode()
     {
+        GameManager.isTalking = false;
         dialogueIsPlaying = false;
         dialogueBubble.SetActive(false);
         dialogueText.text = "";
 
         dialogueVariables.StopListening(currentStory);
         inkExternalFunctions.Unbind(currentStory);
+        
 
     }
 
@@ -111,6 +112,7 @@ public class DialogueManager : MonoBehaviour
         else
         {
             ExitDialogueMode();
+            GameManager.isTalking = false;
         }
         canContinueToNextLine = false;
         //string nextLine = currentStory.Continue();

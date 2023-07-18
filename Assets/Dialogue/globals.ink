@@ -9,18 +9,23 @@ VAR bedside_Interactions = 0
 VAR isBedTime = false
 EXTERNAL bedTime(value)
 
-//KITCHEN
+//KITCHEN LIVING
 
 VAR fridge_Interactions = 0
+VAR hasEatenDinner = false
+
+EXTERNAL watchTv(watched)
 
 //BUS 
 VAR bus_Chosen = false
 VAR isLateToClass = false
 VAR FoundBus = false
+EXTERNAL busChosen(bus)
 
 //NOAH 
 VAR noah_Interractions = 0
 VAR spokenToNoah = false
+EXTERNAL timeSkip(skip)
 
 
 
@@ -30,7 +35,6 @@ EXTERNAL spokeTo(person)
 
 EXTERNAL turnNight(night)
 
-EXTERNAL dailyTasks(task)
 
 EXTERNAL sittingDown(sit)
 

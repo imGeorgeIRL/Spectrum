@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,8 +17,8 @@ public class PlayerMovement : MonoBehaviour
     private float savedXCoordinate;
     private Vector3 startingPosition;
 
-    public Animation leftIdle;
-    public Animation rightIdle;
+    //public Animation leftIdle;
+    //public Animation rightIdle;
 
 
     public Transform sitTransform;
@@ -56,31 +57,64 @@ public class PlayerMovement : MonoBehaviour
         if (DialogueManager.GetInstance().dialogueIsPlaying)
         {
             animator.SetBool("isWalking", false);
-            return;
+            
+            //return;
         }
         else
         {
-        float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveHorizontal = Input.GetAxis("Horizontal");
 
-        // Move the character horizontally
-        Vector2 movement = new Vector2(moveHorizontal * moveSpeed, rb.velocity.y);
-        rb.velocity = movement;
-
-        
+            // Move the character horizontally
+            Vector2 movement = new Vector2(moveHorizontal * moveSpeed, rb.velocity.y);
+            rb.velocity = movement;     
+            
+           
             if (moveHorizontal != 0f)
             {
-                animator.SetBool("isWalking", true);
-                animator.SetFloat("Direction", moveHorizontal);
-                
+                bool isTalking = animator.GetBool("isTalking");
+                if (GameManager.isTalking)
+                {
+                    if(moveHorizontal > 0f)
+                    {
+                        animator.Play("ANIM_Austin_Idle_Right");
+                        animator.SetBool("isTalking", true);
+                    }
+                    else
+                    {
+                        animator.Play("ANIM_Austin_Idle_Left");
+                        animator.SetBool("isTalking", true);
+                    }
+                }
+                else
+                {
+                    animator.SetBool("isWalking", true);
+                    animator.SetFloat("Direction", moveHorizontal);
+                    animator.SetBool("isTalking", false);
+
+                    if (GameManager.watchingTv)
+                    {
+                        GameManager.watchingTv = false;
+                    }
+                }
             }
             else
             {
                 animator.SetBool("isWalking", false);
-                
+
             }
-
-
+            
         }
+
+        if (GameManager.isTalking && !hasSat)
+        {
+            animator.SetBool("isTalking", true);
+            rb.velocity = Vector2.zero;
+        }
+        else
+        {
+            animator.SetBool("isTalking", false);
+        }
+
         if (GameManager.isSitting && GameManager.loadedScene == "UniClassroom" && !hasSat)
         {
             positionBeforeSit = transform.position;
@@ -89,7 +123,7 @@ public class PlayerMovement : MonoBehaviour
             hasSat = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
         {
             if (hasSat)
             {

@@ -28,7 +28,9 @@ public class DialogueTrigger : MonoBehaviour
             visualCue.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
+                
                 TriggerDialogue();
+                
             }
             if (playerInRange && triggerDialogueInRange)
             {
@@ -52,6 +54,8 @@ public class DialogueTrigger : MonoBehaviour
     }
     private void TriggerDialogue()
     {
+        GameManager.isTalking = true;
+        Debug.Log("is talking is " + GameManager.isTalking.ToString());
         DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
     }
     private void OnTriggerEnter2D(Collider2D collision)

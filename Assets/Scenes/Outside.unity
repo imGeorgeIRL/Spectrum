@@ -722,6 +722,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 67979281}
     m_Modifications:
+    - target: {fileID: 1123743644806943856, guid: 96d7ad30ef37b8941afafe1c706f0086, type: 3}
+      propertyPath: inkJSON
+      value: 
+      objectReference: {fileID: 4900000, guid: 0e68811ae79e2294389d4913b8f4181a, type: 3}
     - target: {fileID: 1123743644806943857, guid: 96d7ad30ef37b8941afafe1c706f0086, type: 3}
       propertyPath: m_Size.y
       value: 8.319765
@@ -1781,6 +1785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 138424107}
+  - component: {fileID: 138424108}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -1807,6 +1812,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &138424108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138424106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e509916a6d0c52c4585097d35fa48fef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npcArray:
+  - {fileID: 681872099}
+  - {fileID: 1961876591}
+  - {fileID: 1933430378}
+  - {fileID: 67979280}
 --- !u!1 &152679624
 GameObject:
   m_ObjectHideFlags: 0
@@ -15029,68 +15051,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c671f5fb6225a84ca8534abbb93668c, type: 3}
---- !u!1001 &6325528994046730228
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 97082117289014927, guid: 8ad1390128ce4f94a8358237465b8ba3, type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 697295269507654181, guid: 8ad1390128ce4f94a8358237465b8ba3, type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 697295269507654181, guid: 8ad1390128ce4f94a8358237465b8ba3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.60656
-      objectReference: {fileID: 0}
-    - target: {fileID: 697295269507654181, guid: 8ad1390128ce4f94a8358237465b8ba3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.2163798
-      objectReference: {fileID: 0}
-    - target: {fileID: 697295269507654181, guid: 8ad1390128ce4f94a8358237465b8ba3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 11.917357
-      objectReference: {fileID: 0}
-    - target: {fileID: 697295269507654181, guid: 8ad1390128ce4f94a8358237465b8ba3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 697295269507654181, guid: 8ad1390128ce4f94a8358237465b8ba3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 697295269507654181, guid: 8ad1390128ce4f94a8358237465b8ba3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 697295269507654181, guid: 8ad1390128ce4f94a8358237465b8ba3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 697295269507654181, guid: 8ad1390128ce4f94a8358237465b8ba3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 697295269507654181, guid: 8ad1390128ce4f94a8358237465b8ba3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 697295269507654181, guid: 8ad1390128ce4f94a8358237465b8ba3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1408202853156689103, guid: 8ad1390128ce4f94a8358237465b8ba3, type: 3}
-      propertyPath: clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 1cc73765f23659a4c88eec9813624291, type: 3}
-    - target: {fileID: 2891374637080060102, guid: 8ad1390128ce4f94a8358237465b8ba3, type: 3}
-      propertyPath: m_Name
-      value: AudioManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8ad1390128ce4f94a8358237465b8ba3, type: 3}

@@ -25,11 +25,30 @@ public class InkExternalFunctions
                 Debug.Log("Choice 3");
             }
         });
+        story.BindExternalFunction("busChosen", (int bus) =>
+        {
+            if (bus == 1)
+            {
+                GameManager.choiceSelected = 1;
+                Debug.Log("Choice 1");
+            }
+            else if (bus == 2)
+            {
+                GameManager.choiceSelected = 2;
+                Debug.Log("Choice 2");
+            }
+            else if (bus == 3)
+            {
+                GameManager.choiceSelected = 3;
+                Debug.Log("Choice 3");
+            }
+        });
         story.BindExternalFunction("spokeTo", (int person) =>
         {
             if (person == 1)
             {
                 GameManager.sensoryMetre += 5f;
+                GameManager.socialBattery -= 5f;
                 person -= 1;
             }
         });
@@ -44,28 +63,14 @@ public class InkExternalFunctions
                 GameManager.isDayTime = false;
             }
         });
-        story.BindExternalFunction("dailyTasks", (int task) =>
-        {
-            if (task == 1)
-            {
-                GameManager.eatenBreakfast = true;
-            }
-            if (task == 2)
-            {
-                GameManager.goneToUni = true;
-            }
-            if (task == 3)
-            {
-                GameManager.madeAFriend = true;
-            }
-        });
+        
         story.BindExternalFunction("sittingDown", (int sit) =>
         {
             if (sit == 1)
             {
                 GameManager.isSitting = true;
             }
-            else if (sit == 1)
+            else if (sit == 0)
             {
                 GameManager.isSitting = false;
             }
@@ -77,6 +82,25 @@ public class InkExternalFunctions
             {
                 GameManager.goToSleep = true;
                 Debug.Log("going to sleep");
+                value -= 1;
+            }
+
+        });
+        story.BindExternalFunction("watchTv", (int watched) =>
+        {
+            if (watched == 1)
+            {
+                GameManager.watchingTv = true;
+                watched -= 1;
+            }
+
+        });
+        story.BindExternalFunction("timeSkip", (int skip) =>
+        {
+            if (skip == 1)
+            {
+                GameManager.timeSkip = true;
+                skip -= 1;
             }
 
         });
@@ -85,9 +109,14 @@ public class InkExternalFunctions
     public void Unbind(Story story)
     {
         story.UnbindExternalFunction("makeChoice");
+        story.UnbindExternalFunction("busChosen");
         //Debug.Log("Choice made was " + GameManager.choiceSelected);
         story.UnbindExternalFunction("spokeTo");
         story.UnbindExternalFunction("turnNight");
+        story.UnbindExternalFunction("sittingDown");
+        story.UnbindExternalFunction("bedTime");
+        story.UnbindExternalFunction("watchTv");
+        story.UnbindExternalFunction("timeSkip");
     }
 
     

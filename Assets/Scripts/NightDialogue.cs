@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bed : MonoBehaviour
+public class NightDialogue : MonoBehaviour
 {
     public GameObject dialogueTrigger;
     // Start is called before the first frame update

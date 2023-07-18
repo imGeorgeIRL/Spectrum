@@ -39,6 +39,7 @@ public class BorderTrigger : MonoBehaviour
 
     private void TriggerDialogue()
     {
+        GameManager.isTalking = true;
         DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
     }
 

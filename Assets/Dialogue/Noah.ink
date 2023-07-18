@@ -37,7 +37,6 @@ Hey, what's up? #speaker:???
 
 ===Noah2===
 What's your name? #speaker:???
-~ dailyTasks(3)
 Austin #speaker:Austin
 ... #speaker:???
 Mine's Noah! #speaker:Noah
@@ -51,12 +50,18 @@ Mine's Noah! #speaker:Noah
         Thanks #speaker:Austin
         ~noah_Interractions += 1
         ~spokenToNoah = true
-        
+        ->DONE
+    *[cool]
+        nice to meet you #speaker:Noah
+        yeah, you too #speaker: Austin
+        ~noah_Interractions += 1
+        ~spokenToNoah = true
         ->DONE
 
 ===Noah3===
 Cant wait to get started #speaker: Noah
 ~turnNight(1)
+~timeSkip(1)
 me too #speaker: Austin
 ~spokenToNoah = true
 

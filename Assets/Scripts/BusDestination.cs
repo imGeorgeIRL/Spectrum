@@ -120,7 +120,7 @@ public class BusDestination : MonoBehaviour
     private IEnumerator waitForBus()
     {
         GameManager.choiceSelected = 0;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1.5f);
         
         SceneManager.UnloadSceneAsync(GameManager.loadedScene);
         GameManager.loadedScene = sceneToLoad;

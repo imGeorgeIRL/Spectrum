@@ -13,6 +13,7 @@ Good morning son! #speaker:Mr. Donaldson
 Good morning sir #speaker:Austin
 Please, call me Donny #speaker: Donny
 Okay sir #speaker: Austin
+~spokeTo(1)
 <shake a=0.7> I mean Donny!! </shake>
 ->DONE
 
