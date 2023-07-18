@@ -17,10 +17,16 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialogueBubble;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI displayNameText;
-    public TypewriterCore typewriterCore;
+
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
+
+    [Header("Audio")]
+    [SerializeField] private AudioClip dialogueTypingSoundClip;
+    [SerializeField] private bool stopAudioSource;
+    [SerializeField] private bool makePredictable;
+    private AudioSource audioSource;
 
     private TextMeshProUGUI[] choicesText;
     private int choiceID;
@@ -37,6 +43,7 @@ public class DialogueManager : MonoBehaviour
 
     private DialogueVariables dialogueVariables;
     private InkExternalFunctions inkExternalFunctions;
+
     private void Start()
     {
         dialogueIsPlaying = false;
@@ -50,6 +57,7 @@ public class DialogueManager : MonoBehaviour
             index++;
         }
         choices[choiceID].SetActive(true);
+        audioSource = GetComponent<AudioSource>();
     }
     private void Awake()
     {
@@ -61,6 +69,17 @@ public class DialogueManager : MonoBehaviour
         dialogueVariables = new DialogueVariables(loadGlobalsJSON);
         inkExternalFunctions = new InkExternalFunctions();
     }
+
+
+    public void PlayDialogueAudio()
+    {
+        if (stopAudioSource)
+        {
+            audioSource.Stop();
+        }
+            audioSource.PlayOneShot(dialogueTypingSoundClip);
+    }
+
 
     public static DialogueManager GetInstance()
     {
