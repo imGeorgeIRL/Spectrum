@@ -1469,6 +1469,7 @@ MonoBehaviour:
   dialogueBubble: {fileID: 4502435458633481015}
   dialogueText: {fileID: 4502435458335425956}
   displayNameText: {fileID: 4502435457939482623}
+  typewriterCore: {fileID: 0}
   choices:
   - {fileID: 4502435457273449970}
   - {fileID: 4502435457343327216}

@@ -5,6 +5,8 @@ using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
 using UnityEngine.SearchService;
+using Febucci.UI.Core;
+using Febucci.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -15,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject dialogueBubble;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI displayNameText;
+    public TypewriterCore typewriterCore;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -87,7 +90,12 @@ public class DialogueManager : MonoBehaviour
         {
             ContinueStory();
         }
+        if (dialogueIsPlaying && Input.GetKeyDown(KeyCode.Space))
+        {
+            
+        }
     }
+    
     private void ExitDialogueMode()
     {
         GameManager.isTalking = false;
