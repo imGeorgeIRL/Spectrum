@@ -91,27 +91,29 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            Debug.Log("choice selected was " + choiceSelected);
-        }
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            if (!isDayTime)
-            {
-                isDayTime = true;
-            }
-            else
-            {
-                isDayTime = false;
-            }
+        
+        //if (Input.GetKeyDown(KeyCode.T))
+        //{
+        //    if (!isDayTime)
+        //    {
+        //        isDayTime = true;
+        //    }
+        //    else
+        //    {
+        //        isDayTime = false;
+        //    }
             
-        }
+        //}
 
-        if (Input.GetKeyDown(KeyCode.N))
+        //if (Input.GetKeyDown(KeyCode.N))
+        //{
+        //    sensoryMetre += 10f;
+        //    socialBattery -= 10f;
+        //}
+
+        if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.P))
         {
-            sensoryMetre += 10f;
-            socialBattery -= 10f;
+            PlayerPrefs.DeleteAll();
         }
     }
 
@@ -166,16 +168,16 @@ public class GameManager : MonoBehaviour
             Debug.Log("No value for Social Battery, set to 100");
         }
     }
-
-    
-    
+     
 
 
 
     private static void OnDestroy()
     {
+        gameManagerLoaded = false;
         SceneManager.UnloadSceneAsync("ManagementScene");
         SaveSensoryMetre();
         SaveSocialBattery();
+        
     }
 }

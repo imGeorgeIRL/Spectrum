@@ -43,7 +43,9 @@ public class UIManager : MonoBehaviour
 
     public void MainMenuButton()
     {
+        GameManager.gameManagerLoaded = false;
         GameManager.loadedScene = "MainMenu";
         SceneManager.LoadScene("MainMenu");
+        
     }
 }

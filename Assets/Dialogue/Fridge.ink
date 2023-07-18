@@ -1,37 +1,34 @@
 INCLUDE globals.ink 
 
 {Day_Of_Week:
-- 0: ->NightTime
+- 0: {isNight: ->NightTime | ->Monday}
 - 1: -> Tuesday
 - 2: -> Wednesday
 - 3: -> Thursday
 - 4: -> Friday
 }
-#speaker:Austin
-===Monday===
 
-{turnNight(1): ->NightTime }
-{fridge_Interactions > 0: -> AlreadyDone | ->Main}
-=== Main ===
 
+=== Monday ===
+{fridge_Interactions == 1: -> AlreadyDone}
 what should I eat for breakfast?#speaker:Austin
     * Cereal
         which cereal?
             ** Fruity loops
                  So tasty!
-                ~ fridge_Interactions++
+                ~ fridge_Interactions = 1
                 -> DONE
             ** Corn Flakes
                  okay I suppose...
-                ~ fridge_Interactions++
+                ~ fridge_Interactions = 1
                 -> DONE
     * Toast
          <dangle a=0.5> yummy toast!</dangle>
-        ~ fridge_Interactions++
+        ~ fridge_Interactions = 1
         -> DONE
     * Nothing
          Not feeling that hungry this morning...
-        ~ fridge_Interactions++
+        ~ fridge_Interactions = 1
         -> DONE
 
         

@@ -27,6 +27,8 @@ public class StartupManager : MonoBehaviour
 
     }
 
+    
+
     private IEnumerator WaitForLoadedScene()
     {
         yield return new WaitForSeconds(1);

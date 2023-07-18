@@ -61,6 +61,7 @@ Mine's Noah! #speaker:Noah
 ===Noah3===
 Cant wait to get started #speaker: Noah
 ~turnNight(1)
+~isNight = true
 ~timeSkip(1)
 me too #speaker: Austin
 ~spokenToNoah = true
