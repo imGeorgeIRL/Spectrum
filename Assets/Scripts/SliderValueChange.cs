@@ -31,7 +31,7 @@ public class SliderValueChange : MonoBehaviour
     {
         isIncreasing = true;
 
-        slider.value += increaseRate;
+        GameManager.sensoryMetre += increaseRate;
         yield return new WaitForSeconds(increaseInterval);
 
         isIncreasing = false;

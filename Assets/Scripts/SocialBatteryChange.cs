@@ -31,7 +31,7 @@ public class SocialBatteryChange : MonoBehaviour
     {
         isIncreasing = true;
 
-        slider.value -= decreaseRate;
+        GameManager.socialBattery -= decreaseRate;
         yield return new WaitForSeconds(increaseInterval);
 
         isIncreasing = false;
