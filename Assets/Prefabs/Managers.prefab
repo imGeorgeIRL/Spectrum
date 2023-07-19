@@ -3349,6 +3349,7 @@ GameObject:
   - component: {fileID: 1926004019155873085}
   - component: {fileID: 4615543260481637608}
   - component: {fileID: 8870175992388796157}
+  - component: {fileID: 3008216942204967382}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -3432,3 +3433,15 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!225 &3008216942204967382
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6743652403713307578}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

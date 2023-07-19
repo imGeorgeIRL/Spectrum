@@ -1,7 +1,7 @@
 INCLUDE globals.ink 
 
 {Day_Of_Week:
-- 0: ->Monday
+- 0: -> Monday
 - 1: -> Tuesday
 - 2: -> Wednesday
 - 3: -> Thursday
@@ -12,15 +12,15 @@ INCLUDE globals.ink
 Phew, I made it in time #speaker:Austin
 now which bus did I have to catch again?
     *[519]
-    ~bus_Chosen(1)
+    ~busChosen(1)
     ~isLateToClass = true
 
     *[838]
-    ~bus_Chosen(2)
+    ~busChosen(2)
     ~isLateToClass = false
 
     *[827]
-    ~bus_Chosen(3)
+    ~busChosen(3)
     ~isLateToClass = true
 
 -oh! here it comes now!

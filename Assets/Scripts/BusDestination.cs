@@ -105,13 +105,25 @@ public class BusDestination : MonoBehaviour
                         break;
                 }
             }
-            else if (GameManager.loadedScene == "BusTerminal" || GameManager.loadedScene == "TownCentre")
+            else if (GameManager.loadedScene == "TownCentre")
             {
-                if (GameManager.choiceSelected == 1)
+                switch (GameManager.choiceSelected)
                 {
-                    sceneToLoad = "UniEntrance";
-                    StartCoroutine(waitForBus());
+                    case 1:
+                        //Go home
+                        sceneToLoad = "Outside";
+                        StartCoroutine(waitForBus());
+                        break;
+                    case 2:
+                        //Go to Town Centre
+                        sceneToLoad = "UniEntrance";
+                        StartCoroutine(waitForBus());
+                        break;
+                    default:
+                        Debug.Log("there was no value for choiceSelected!");
+                        break;
                 }
+                
             }
 
         }

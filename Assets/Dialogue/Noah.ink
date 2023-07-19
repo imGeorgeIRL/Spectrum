@@ -15,7 +15,7 @@ INCLUDE globals.ink
 {noah_Interractions >= 2: ->Noah3}
 
 Hey, what's up? #speaker:??? 
-    *[Dr. Miller told me to ask if I can sit here,]
+    *[Dr. Miller told me to sit here,]
         is that okay? #speaker:Austin
         yeah! that's totally fine
         seat's all yours.

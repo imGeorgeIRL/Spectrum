@@ -29,19 +29,19 @@ EXTERNAL busChosen(bus)
 VAR noah_Interractions = 0
 VAR spokenToNoah = false
 EXTERNAL timeSkip(skip)
-~timeSkip(0)
+
 
 EXTERNAL makeChoice(choice)
-~makeChoice(0)
+
 
 EXTERNAL spokeTo(person)
-~spokeTo(0)
+
 
 EXTERNAL turnNight(night)
-~turnNight(0)
+
 
 EXTERNAL sittingDown(sit)
-~sittingDown(0)
+
 
 
 

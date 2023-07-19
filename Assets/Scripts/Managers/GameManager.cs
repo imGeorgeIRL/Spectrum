@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public static bool isTalking;
 
     //Time of day ******************************************
-    public static bool isDayTime = true;
+    public static bool isDayTime;
     public static bool goToSleep = false;
 
     //Scene loading *****************************************
@@ -87,6 +87,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(StartLoadingScreen());
         LoadSensoryMetre();
         LoadSocialBattery();
+        isDayTime = true;
     }
 
     private void Update()
