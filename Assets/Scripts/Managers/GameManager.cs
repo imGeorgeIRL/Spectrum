@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        
+
         //if (Input.GetKeyDown(KeyCode.T))
         //{
         //    if (!isDayTime)
@@ -103,14 +103,14 @@ public class GameManager : MonoBehaviour
         //    {
         //        isDayTime = false;
         //    }
-            
+
         //}
 
-        //if (Input.GetKeyDown(KeyCode.N))
-        //{
-        //    sensoryMetre += 10f;
-        //    socialBattery -= 10f;
-        //}
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            sensoryMetre += 10f;
+            socialBattery -= 10f;
+        }
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.P))
         {
