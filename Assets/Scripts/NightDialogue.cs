@@ -9,6 +9,7 @@ public class NightDialogue : MonoBehaviour
     void Start()
     {
         dialogueTrigger.SetActive(false);
+        Debug.Log("Dialogue is Inactive for " + name);
     }
 
     // Update is called once per frame
@@ -17,6 +18,10 @@ public class NightDialogue : MonoBehaviour
         if (!GameManager.isDayTime)
         {
             dialogueTrigger.SetActive(true);
+        }
+        else
+        {
+            dialogueTrigger.SetActive(false);
         }
     }
 }

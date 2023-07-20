@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SocialBatteryChange : MonoBehaviour
 {
     public Slider slider;
-    private float decreaseRate = 0.5f;
+    private float decreaseRate = 1f;
 
     public float increaseInterval;
 

@@ -44,7 +44,7 @@ public class DoorController : MonoBehaviour
         
         if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
         {
-
+            GameManager.isTalking = false;
             switch (gameObject.tag)
             {
                 case "BedroomDoor":

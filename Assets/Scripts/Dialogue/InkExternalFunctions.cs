@@ -104,6 +104,15 @@ public class InkExternalFunctions
             }
 
         });
+        story.BindExternalFunction("drMiller", (int interact) =>
+        {
+            if (interact == 1)
+            {
+                GameManager.spokenToMiller = true;
+                
+            }
+
+        });
     }
 
     public void Unbind(Story story)

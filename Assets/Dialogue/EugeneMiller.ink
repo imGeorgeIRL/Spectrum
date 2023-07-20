@@ -22,6 +22,7 @@ having access to lecture notes.
 yeah of course kiddo, #speaker: Miller
 let me know if you need anything else
 and just take a seat over there by the door
+~drMiller(1)
 thank you. #speaker: Austin
     ->DONE
 
@@ -42,6 +43,8 @@ You're late. #speaker: Miller
             ** [sorta??]
                 then sorta. #speaker: Miller
     - You can go take a seat over by the door #speaker: Miller
+    ~drMiller(1)
+thank you #speaker: Austin
     ->DONE
 
 ===Tuesday===

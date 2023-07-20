@@ -42,7 +42,7 @@ public class BlackScreen : MonoBehaviour
 
     private IEnumerator NightToDay()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(1f);
         yield return StartCoroutine(FadeCanvasGroup(0f, 1f));
         yield return new WaitForSeconds(1.5f);
 

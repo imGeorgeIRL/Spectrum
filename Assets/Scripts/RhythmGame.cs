@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class RhythmGame : MonoBehaviour
 {
     public GameObject rhythmVisualCue;
-    public Slider slider;
+    public Slider sensorySlider;
+    public Slider socialSlider;
 
     private float ringSizeDecreaseSpeed = 0.2f;
 
@@ -33,7 +34,8 @@ public class RhythmGame : MonoBehaviour
         rhythmVisualCue.SetActive(false);
         cueObject.SetActive(false);
         
-        slider.value = GameManager.sensoryMetre;
+        sensorySlider.value = GameManager.sensoryMetre;
+        socialSlider.value = GameManager.socialBattery;
         foreach (GameObject star in starArray)
         {
             star.SetActive(false);
@@ -196,6 +198,7 @@ public class RhythmGame : MonoBehaviour
         yield return new WaitForSeconds(1f);
                
         GameManager.sensoryMetre -= 20f;
+        GameManager.socialBattery += 20f;
         visualCueActive = false;
         
     }

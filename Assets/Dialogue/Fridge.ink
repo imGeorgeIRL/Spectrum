@@ -10,7 +10,8 @@ INCLUDE globals.ink
 
 
 === Monday ===
-{fridge_Interactions == 1: -> AlreadyDone}
+{fridge_Interactions == 1: -> AlreadyDone | ->MondayNotEaten}
+=MondayNotEaten
 what should I eat for breakfast?#speaker:Austin
     * Cereal
         which cereal?

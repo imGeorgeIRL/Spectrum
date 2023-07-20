@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     public static bool isTalking;
 
+    public static bool spokenToMiller;
+
     //Time of day ******************************************
     public static bool isDayTime;
     public static bool goToSleep = false;
@@ -35,6 +37,7 @@ public class GameManager : MonoBehaviour
                 if (instance != null)
                 {
                     instance.StartCoroutine(instance.StartLoadingScreen());
+                    
                 }
             }
         }
@@ -120,6 +123,7 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator StartLoadingScreen()
     {
+        isTalking = false;
         loadingScreen.SetActive(true);
         yield return new WaitForSeconds(2);
         loadingScreen.SetActive(false);

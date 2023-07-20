@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SliderValueChange : MonoBehaviour
 {
     public Slider slider;
-    private float increaseRate = 0.5f;
+    private float increaseRate = 1f;
 
     public float increaseInterval;
     
@@ -23,7 +23,7 @@ public class SliderValueChange : MonoBehaviour
 
         if (GameManager.loadedScene == "BusTerminal")
         {
-            increaseRate = 2f;
+            increaseRate = 3f;
         }
     }
 

@@ -18,6 +18,7 @@ public class StartupManager : MonoBehaviour
 
             GameManager.gameManagerLoaded = true;
             StartCoroutine(WaitForLoadedScene());
+            
         }
         else
         {
@@ -25,6 +26,7 @@ public class StartupManager : MonoBehaviour
         }
         // Load the game manager scene asynchronously
 
+        GameManager.isTalking = false;
     }
 
     
