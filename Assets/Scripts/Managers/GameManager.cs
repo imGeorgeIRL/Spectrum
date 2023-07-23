@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     //Player stats *******************************************
     public static float sensoryMetre;
     public static float socialBattery;
+    public static bool rhythmActive;
 
     public static bool isSitting = false;
 

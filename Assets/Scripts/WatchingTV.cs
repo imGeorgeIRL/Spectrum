@@ -8,6 +8,7 @@ public class WatchingTV : MonoBehaviour
     public GameObject character;
     private Animator animator;
     public GameObject tvScreen;
+    public GameObject dialogueSystem;
 
     private BoxCollider2D bx;
     private Renderer couchRenderer;
@@ -31,7 +32,8 @@ public class WatchingTV : MonoBehaviour
     void Update()
     {
         if (GameManager.watchingTv && !watching)
-        {            
+        {
+            dialogueSystem.SetActive(false);
             StartCoroutine(WatchTV());            
         }
 
@@ -45,20 +47,23 @@ public class WatchingTV : MonoBehaviour
             animator.SetBool("isSitting", false);
             tvScreen.SetActive(false);
             couchRenderer.sortingOrder = 3;
+            dialogueSystem.SetActive(true);
+            GameManager.watchingTv = false;
         }
     }
 
     private IEnumerator WatchTV()
-    {
+    {        
         watching = true;
         startingPosition = character.transform.position;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         bx.enabled = true;
         character.transform.position = sitPosition;
         character.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
         animator.SetBool("isSitting", true);
         tvScreen.SetActive(true);
         couchRenderer.sortingOrder = 11;
+        
     }
 
     private IEnumerator StopWatchingTV()
@@ -70,5 +75,6 @@ public class WatchingTV : MonoBehaviour
         animator.SetBool("isSitting", false);
         tvScreen.SetActive(false);
         couchRenderer.sortingOrder = 3;
+        dialogueSystem.SetActive(true);
     }
 }

@@ -14,9 +14,13 @@ public class BedsideTable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.interactedWithWardrobe)
+        if (GameManager.interactedWithWardrobe && !GameManager.rhythmActive)
         {
             dialogueSystem.SetActive(true);
+        }
+        else
+        {
+            dialogueSystem.SetActive(false);
         }
     }
 }

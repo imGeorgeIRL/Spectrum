@@ -21,9 +21,9 @@ public class SocialBatteryChange : MonoBehaviour
             StartCoroutine(IncreaseSliderValue());
         }
 
-        if (GameManager.loadedScene == "BusTerminal")
+        if (GameManager.loadedScene == "Bedroom" || GameManager.loadedScene == "LoungeKitchen")
         {
-
+            decreaseRate = -1f;
         }
     }
 

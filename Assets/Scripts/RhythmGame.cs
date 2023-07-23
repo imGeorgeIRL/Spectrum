@@ -10,13 +10,14 @@ public class RhythmGame : MonoBehaviour
     public Slider sensorySlider;
     public Slider socialSlider;
 
-    private float ringSizeDecreaseSpeed = 0.2f;
+    private float ringSizeDecreaseSpeed = 0.3f;
 
     
     public GameObject cueObject;
     public GameObject ringPrefab;
 
     public GameObject[] starArray;
+    public GameObject[] dialogueTriggerArray;
 
     private bool visualCueActive = false;
 
@@ -30,7 +31,6 @@ public class RhythmGame : MonoBehaviour
 
     private GameObject currentRing;
 
-    public GameObject dialogueManager;
     private void Start()
     {
         rhythmVisualCue.SetActive(false);
@@ -47,18 +47,23 @@ public class RhythmGame : MonoBehaviour
 
     public void StartGame()
     {
-        rhythmVisualCue.SetActive(false);
+        foreach (GameObject trigger in  dialogueTriggerArray)
+        {
+            trigger.SetActive(false);
+        }
+        GameManager.rhythmActive = true;
         // Show the visual cue
         cueObject.SetActive(true);
         hasSucceeded = false;
         gameFinished = false;
-        dialogueManager.SetActive(false);
+        
         // Start the rhythm mechanic
         StartCoroutine(StartRhythmMechanic());
     }
 
     private IEnumerator StartRhythmMechanic()
     {
+        rhythmVisualCue.SetActive(false);
         yield return new WaitForSeconds(Random.Range(1f, 3f));
         if (!rhythmRunning && !gameFinished)
         {
@@ -84,7 +89,7 @@ public class RhythmGame : MonoBehaviour
                 ring.GetComponent<SpriteRenderer>().color = Color.green;
                 StartCoroutine(ResetColorAndCheckSuccess(ring));
             }
-            if (ring.transform.localScale.x <= 0.35f && isGreen)
+            if (ring.transform.localScale.x <= 0.3f && isGreen)
             {
                 isGreen = false;
                 ring.GetComponent<SpriteRenderer>().color = Color.white;
@@ -200,7 +205,13 @@ public class RhythmGame : MonoBehaviour
         yield return new WaitForSeconds(1f);
                
         GameManager.sensoryMetre -= 40f;
+        rhythmVisualCue.SetActive(false);
+        cueObject.SetActive(false);
         visualCueActive = false;
-        dialogueManager.SetActive(true);
+        foreach (GameObject trigger in dialogueTriggerArray)
+        {
+            trigger.SetActive(true);
+        }
+        GameManager.rhythmActive = false;
     }
 }

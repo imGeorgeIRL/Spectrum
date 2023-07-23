@@ -2872,6 +2872,26 @@ PrefabInstance:
       propertyPath: starArray.Array.data[2]
       value: 
       objectReference: {fileID: 117615553992633994}
+    - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+      propertyPath: dialogueTriggerArray.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+      propertyPath: dialogueTriggerArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 4021538660991992030}
+    - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+      propertyPath: dialogueTriggerArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 834536889}
+    - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+      propertyPath: dialogueTriggerArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 1588594183}
+    - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+      propertyPath: dialogueTriggerArray.Array.data[3]
+      value: 
+      objectReference: {fileID: 757238156}
     - target: {fileID: 7525181493217329914, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
@@ -3074,6 +3094,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
+--- !u!1 &4021538660991992030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4021538660932786426, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
+  m_PrefabInstance: {fileID: 4021538660991992029}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4422954462516769283
 PrefabInstance:
   m_ObjectHideFlags: 0

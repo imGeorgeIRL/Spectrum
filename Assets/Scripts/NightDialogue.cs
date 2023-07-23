@@ -16,7 +16,14 @@ public class NightDialogue : MonoBehaviour
     {
         if (!GameManager.isDayTime)
         {
-            dialogueTrigger.SetActive(true);
+            if (GameManager.watchingTv)
+            {
+                dialogueTrigger.SetActive(false);
+            }
+            else
+            {
+                dialogueTrigger.SetActive(true);
+            }
         }
         else
         {

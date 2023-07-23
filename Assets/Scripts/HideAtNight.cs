@@ -16,7 +16,14 @@ public class HideAtNight : MonoBehaviour
     {
         if (GameManager.isDayTime)
         {
-            dialogueSystem.SetActive(true);
+            if (GameManager.rhythmActive)
+            {
+                dialogueSystem.SetActive(false);
+            }
+            else
+            {
+                dialogueSystem.SetActive(true);
+            }
         }
         else
         {
