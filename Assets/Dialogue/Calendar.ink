@@ -33,6 +33,7 @@ INCLUDE globals.ink
 === Monday2 ===
 better check my planner #speaker:Austin
 I wonder where I left it?
+~calendarInteract(1)
 -> END
 
 //TUESDAY

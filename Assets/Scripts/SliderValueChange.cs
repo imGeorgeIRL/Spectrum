@@ -23,7 +23,7 @@ public class SliderValueChange : MonoBehaviour
 
         if (GameManager.loadedScene == "BusTerminal")
         {
-            increaseRate = 3f;
+            increaseRate = 1.5f;
         }
     }
 

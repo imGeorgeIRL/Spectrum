@@ -2,25 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NightDialogue : MonoBehaviour
+public class HideAtNight : MonoBehaviour
 {
-    public GameObject dialogueTrigger;
+    public GameObject dialogueSystem;
     // Start is called before the first frame update
     void Start()
     {
-        dialogueTrigger.SetActive(false);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager.isDayTime)
+        if (GameManager.isDayTime)
         {
-            dialogueTrigger.SetActive(true);
+            dialogueSystem.SetActive(true);
         }
         else
         {
-            dialogueTrigger.SetActive(false);
+            dialogueSystem.SetActive(false);
         }
     }
 }

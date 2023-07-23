@@ -217,6 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 165813219}
   - component: {fileID: 165813218}
+  - component: {fileID: 165813220}
   m_Layer: 0
   m_Name: Wardrobe
   m_TagString: Untagged
@@ -292,6 +293,19 @@ Transform:
   m_Father: {fileID: 1541416046}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &165813220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165813217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c1f358bad2123c409a6c5b8f5ada695, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueSystem: {fileID: 757238156}
 --- !u!1 &192885518 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1731178772919400174, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
@@ -470,6 +484,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4021538660932786421, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
   m_PrefabInstance: {fileID: 4021538660991992029}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &266263878 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4502435457891224757, guid: 9d0b4ebc641893f4886346a42c3d3940, type: 3}
+  m_PrefabInstance: {fileID: 1642444688}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &410274506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -507,11 +526,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1123743645324737854, guid: 96d7ad30ef37b8941afafe1c706f0086, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.6385219
+      value: 5.49
       objectReference: {fileID: 0}
     - target: {fileID: 1123743645324737854, guid: 96d7ad30ef37b8941afafe1c706f0086, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.51
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: 1123743645324737854, guid: 96d7ad30ef37b8941afafe1c706f0086, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1043,6 +1062,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.4118872, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &757238156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1042192150695115438, guid: 3eb2c2d52c4a49a41adb6919253393d0, type: 3}
+  m_PrefabInstance: {fileID: 1042192149739918236}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &834536889 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1123743645324737855, guid: 96d7ad30ef37b8941afafe1c706f0086, type: 3}
@@ -2161,6 +2185,11 @@ Transform:
   m_Father: {fileID: 882802717}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1588594183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1042192150695115438, guid: 3eb2c2d52c4a49a41adb6919253393d0, type: 3}
+  m_PrefabInstance: {fileID: 1456790825}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1588615804
 GameObject:
   m_ObjectHideFlags: 0
@@ -2497,6 +2526,7 @@ GameObject:
   - component: {fileID: 1783417423}
   - component: {fileID: 1783417422}
   - component: {fileID: 1783417424}
+  - component: {fileID: 1783417425}
   m_Layer: 0
   m_Name: Bedside Table
   m_TagString: Untagged
@@ -2598,6 +2628,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.17, y: 6.14}
   m_EdgeRadius: 0
+--- !u!114 &1783417425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783417421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b2c249e5738e44b92b2101bd381a32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueSystem: {fileID: 1588594183}
 --- !u!1 &1870083413
 GameObject:
   m_ObjectHideFlags: 0
@@ -2805,6 +2848,10 @@ PrefabInstance:
       propertyPath: ringPrefab
       value: 
       objectReference: {fileID: 6830379857877301846, guid: dc9f25bd358f62b4686a9b0632e9d892, type: 3}
+    - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 266263878}
     - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
       propertyPath: rhythmVisualCue
       value: 

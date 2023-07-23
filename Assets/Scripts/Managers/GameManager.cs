@@ -65,6 +65,8 @@ public class GameManager : MonoBehaviour
     //LIVING ROOM*************************************************
     public static bool watchingTv = false;
 
+    //OBJECT INTERACTIONS
+    public static bool interactedWithWardrobe;
 
 
     private void Awake()
@@ -96,18 +98,18 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
 
-        //if (Input.GetKeyDown(KeyCode.T))
-        //{
-        //    if (!isDayTime)
-        //    {
-        //        isDayTime = true;
-        //    }
-        //    else
-        //    {
-        //        isDayTime = false;
-        //    }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            if (!isDayTime)
+            {
+                isDayTime = true;
+            }
+            else
+            {
+                isDayTime = false;
+            }
 
-        //}
+        }
 
         if (Input.GetKeyDown(KeyCode.N))
         {

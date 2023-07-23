@@ -10,6 +10,9 @@ using Febucci.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    [Header("Params")]
+    private float typingSpeed = 0.02f;
+
     [Header("Globals JSON")]
     [SerializeField] private TextAsset loadGlobalsJSON;
 
@@ -35,7 +38,11 @@ public class DialogueManager : MonoBehaviour
     private Story currentStory;
 
     public bool dialogueIsPlaying { get; private set; }
+
+    private Coroutine displayLineCoroutine;
+
     private bool canContinueToNextLine = false;
+
 
     private static DialogueManager instance;
 
@@ -105,13 +112,11 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (canContinueToNextLine && currentStory.currentChoices.Count == 0 && Input.GetButtonDown("Submit"))
+        if (canContinueToNextLine 
+            && currentStory.currentChoices.Count == 0 
+            && Input.GetButtonDown("Submit"))
         {
             ContinueStory();
-        }
-        if (dialogueIsPlaying && Input.GetKeyDown(KeyCode.Space))
-        {
-            
         }
     }
     
@@ -130,28 +135,62 @@ public class DialogueManager : MonoBehaviour
 
     private void ContinueStory()
     {
+        
         if (currentStory.canContinue)
         {
-            dialogueText.text = currentStory.Continue();
-            DisplayChoices();
-            HandleTags(currentStory.currentTags);
+            if (displayLineCoroutine != null)
+            {
+                StopCoroutine(displayLineCoroutine);
+            }
+            string nextLine = currentStory.Continue();
+            if (nextLine.Equals("") && !currentStory.canContinue)
+            {
+                ExitDialogueMode();
+            }
+            else
+            {
+                DisplayChoices();
+                HandleTags(currentStory.currentTags);
+                displayLineCoroutine = StartCoroutine(DisplayLine(nextLine));
+            }
         }
         else
         {
             ExitDialogueMode();
             GameManager.isTalking = false;
         }
-        canContinueToNextLine = false;
-        //string nextLine = currentStory.Continue();
-        //if (nextLine.Equals("") && !currentStory.canContinue)
-        //{
-        //    ExitDialogueMode();
-        //}
     }
-    public void CanContinue()
+
+
+    private IEnumerator DisplayLine(string line)
     {
+        canContinueToNextLine = false;
+        dialogueText.text = line;
+        dialogueText.maxVisibleCharacters = 0;
+
+        bool isAddingRichTextTag = false;
+        foreach (char letter in line.ToCharArray())
+        {
+            if (letter == '<' || isAddingRichTextTag)
+            {
+                isAddingRichTextTag = true;
+                if (letter == '>')
+                {
+                    isAddingRichTextTag = false;
+                }
+            }
+            else
+            {
+                dialogueText.maxVisibleCharacters++;
+                yield return new WaitForSeconds(typingSpeed);
+            }
+
+        }
+        
         canContinueToNextLine = true;
     }
+
+
 
     private void HandleTags(List<string> currentTags)
     {

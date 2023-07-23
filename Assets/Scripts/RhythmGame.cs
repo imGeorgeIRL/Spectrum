@@ -29,6 +29,8 @@ public class RhythmGame : MonoBehaviour
     private int successes = 0;
 
     private GameObject currentRing;
+
+    public GameObject dialogueManager;
     private void Start()
     {
         rhythmVisualCue.SetActive(false);
@@ -50,7 +52,7 @@ public class RhythmGame : MonoBehaviour
         cueObject.SetActive(true);
         hasSucceeded = false;
         gameFinished = false;
-
+        dialogueManager.SetActive(false);
         // Start the rhythm mechanic
         StartCoroutine(StartRhythmMechanic());
     }
@@ -82,7 +84,7 @@ public class RhythmGame : MonoBehaviour
                 ring.GetComponent<SpriteRenderer>().color = Color.green;
                 StartCoroutine(ResetColorAndCheckSuccess(ring));
             }
-            if (ring.transform.localScale.x <= 0.3f && isGreen)
+            if (ring.transform.localScale.x <= 0.35f && isGreen)
             {
                 isGreen = false;
                 ring.GetComponent<SpriteRenderer>().color = Color.white;
@@ -197,9 +199,8 @@ public class RhythmGame : MonoBehaviour
         StopCoroutine(StartRhythmMechanic());
         yield return new WaitForSeconds(1f);
                
-        GameManager.sensoryMetre -= 20f;
-        GameManager.socialBattery += 20f;
+        GameManager.sensoryMetre -= 40f;
         visualCueActive = false;
-        
+        dialogueManager.SetActive(true);
     }
 }

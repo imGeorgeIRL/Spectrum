@@ -10,6 +10,8 @@ VAR isBedTime = false
 EXTERNAL bedTime(value)
 ~bedTime(0)
 
+EXTERNAL calendarInteract(cal)
+
 //KITCHEN LIVING
 
 VAR fridge_Interactions = 0

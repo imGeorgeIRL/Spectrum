@@ -113,6 +113,14 @@ public class InkExternalFunctions
             }
 
         });
+        story.BindExternalFunction("calendarInteract", (int cal) =>
+        {
+            if (cal == 1)
+            {
+                GameManager.interactedWithWardrobe = true;
+                cal -= 1;
+            }
+        });
     }
 
     public void Unbind(Story story)
