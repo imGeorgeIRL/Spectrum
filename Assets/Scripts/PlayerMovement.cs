@@ -54,84 +54,100 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (DialogueManager.GetInstance().dialogueIsPlaying)
+        if (GameManager.sensoryMetre >= 95f)
         {
+            animator.SetFloat("Direction", 0f);
             animator.SetBool("isWalking", false);
+            animator.SetBool("isPanic", true);
             
-            //return;
+            rb.velocity = Vector2.zero;
+            animator.speed = 3f;
         }
         else
         {
-            float moveHorizontal = Input.GetAxis("Horizontal");
-
-            // Move the character horizontally
-            Vector2 movement = new Vector2(moveHorizontal * moveSpeed, rb.velocity.y);
-            rb.velocity = movement;     
-            
-           
-            if (moveHorizontal != 0f)
+            if (DialogueManager.GetInstance().dialogueIsPlaying)
             {
-                bool isTalking = animator.GetBool("isTalking");
-                if (GameManager.isTalking)
+                animator.SetBool("isWalking", false);
+
+                //return;
+            }
+            else
+            {
+                animator.SetBool("isPanic", false);
+                animator.speed = 1f;
+
+                float moveHorizontal = Input.GetAxis("Horizontal");
+
+                // Move the character horizontally
+                Vector2 movement = new Vector2(moveHorizontal * moveSpeed, rb.velocity.y);
+                rb.velocity = movement;
+
+
+                if (moveHorizontal != 0f)
                 {
-                    if(moveHorizontal > 0f)
+                    bool isTalking = animator.GetBool("isTalking");
+                    if (GameManager.isTalking)
                     {
-                        animator.Play("ANIM_Austin_Idle_Right");
-                        animator.SetBool("isTalking", true);
+                        if (moveHorizontal > 0f)
+                        {
+                            animator.Play("ANIM_Austin_Idle_Right");
+                            animator.SetBool("isTalking", true);
+                        }
+                        else
+                        {
+                            animator.Play("ANIM_Austin_Idle_Left");
+                            animator.SetBool("isTalking", true);
+                        }
                     }
                     else
                     {
-                        animator.Play("ANIM_Austin_Idle_Left");
-                        animator.SetBool("isTalking", true);
+                        animator.SetBool("isWalking", true);
+                        animator.SetFloat("Direction", moveHorizontal);
+                        animator.SetBool("isTalking", false);
+
+                        if (GameManager.watchingTv)
+                        {
+                            GameManager.watchingTv = false;
+                        }
                     }
                 }
                 else
                 {
-                    animator.SetBool("isWalking", true);
-                    animator.SetFloat("Direction", moveHorizontal);
-                    animator.SetBool("isTalking", false);
+                    animator.SetBool("isWalking", false);
 
-                    if (GameManager.watchingTv)
-                    {
-                        GameManager.watchingTv = false;
-                    }
                 }
+
+            }
+
+            if (GameManager.isTalking && !hasSat)
+            {
+                animator.SetBool("isTalking", true);
+                rb.velocity = Vector2.zero;
             }
             else
             {
-                animator.SetBool("isWalking", false);
-
+                animator.SetBool("isTalking", false);
             }
-            
-        }
 
-        if (GameManager.isTalking && !hasSat)
-        {
-            animator.SetBool("isTalking", true);
-            rb.velocity = Vector2.zero;
-        }
-        else
-        {
-            animator.SetBool("isTalking", false);
-        }
-
-        if (GameManager.isSitting && GameManager.loadedScene == "UniClassroom" && !hasSat)
-        {
-            positionBeforeSit = transform.position;
-            Debug.Log("Position saved at " + positionBeforeSit);
-            SitDown();
-            hasSat = true;
-        }
-
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
-        {
-            if (hasSat)
+            if (GameManager.isSitting && GameManager.loadedScene == "UniClassroom" && !hasSat)
             {
-                GameManager.isSitting = false;
-                StandUp();
+                positionBeforeSit = transform.position;
+                Debug.Log("Position saved at " + positionBeforeSit);
+                SitDown();
+                hasSat = true;
             }
-        }
 
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+            {
+                if (hasSat)
+                {
+                    GameManager.isSitting = false;
+                    StandUp();
+                }
+            }
+
+
+        }
     }
 
     private void StandUp()

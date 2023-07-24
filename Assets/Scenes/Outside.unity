@@ -9906,6 +9906,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 347777463952844421, guid: 9d0b4ebc641893f4886346a42c3d3940, type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 1445066765}
     - target: {fileID: 700372444015935816, guid: 9d0b4ebc641893f4886346a42c3d3940, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

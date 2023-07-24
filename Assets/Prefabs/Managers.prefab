@@ -2460,6 +2460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17d6daf029cf014c82514e9164a1f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  postProcessVol: {fileID: 4502435458342518486}
 --- !u!1 &4502435458356024246
 GameObject:
   m_ObjectHideFlags: 0
@@ -2585,7 +2586,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 27
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

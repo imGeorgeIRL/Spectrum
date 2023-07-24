@@ -88,6 +88,7 @@ public class SliderValueChange : MonoBehaviour
             }
         }
         GameManager.sensoryMetre += increaseRate;
+        GameManager.sensoryMetre = Mathf.Clamp(GameManager.sensoryMetre, 0, 100);
         yield return new WaitForSeconds(increaseInterval);
 
         isIncreasing = false;

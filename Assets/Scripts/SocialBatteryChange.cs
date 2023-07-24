@@ -37,6 +37,7 @@ public class SocialBatteryChange : MonoBehaviour
         isIncreasing = true;
 
         GameManager.socialBattery -= decreaseRate;
+        GameManager.socialBattery = Mathf.Clamp(GameManager.socialBattery, 0, 100);
         yield return new WaitForSeconds(increaseInterval);
 
         isIncreasing = false;
