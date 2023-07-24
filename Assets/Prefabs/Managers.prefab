@@ -2408,6 +2408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4502435458342518487}
   - component: {fileID: 4502435458342518486}
+  - component: {fileID: 347777463952844421}
   m_Layer: 8
   m_Name: PostProcessVolume
   m_TagString: Untagged
@@ -2447,6 +2448,18 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
+--- !u!114 &347777463952844421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4502435458342518481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17d6daf029cf014c82514e9164a1f4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4502435458356024246
 GameObject:
   m_ObjectHideFlags: 0
@@ -2601,7 +2614,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 4502435458499820903}
-  increaseInterval: 5
   dialogueManager: {fileID: 4502435457891224747}
 --- !u!114 &6785200864525224566
 MonoBehaviour:
