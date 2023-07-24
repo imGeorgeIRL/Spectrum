@@ -9,14 +9,20 @@ INCLUDE globals.ink
 }
 
 ===Monday===
+{townNPC3 : ->Monday2 }
 what? #speaker:Guy
 uh... #speaker:Austin
 spit it out dude. #speaker:Guy
 sorry #speaker:Austin
 ~spokeTo(1)
+~townNPC3 = true
 bye
 ->DONE
 
+===Monday2===
+What do you want? #speaker:Guy
+nothing, sorry #speaker:Austin
+->DONE
 
 ===Tuesday===
 ->DONE

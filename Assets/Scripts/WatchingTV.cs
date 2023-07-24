@@ -69,6 +69,20 @@ public class WatchingTV : MonoBehaviour
             dialogueSystem.SetActive(true);
             GameManager.watchingTv = false;
 
+            if (GameManager.spaceDoc)
+            {
+                GameManager.socialBattery += 15f;
+                GameManager.sensoryMetre -= 8f;
+            }
+            else if (GameManager.news)
+            {
+                GameManager.sensoryMetre += 5f;
+                GameManager.socialBattery -= 10f;
+            }
+            else if (GameManager.realityTv)
+            {
+                GameManager.sensoryMetre += 15f;
+            }
             audioSource.Stop();
             GameManager.spaceDoc = false;
             GameManager.news = false;

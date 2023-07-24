@@ -25,6 +25,11 @@ public class SocialBatteryChange : MonoBehaviour
         {
             decreaseRate = -1f;
         }
+
+        if (GameManager.safeZoneActive)
+        {
+            decreaseRate = -1f;
+        }
     }
 
     private IEnumerator IncreaseSliderValue()

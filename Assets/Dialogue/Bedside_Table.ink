@@ -19,9 +19,9 @@ INCLUDE globals.ink
 {isNight : ->MondayNight }
 Oh here it is!#speaker:Austin
 whats on the agenda today?
-breakfast, uni, make a friend
-should be easy enough
-maybe...
+breakfast, uni, make a friend!
+This is gonna be really overstimulating
+so many new things today
 ->DONE
 
 =MondayNight

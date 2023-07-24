@@ -26,6 +26,7 @@ public class SliderValueChange : MonoBehaviour
             increaseInterval = 2f;
         }
 
+
         
     }
 
@@ -34,35 +35,56 @@ public class SliderValueChange : MonoBehaviour
         isIncreasing = true;
         if(GameManager.socialBattery <=100f && GameManager.socialBattery > 50)
         {
-            if (GameManager.loadedScene == "Bedroom" || GameManager.loadedScene == "LoungeKitchen")
+            if (GameManager.safeZoneActive)
             {
                 increaseRate = -1f;
             }
             else
             {
-                increaseRate = 0.7f;
+                if (GameManager.loadedScene == "Bedroom" || GameManager.loadedScene == "LoungeKitchen")
+                {
+                    increaseRate = -1f;
+                }
+                else
+                {
+                    increaseRate = 0.7f;
+                }
             }
         }
         else if (GameManager.socialBattery <=50 && GameManager.socialBattery > 25)
         {
-            if (GameManager.loadedScene == "Bedroom" || GameManager.loadedScene == "LoungeKitchen")
+            if (GameManager.safeZoneActive)
             {
                 increaseRate = -1f;
             }
             else
             {
-                increaseRate = 1f;
+                if (GameManager.loadedScene == "Bedroom" || GameManager.loadedScene == "LoungeKitchen")
+                {
+                    increaseRate = -1f;
+                }
+                else
+                {
+                    increaseRate = 1f;
+                }
             }
         }
         else if (GameManager.socialBattery <= 25)
         {
-            if (GameManager.loadedScene == "Bedroom" || GameManager.loadedScene == "LoungeKitchen")
+            if (GameManager.safeZoneActive)
             {
-                increaseRate = -1.5f;
+                increaseRate = -1f;
             }
             else
             {
-                increaseRate = 1.3f;
+                if (GameManager.loadedScene == "Bedroom" || GameManager.loadedScene == "LoungeKitchen")
+                {
+                    increaseRate = -1.5f;
+                }
+                else
+                {
+                    increaseRate = 1.3f;
+                }
             }
         }
         GameManager.sensoryMetre += increaseRate;

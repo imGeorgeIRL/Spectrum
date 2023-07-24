@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
 
     private string previousScene;
     public AudioSource audioSource;
+    private AudioLowPassFilter lowPassFilter;
+    private AudioEchoFilter echoFilter;
 
     [System.Serializable]
     public class SceneAudioClip
@@ -48,6 +50,8 @@ public class AudioManager : MonoBehaviour
 
         previousScene = loadedScene;
         audioSource = GetComponent<AudioSource>();
+        lowPassFilter = GetComponent<AudioLowPassFilter>();
+        echoFilter = GetComponent<AudioEchoFilter>();
     }
 
     private void Update()
@@ -65,6 +69,19 @@ public class AudioManager : MonoBehaviour
         else
         {
             audioSource.volume = 0.35f;
+        }
+
+        if (GameManager.safeZoneActive)
+        {
+            audioSource.volume = 0.1f;
+            lowPassFilter.enabled = true;
+            echoFilter.enabled = true;
+        }
+        else
+        {
+            audioSource.volume = 0.35f;
+            lowPassFilter.enabled = false;
+            echoFilter.enabled = false;
         }
     }
 

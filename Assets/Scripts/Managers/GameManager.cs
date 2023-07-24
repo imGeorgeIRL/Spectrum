@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     public static bool spokenToMiller;
 
+    public static bool safeZoneActive = false;
+
     //Time of day ******************************************
     public static bool isDayTime;
     public static bool goToSleep = false;

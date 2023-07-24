@@ -48,4 +48,15 @@ EXTERNAL sittingDown(sit)
 
 EXTERNAL drMiller(interact)
 
+//UNI 
+VAR spokenToMiller = false
 
+
+//NPCS
+VAR houseNPC1 = false
+VAR houseNPC2 = false
+VAR houseNPC3 = false
+
+VAR townNPC1 = false
+VAR townNPC2 = false
+VAR townNPC3 = false

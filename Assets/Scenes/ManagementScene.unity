@@ -1863,6 +1863,8 @@ GameObject:
   - component: {fileID: 1662466270}
   - component: {fileID: 1662466272}
   - component: {fileID: 1662466271}
+  - component: {fileID: 1662466273}
+  - component: {fileID: 1662466274}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -2009,6 +2011,43 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 82796e76556a9f04f9a91c27291bbd7a, type: 3}
   - sceneName: UniClassroom
     audioClip: {fileID: 8300000, guid: 82796e76556a9f04f9a91c27291bbd7a, type: 3}
+--- !u!169 &1662466273
+AudioLowPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662466267}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_LowpassResonanceQ: 1
+  lowpassLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.22727273
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!168 &1662466274
+AudioEchoFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662466267}
+  m_Enabled: 1
+  m_Delay: 100
+  m_DecayRatio: 0.2
+  m_WetMix: 1
+  m_DryMix: 1
 --- !u!1 &1704124198
 GameObject:
   m_ObjectHideFlags: 0

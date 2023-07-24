@@ -9,13 +9,19 @@ INCLUDE globals.ink
 }
 
 ===Monday===
+{houseNPC3 : ->Monday2 }
 Just enjoying the morning #speaker:Gerald
 I think I saw a kookaburra up in that tree
 He's laughing at me....
 ~spokeTo(1)
+~houseNPC3 = true
 ok... #speaker:Austin
 cool.
+->DONE
 
+===Monday2===
+I'm gonna catch that bird one day! #speaker:Gerald
+okay... #speaker:Austin
 ->DONE
 
 ===Tuesday===

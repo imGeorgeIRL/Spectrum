@@ -386,7 +386,7 @@ GameObject:
   - component: {fileID: 80143711}
   - component: {fileID: 80143712}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Teacher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -803,6 +803,22 @@ PrefabInstance:
       propertyPath: starArray.Array.data[2]
       value: 
       objectReference: {fileID: 778246257}
+    - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+      propertyPath: dialogueTriggerArray.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+      propertyPath: dialogueTriggerArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 1033650951}
+    - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+      propertyPath: dialogueTriggerArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 486960340}
+    - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+      propertyPath: dialogueTriggerArray.Array.data[2]
+      value: 
+      objectReference: {fileID: 1381142017}
     - target: {fileID: 5026732451204614534, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -2168,6 +2184,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3859289088094872859, guid: 91847d021558bec44a67c116fca950ec, type: 3}
   m_PrefabInstance: {fileID: 1033650949}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1033650951 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3859289088094872852, guid: 91847d021558bec44a67c116fca950ec, type: 3}
+  m_PrefabInstance: {fileID: 1033650949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1108339558
 GameObject:
   m_ObjectHideFlags: 0
@@ -2643,6 +2664,11 @@ PrefabInstance:
 --- !u!4 &1381142016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1123743645324737854, guid: 96d7ad30ef37b8941afafe1c706f0086, type: 3}
+  m_PrefabInstance: {fileID: 1381142015}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1381142017 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1123743645324737855, guid: 96d7ad30ef37b8941afafe1c706f0086, type: 3}
   m_PrefabInstance: {fileID: 1381142015}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1384272067

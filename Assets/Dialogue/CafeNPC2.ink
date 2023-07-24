@@ -9,6 +9,7 @@ INCLUDE globals.ink
 }
 
 ===Monday===
+{townNPC2 : ->Monday2 }
 um... hi? #speaker: Guy 
 hi #speaker: Austin 
 can I help you? #speaker: Guy 
@@ -21,9 +22,15 @@ can I help you? #speaker: Guy
         no worries, good luck pal #speaker: Guy 
         ~spokeTo(1)
         ~FoundBus = true
+        ~townNPC2 = true
     - you too! #speaker:Austin
     wait..
     ->DONE
+
+===Monday2===
+Remember, but 838 #speaker: Guy 
+you should really write that down somewhere!
+->DONE
 
 ===Tuesday===
 ->DONE
