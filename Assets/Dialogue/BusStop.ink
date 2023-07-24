@@ -10,7 +10,10 @@ INCLUDE globals.ink
 
 ===Monday===
 Phew, I made it in time #speaker:Austin
-now which bus did I have to catch again?
+oh...
+oh no!
+I forgot which bus to catch for uni!
+Which one was it?!
     *[519]
     ~busChosen(1)
     ~isLateToClass = true

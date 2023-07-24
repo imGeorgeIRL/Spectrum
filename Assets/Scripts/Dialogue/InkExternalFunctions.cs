@@ -121,6 +121,28 @@ public class InkExternalFunctions
                 cal -= 1;
             }
         });
+        story.BindExternalFunction("tvChoice", (int choice) =>
+        {
+            if (choice == 1)
+            {
+                GameManager.tvChoice = 1;
+                GameManager.spaceDoc = true;
+                Debug.Log("TV Choice 1");
+            }
+            else if (choice == 2)
+            {
+                GameManager.tvChoice = 2;
+                GameManager.news = true;
+                Debug.Log("TV Choice 2");
+            }
+            else if (choice == 3)
+            {
+                GameManager.tvChoice = 3;
+                GameManager.realityTv = true;
+                Debug.Log("TV Choice 3");
+            }
+            choice = 0;
+        });
     }
 
     public void Unbind(Story story)

@@ -16,9 +16,13 @@ public class WatchingTV : MonoBehaviour
     private Vector3 startingPosition;
     private Vector3 sitPosition;
 
+    public AudioClip[] tvClips;
+    private AudioSource audioSource;
+    private int clipID;
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         animator = character.GetComponent<Animator>();
         watching = false;
         tvScreen.SetActive(false);
@@ -34,6 +38,18 @@ public class WatchingTV : MonoBehaviour
         if (GameManager.watchingTv && !watching)
         {
             dialogueSystem.SetActive(false);
+            if (GameManager.spaceDoc)
+            {
+                clipID = 0;
+            }
+            else if (GameManager.news)
+            {
+                clipID = 1;
+            }
+            else if (GameManager.realityTv)
+            {
+                clipID = 2;
+            }
             StartCoroutine(WatchTV());            
         }
 
@@ -41,14 +57,22 @@ public class WatchingTV : MonoBehaviour
         {
             watching = false;
             bx.enabled = false;
+
             //StartCoroutine(StopWatchingTV());
             character.transform.position = startingPosition;
             character.transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+
             animator.SetBool("isSitting", false);
             tvScreen.SetActive(false);
             couchRenderer.sortingOrder = 3;
+
             dialogueSystem.SetActive(true);
             GameManager.watchingTv = false;
+
+            audioSource.Stop();
+            GameManager.spaceDoc = false;
+            GameManager.news = false;
+            GameManager.realityTv = false;
         }
     }
 
@@ -56,7 +80,13 @@ public class WatchingTV : MonoBehaviour
     {        
         watching = true;
         startingPosition = character.transform.position;
+
         yield return new WaitForSeconds(1f);
+
+        AudioClip clip = tvClips[clipID];
+        audioSource.clip = clip;
+        audioSource.Play();
+
         bx.enabled = true;
         character.transform.position = sitPosition;
         character.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);

@@ -65,6 +65,9 @@ public class GameManager : MonoBehaviour
 
     //LIVING ROOM*************************************************
     public static bool watchingTv = false;
+    public static int tvChoice;
+    public static bool spaceDoc, news, realityTv = false;
+
 
     //OBJECT INTERACTIONS
     public static bool interactedWithWardrobe;

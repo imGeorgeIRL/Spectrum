@@ -1,7 +1,7 @@
 INCLUDE globals.ink 
 
 {Day_Of_Week:
-- 0: {isNight : ->Monday | ->MondayNight }
+- 0: {isNight : ->MondayNight | ->Monday }
 - 1: -> Tuesday
 - 2: -> Wednesday
 - 3: -> Thursday
@@ -22,20 +22,17 @@ that noah guy seems
         I think the bus is coming now...
         ->DONE
     *[Into town?]
-    ~busChosen(2)
+    Actually, I think I just want to go home
+    ~busChosen(1)
     
         - I think the bus is coming now...
         ->DONE
 
 ===Monday===
-Where should I go?
-        *[Home?]
-    ~busChosen(1)
-        I think the bus is coming now...
-        ->DONE
-    *[Into town?]
-    ~busChosen(2)
-    -I think the bus is coming now...
+Where should I g- #speaker: Austin
+wait,
+I'm at uni already,
+why would I go anywhere?
     ->DONE
 
 ===Tuesday===

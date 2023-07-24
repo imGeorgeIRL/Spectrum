@@ -9,24 +9,27 @@ INCLUDE globals.ink
 }
 
 ===Monday===
-Should I watch some Tv?
+Should I watch some Tv? #speaker: Austin
     *[Yeah]
     what should I watch?
         **[space documentary?]
-        ~makeChoice(1)
+        ~tvChoice(1)
             I think I have one on my watch list 
             its on <bounce a= 0.2>Black Holes</bounce>
-            ->watching
+            ~watchTv(1)
+            ->DONE
         **[The news?]
-        ~makeChoice(2)
+        ~tvChoice(2)
             I dont think theres much going on
             but I could have a look I suppose.
-            ->watching
+            ~watchTv(1)
+            ->DONE
         **[Reality Tv?]
-        ~makeChoice(3)
+        ~tvChoice(3)
             maybe I should check it out,
             see what all the fuss is about.
-            ->watching
+            ~watchTv(1)
+            ->DONE
     *[Nah, im pretty tired]
         {hasEatenDinner: 
         I think I just want to go to bed.
@@ -35,11 +38,6 @@ Should I watch some Tv?
         }
     ->DONE
 
-=watching
-    I just have to find my remote
-    ~watchTv(1)
-    where did I leave it last?
-    ->DONE
     
 ===Tuesday===
 ->DONE

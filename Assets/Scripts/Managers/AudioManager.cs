@@ -58,6 +58,14 @@ public class AudioManager : MonoBehaviour
             PlaySceneAudio(currentScene);
             previousScene = currentScene;
         }
+        if (GameManager.watchingTv)
+        {
+            audioSource.volume = 0f;
+        }
+        else
+        {
+            audioSource.volume = 0.35f;
+        }
     }
 
     private void PlaySceneAudio(string sceneName)
