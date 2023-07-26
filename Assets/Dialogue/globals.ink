@@ -1,5 +1,5 @@
 // GENERAL
-VAR Day_Of_Week = "0"
+VAR Day_Of_Week = 0
 
 
 // BEDROOM

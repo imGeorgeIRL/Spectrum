@@ -5,7 +5,8 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class PostProcessingController : MonoBehaviour
 {
-    public Camera mainCamera;
+   // public Camera mainCamera;
+    //private float cameraZoom;
     public PostProcessVolume postProcessVol;
 
     private float vignetteIntensity = 0.5f;
@@ -29,15 +30,15 @@ public class PostProcessingController : MonoBehaviour
         }
         else if (GameManager.sensoryMetre >= 95)
         {
-            mainCamera.orthographicSize = 3f;
-            mainCamera.transform.position = new Vector3(transform.position.x, -1.84f, transform.position.z);
+            //mainCamera.orthographicSize = 3f;
+           //mainCamera.transform.position = new Vector3(transform.position.x, -1.84f, transform.position.z);
 
         }
         else
         {
             OldPostProcessingSettings();
-            mainCamera.orthographicSize = 6f;
-            mainCamera.transform.position = new Vector3(transform.position.x, 0.41f, transform.position.z);
+           // mainCamera.orthographicSize = 6f;
+            //mainCamera.transform.position = new Vector3(transform.position.x, 0.41f, transform.position.z);
         }
     }
 

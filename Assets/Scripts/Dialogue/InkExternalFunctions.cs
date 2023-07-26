@@ -143,6 +143,7 @@ public class InkExternalFunctions
             }
             choice = 0;
         });
+        
     }
 
     public void Unbind(Story story)

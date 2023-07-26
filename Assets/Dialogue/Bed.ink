@@ -23,6 +23,25 @@ that would've been awful.
 ~Day_Of_Week = 1
 }
 anyway, sleep time!
+~Day_Of_Week = 1
+~calendar_Interactions = 0
+~bedside_Interactions = 0
+~isBedTime = false
+~fridge_Interactions = 0
+~hasEatenDinner = false
+~isNight = false
+~bus_Chosen = false
+~isLateToClass = false
+~FoundBus = false
+~noah_Interractions = 0
+~spokenToNoah = false
+~ spokenToMiller = false
+~ houseNPC1 = false
+~ houseNPC2 = false
+~ houseNPC3 = false
+~ townNPC1 = false
+~ townNPC2 = false
+~ townNPC3 = false
 ->DONE
 
 
