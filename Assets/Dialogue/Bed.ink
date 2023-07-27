@@ -46,6 +46,20 @@ anyway, sleep time!
 
 
 ===Tuesday===
+That was
+    *[awful]
+    *[terrible]
+    *[horrible]
+-It's not even my bed time yet 
+but I really just need to sleep.
+~bedTime(1)
+~calendar_Interactions = 0
+~isBedTime = false
+~fridge_Interactions = 0
+~hasEatenDinner = false
+~isNight = false
+~bus_Chosen = false
+~FoundBus = false
 ->DONE
 
 ===Wednesday===

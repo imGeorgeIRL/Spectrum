@@ -8,12 +8,6 @@ INCLUDE globals.ink
 - 4: -> Friday
 }
 
--> main
-{ bedside_Interactions > 0: ->DONE | ->main}
-=== main ===
-
--> DONE
-
 
 ===Monday===
 {isNight : ->MondayNight }
@@ -25,7 +19,7 @@ so many new things today
 ->DONE
 
 =MondayNight
-What do I have tomorrow?
+What do I have tomorrow?#speaker:Austin
 Uni again,
 {isLateToClass : I should catch the right bus this time}
 I'll try and talk to Noah again as well
@@ -33,10 +27,19 @@ dialogue
 ->DONE
 
 
-
-
-
 ===Tuesday===
+{isNight : ->TuesdayNight }
+Okay what do I have today?
+Uni again, go figure
+I think I might have enough time to go into town
+(if I can remember what bus to catch)
+but I'll decide when I get to the bus stop
+->DONE
+
+===TuesdayNight===
+What's on tomorrow?
+just a bunch of errands
+grocery and clothes shopping
 ->DONE
 
 ===Wednesday===

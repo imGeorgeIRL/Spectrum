@@ -44,21 +44,21 @@ I think it's in the same spot as yesterday.
 ->END
 
 === Tuesday ===
-{ calendar_Interactions == 2: ->Tuesday2 }
+{ calendar_Interactions == 1: ->Tuesday2 }
 Day two! #speaker:Austin
 Hopefully things go well today,
 That Noah guy is 
     * interesting
         to say the least.
-        ~calendar_Interactions = 2
+        ~calendar_Interactions = 1
         ->Tuesday2
     * nice 
         hopefully he stays that way.
-        ~calendar_Interactions = 2
+        ~calendar_Interactions = 1
         ->Tuesday2
     * funny
         but I'm sure he knows that already...
-        ~calendar_Interactions = 2
+        ~calendar_Interactions = 1
         ->Tuesday2
         
 
@@ -71,20 +71,20 @@ I think I have some things to do today.
 -> END
 
 === Wednesday ===
-{calendar_Interactions == 3: ->Wednesday2 }
+{calendar_Interactions == 1: ->Wednesday2 }
 Man I am so tired,#speaker:Austin
 yesterday was awful
     * at least I have no class today
         although its not like I has class yesterday...
-        ~calendar_Interactions = 3
+        ~calendar_Interactions = 1
         ->Wednesday2
     * Maybe I should apoligise to Noah
         I probably freaked him out yesterday...
-        ~calendar_Interactions = 3
+        ~calendar_Interactions = 1
         ->Wednesday2
     * I feel like I haven't slept at all 
         even though I slept for like 12 hours...
-        ~calendar_Interactions = 3
+        ~calendar_Interactions = 1
         ->Wednesday2
         
     

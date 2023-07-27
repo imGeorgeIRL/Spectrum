@@ -73,6 +73,12 @@ hmm, i've already eaten...#speaker:Austin
 
 
 ===Tuesday===
+{ fridge_Interactions == 1 : ->Tuesday2 }
+bleh
+->DONE
+
+
+=Tuesday2
 ->DONE
 
 ===Wednesday===
