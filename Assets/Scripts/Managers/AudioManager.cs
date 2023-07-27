@@ -23,6 +23,7 @@ public class AudioManager : MonoBehaviour
     public List<SceneAudioClip> sceneAudioClips = new List<SceneAudioClip>();
     private Dictionary<string, AudioClip> audioClipMap = new Dictionary<string, AudioClip>();
 
+    public static float musicVolume = 0.35f;
     
 
     //************************************************************************\\
@@ -68,18 +69,18 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            audioSource.volume = 0.35f;
+            audioSource.volume = musicVolume;
         }
 
         if (GameManager.safeZoneActive)
         {
-            audioSource.volume = 0.1f;
+            audioSource.volume = (musicVolume / 3);
             lowPassFilter.enabled = true;
             echoFilter.enabled = true;
         }
         else
         {
-            audioSource.volume = 0.35f;
+            audioSource.volume = musicVolume;
             lowPassFilter.enabled = false;
             echoFilter.enabled = false;
         }

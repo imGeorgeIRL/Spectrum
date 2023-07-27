@@ -18,6 +18,8 @@ VAR fridge_Interactions = 0
 VAR hasEatenDinner = false
 VAR isNight = false
 
+EXTERNAL talkedToMum(mum)
+
 EXTERNAL tvChoice(choice)
 
 EXTERNAL watchTv(watched)

@@ -76,6 +76,9 @@ public class GameManager : MonoBehaviour
     //OBJECT INTERACTIONS
     public static bool interactedWithWardrobe;
 
+    public static bool talkedToMum = false;
+
+
 
     private void Awake()
     {

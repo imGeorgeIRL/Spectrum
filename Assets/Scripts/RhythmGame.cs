@@ -124,7 +124,7 @@ public class RhythmGame : MonoBehaviour
  
     private void Update()
     {
-        if (GameManager.sensoryMetre > 75f)
+        if (GameManager.sensoryMetre > 75f && !GameManager.isTalking)
         {
             if (!visualCueActive)
             {

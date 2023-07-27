@@ -43,9 +43,12 @@ public class UIManager : MonoBehaviour
 
     public void MainMenuButton()
     {
+        PlayerPrefs.SetString("lastLoadedScene", GameManager.loadedScene);
+        Time.timeScale = 1f;
         GameManager.gameManagerLoaded = false;
+        SceneManager.UnloadSceneAsync("ManagementScene");
         GameManager.loadedScene = "MainMenu";
         SceneManager.LoadScene("MainMenu");
-        
+        PlayerPrefs.Save();
     }
 }

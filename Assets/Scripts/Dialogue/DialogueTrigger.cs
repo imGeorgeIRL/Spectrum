@@ -27,6 +27,7 @@ public class DialogueTrigger : MonoBehaviour
         if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
             visualCue.SetActive(true);
+
             if (Input.GetKeyDown(KeyCode.E))
             {
                 
@@ -69,11 +70,11 @@ public class DialogueTrigger : MonoBehaviour
             {
                 GameManager.isbusChosen = true;
             }
-
             if (gameObject.tag == "TriggeredDialogue")
             {
                 triggerDialogueInRange = true;
             }
+            
         }        
     }
 
@@ -87,6 +88,11 @@ public class DialogueTrigger : MonoBehaviour
             {
                 GameManager.isbusChosen = false;
             }
+            if (gameObject.tag == "TriggeredDialogue")
+            {
+                triggerDialogueInRange = false;
+            }
+            
         }
     }
 }

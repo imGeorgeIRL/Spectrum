@@ -2,48 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BorderTrigger : MonoBehaviour
+public class mumDialogueTrigger : MonoBehaviour
 {
-
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
-    private bool playerInRange;
-    private bool isCoolDown = false;
+    private bool inRangeOfMum;
 
+    
 
 
     private void Awake()
     {
-        playerInRange = false;
+        inRangeOfMum = false;
     }
 
     private void Update()
     {
-        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
+        if (inRangeOfMum && !DialogueManager.GetInstance().dialogueIsPlaying && !GameManager.talkedToMum)
         {
-            if (!isCoolDown)
+            bool phoneCall = false;
+            if (!phoneCall)
             {
-                isCoolDown = true;
-
-                TriggerDialogue();
-                StartCoroutine(CoolDown());
+                StartCoroutine(PhoneCall());
+                phoneCall = true;
             }
+            
         }
 
     }
 
-    private IEnumerator CoolDown()
-    {
-        yield return new WaitForSeconds(15);
-        isCoolDown = false;
-    }
 
     private IEnumerator PhoneCall()
     {
         Debug.Log("Phone call with mum active");
-        GameManager.isTalking = true;
         //phone rings - play sound
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1f);
         TriggerDialogue();
     }
 
@@ -59,8 +52,8 @@ public class BorderTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
-        {           
-            playerInRange = true;
+        {
+            inRangeOfMum = true;
         }
     }
 
@@ -68,7 +61,7 @@ public class BorderTrigger : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            playerInRange = false;
+            inRangeOfMum = false;
         }
     }
 }

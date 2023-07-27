@@ -7,7 +7,9 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("Bedroom");
+        string lastLoadedScene = PlayerPrefs.GetString("lastLoadedScene", "Bedroom");
+
+        SceneManager.LoadScene(lastLoadedScene);
         GameManager.loadedScene = "Bedroom";
     }
 
@@ -17,11 +19,6 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Application Quit");
         PlayerPrefs.DeleteAll();
         
-    }
-
-    public void MainMenuButton()
-    {
-        SceneManager.LoadScene("MainMenu");
     }
 
 }

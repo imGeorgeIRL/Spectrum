@@ -8,6 +8,7 @@ public class DarkOnLoad : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        darkScreen.SetActive(true);
         StartCoroutine(Loading());
     }
 
@@ -19,7 +20,7 @@ public class DarkOnLoad : MonoBehaviour
 
     private IEnumerator Loading()
     {
-        darkScreen.SetActive(true);
+
         yield return new WaitForSeconds(2f);
         darkScreen.SetActive(false);
     }

@@ -21,6 +21,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI displayNameText;
 
+    [SerializeField] private TMP_FontAsset trashHand;
+    [SerializeField] private TMP_FontAsset lineBeam;
+
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -47,6 +50,7 @@ public class DialogueManager : MonoBehaviour
     private static DialogueManager instance;
 
     private const string SPEAKER_TAG = "speaker";
+    private const string FONT_TAG = "font";
 
     private DialogueVariables dialogueVariables;
     private InkExternalFunctions inkExternalFunctions;
@@ -208,6 +212,16 @@ public class DialogueManager : MonoBehaviour
             {
                 case SPEAKER_TAG:
                     displayNameText.text = tagValue;
+                    break;
+                case FONT_TAG:
+                    if (splitTag[1] == "mum")
+                    {
+                        dialogueText.font = lineBeam;
+                    }
+                    else if (splitTag[1] == "other")
+                    {
+                        dialogueText.font = trashHand;
+                    }
                     break;
                 default:
                     Debug.LogWarning("Tag came in but is not being properly handled: " + tag);

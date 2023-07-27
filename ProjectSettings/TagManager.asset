@@ -15,6 +15,7 @@ TagManager:
   - UniFrontDoor
   - UniInteriorDoor
   - TriggeredDialogue
+  - mum
   layers:
   - Default
   - TransparentFX

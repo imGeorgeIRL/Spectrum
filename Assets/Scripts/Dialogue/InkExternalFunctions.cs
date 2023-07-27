@@ -120,6 +120,10 @@ public class InkExternalFunctions
                 GameManager.interactedWithWardrobe = true;
                 cal -= 1;
             }
+            //if (cal == 0)
+            //{
+            //    GameManager.interactedWithWardrobe = false;
+            //}
         });
         story.BindExternalFunction("tvChoice", (int choice) =>
         {
@@ -143,7 +147,15 @@ public class InkExternalFunctions
             }
             choice = 0;
         });
-        
+        story.BindExternalFunction("talkedToMum", (int mum) =>
+        {
+            if (mum == 1)
+            {
+                GameManager.talkedToMum = true;
+                mum -= 1;
+            }
+
+        });
     }
 
     public void Unbind(Story story)

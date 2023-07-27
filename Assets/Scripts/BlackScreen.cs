@@ -94,6 +94,7 @@ public class BlackScreen : MonoBehaviour
             GameManager.goToSleep = false; // Set to false immediately to avoid multiple coroutine calls
             GameManager.dayOfWeek += 1;
             StartCoroutine(NightToDay());
+            GameManager.interactedWithWardrobe = false;
         }
 
         if (Input.GetKeyDown(KeyCode.H))

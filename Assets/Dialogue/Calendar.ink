@@ -41,6 +41,7 @@ I wonder where I left it?
 === Tuesday2 ===
 Gotta check my planner again,#speaker:Austin
 I think it's in the same spot as yesterday.
+~calendarInteract(1)
 ->END
 
 === Tuesday ===
