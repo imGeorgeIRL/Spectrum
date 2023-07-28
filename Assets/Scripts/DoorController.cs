@@ -9,8 +9,6 @@ public class DoorController : MonoBehaviour
     private bool isPlayerInRange;
     public GameObject visualCue;
 
-    public string bedroomSceneName = "Bedroom";
-    public string LoungeSceneName = "LoungeKitchen";
 
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -115,8 +113,22 @@ public class DoorController : MonoBehaviour
                     GameManager.SaveSensoryMetre();
                     GameManager.SaveSocialBattery();
                     break;
-                    
+                case "CafeInteriorDoor":
+                    SceneManager.UnloadSceneAsync(GameManager.loadedScene);
+                    GameManager.loadedScene = "TownCentre";
+                    SceneManager.LoadSceneAsync("TownCentre", LoadSceneMode.Additive);
 
+                    GameManager.SaveSensoryMetre();
+                    GameManager.SaveSocialBattery();
+                    break;
+                case "CafeExteriorDoor":
+                    SceneManager.UnloadSceneAsync(GameManager.loadedScene);
+                    GameManager.loadedScene = "Cafe";
+                    SceneManager.LoadSceneAsync("Cafe", LoadSceneMode.Additive);
+
+                    GameManager.SaveSensoryMetre();
+                    GameManager.SaveSocialBattery();
+                    break;
                 default:
                     Debug.LogWarning("No scene assigned for this door.");
                     break;

@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndOfPlaytest.unity
     guid: 5a63d715e5354914898fc793fe8c0f74
+  - enabled: 1
+    path: Assets/Scenes/Cafe.unity
+    guid: fcc51c273b0a6ab4fa0cd84c743cbe16
   m_configObjects: {}
