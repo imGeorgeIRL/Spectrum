@@ -25,6 +25,19 @@ Yeah#speaker:Austin
 ->DONE
 
 ===Tuesday===
+{houseNPC1: ->Tuesday2 }
+Morning Austin! #speaker:Mr. Donaldson
+Hi Donny #speaker:Austin
+Hey! you remembered! #speaker:Mr. Donaldson
+yeah haha #speaker:Austin
+Have a good one kid #speaker:Mr. Donaldson
+you too. #speaker:Austin
+~spokeTo(1)
+~houseNPC1 = true
+->DONE
+
+=Tuesday2
+Have a stellar day kid! #speaker:Mr. Donaldson
 ->DONE
 
 ===Wednesday===

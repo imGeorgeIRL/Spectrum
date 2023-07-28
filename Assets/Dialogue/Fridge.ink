@@ -2,7 +2,7 @@ INCLUDE globals.ink
 
 {Day_Of_Week:
 - 0: {isNight: ->NightTime | ->Monday}
-- 1: -> Tuesday
+- 1: {isNight: ->TuesdayNight | ->Tuesday }
 - 2: -> Wednesday
 - 3: -> Thursday
 - 4: -> Friday
@@ -73,12 +73,40 @@ hmm, i've already eaten...#speaker:Austin
 
 
 ===Tuesday===
-{ fridge_Interactions == 1 : ->Tuesday2 }
-bleh
+{ fridge_Interactions == 1 : ->Tuesday2 | ->Tuesday1}
+
+=Tuesday1
+what should I eat for breakfast?#speaker:Austin
+    * [Cereal]
+        which cereal?
+            ** [Fruity loops]
+                 So tasty!
+                ~fridge_Interactions = 1
+                ->DONE
+            ** [Corn Flakes]
+                 okay I suppose...
+                ~ fridge_Interactions = 1
+                ->DONE
+    * [Toast]
+         <dangle a=0.5> yummy toast!</dangle>
+        ~fridge_Interactions = 1
+        ->DONE
+    * [Nothing]
+         Not feeling that hungry this morning...
+        ~fridge_Interactions = 1
+        ->DONE
+
+
+
+===Tuesday2===
+I've already had breakfast, #speaker:Austin
+I should probably head off soon!
 ->DONE
 
-
-=Tuesday2
+===TuesdayNight===
+I should really eat something #speaker:Austin
+but I think I just want to go to sleep
+put today behind me.
 ->DONE
 
 ===Wednesday===

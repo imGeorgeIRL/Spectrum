@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ac3fedc30986d84abcdd16c68851950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 207751790}
   sfxClips:
   - sceneName: Outside
     audioClip: {fileID: 8300000, guid: 044698ae1a3ac4a4984c48bcd3a45ce1, type: 3}

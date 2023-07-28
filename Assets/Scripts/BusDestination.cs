@@ -129,7 +129,7 @@ public class BusDestination : MonoBehaviour
                         StartCoroutine(waitForBus());
                         break;
                     case 2:
-                        //Go to Town Centre
+                        //Go to Uni
                         sceneToLoad = "UniEntrance";
                         StartCoroutine(waitForBus());
                         break;

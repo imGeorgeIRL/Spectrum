@@ -17,7 +17,7 @@ Which one was it?!
     *[519]
     ~busChosen(1)
     ~isLateToClass = true
-
+    ~cafeOnMonday = true
     *[838]
     ~busChosen(2)
     ~isLateToClass = false
@@ -25,12 +25,26 @@ Which one was it?!
     *[827]
     ~busChosen(3)
     ~isLateToClass = true
+    ~busOnMonday = true
 
 -oh! here it comes now!
 
 -> DONE
 
 ===Tuesday===
+Okay, lets see if my memory can tell me
+which bus to catch this time...
+If I remember correctly it was the
+    *[519]
+    ~busChosen(1)
+
+    *[838]
+    ~busChosen(2)
+
+    *[827]
+    ~busChosen(3)
+
+- let's hope this is the right one.
 ->DONE
 
 ===Wednesday===

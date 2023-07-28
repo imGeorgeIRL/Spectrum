@@ -14,7 +14,7 @@ INCLUDE globals.ink
 
 =Found
 I finally figured out what bus to catch #speaker:Austin
-~makeChoice(1)
+~makeChoice(2)
 Looks like it's right around the corner.
     ->DONE 
 
@@ -25,20 +25,26 @@ I just know im gonna get super overstimulated
     ->DONE
 
 =MondayNight
-Where should I go?
-        *[Home?]
-    ~busChosen(1)
-        I think the bus is coming now...
-        ->DONE
-    *[Into Uni?]
-    ~busChosen(2)
-    -I think the bus is coming now...
-    ->DONE
-    ->DONE
+alright, it's pretty late, #speaker:Austin
+i'm just gonna go home
+~busChosen(1)
 ->DONE
 
 
 ===Tuesday===
+{FoundBus: ->Found | ->NotFound }
+
+    =Found
+    838, 838, thats the bus I need to take #speaker:Austin
+    ~makeChoice(2)
+    Here is is, right on time.
+    ->DONE
+
+    =NotFound
+    I Need to find out what bus I need to catch #speaker:Austin
+    but talking to people just drains me.
+    ->DONE
+
 ->DONE
 
 ===Wednesday===

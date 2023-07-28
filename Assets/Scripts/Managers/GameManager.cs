@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     public static bool isDayTime;
     public static bool goToSleep = false;
 
-    public static int dayOfWeek = 0;
+    public static int dayOfWeek = 1;
 
     //Scene loading *****************************************
     public static bool transitionFromBedroom;

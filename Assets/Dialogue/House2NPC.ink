@@ -31,6 +31,19 @@ sorry! #speaker:Austin
 
 
 ===Tuesday===
+{houseNPC2: ->Tuesday2 }
+I'm keeping my eyes on you kid #speaker:Charles
+you youngins are all the same 
+destructive and loud
+I'm not #speaker:Austin
+what? #speaker:Charles
+I'm not destructive, and im certainly not loud #speaker:Austin
+yeah well we'll see about that. #speaker:Charles
+~spokeTo(1)
+~houseNPC2 = true
+
+=Tuesday2
+hrmmph #speaker:Charles
 ->DONE
 
 ===Wednesday===

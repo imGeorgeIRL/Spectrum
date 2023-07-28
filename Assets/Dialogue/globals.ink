@@ -1,6 +1,8 @@
 // GENERAL
-VAR Day_Of_Week = 0
+VAR Day_Of_Week = 1
 
+VAR cafeOnMonday = true
+VAR busOnMonday = false
 
 // BEDROOM
 

@@ -13,6 +13,7 @@ public class InkExternalFunctions
             {
                 GameManager.choiceSelected = 1;
                 Debug.Log("Choice 1");
+                
             }
             else if (choice == 2)
             {

@@ -2,7 +2,7 @@ INCLUDE globals.ink
 
 {Day_Of_Week:
 - 0: ->Monday
-- 1: -> Tuesday
+- 1: {cafeOnMonday : ->Tuesday | -> Monday }
 - 2: -> Wednesday
 - 3: -> Thursday
 - 4: -> Friday
@@ -27,6 +27,23 @@ sorry sweetheart.
 ->DONE
 
 ===Tuesday===
+{townNPC1 : ->Tuesday2 | ->Tuesday1}
+
+=Tuesday1
+Oh it's you again!#speaker:Woman
+Didn't find out which bus you needed?
+I did, I just <fade d=1>forgot</fade> again #speaker:Austin
+Oh no!#speaker:Woman
+Unfortunately im just as clueless as yesterday
+but I think the same fella is over there again!
+Thank you #speaker:Austin
+No problem.#speaker:Woman
+~spokeTo(1)
+~townNPC1 = true
+->DONE
+
+=Tuesday2
+Hope you remember this time haha!#speaker:Woman
 ->DONE
 
 ===Wednesday===
