@@ -33,6 +33,8 @@ VAR isLateToClass = false
 VAR FoundBus = false
 EXTERNAL busChosen(bus)
 
+VAR tuesdayUni = false
+
 //NOAH 
 VAR noah_Interractions = 0
 VAR spokenToNoah = false

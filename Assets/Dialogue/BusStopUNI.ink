@@ -1,4 +1,4 @@
-INCLUDE globals.ink 
+INCLUDE globals.ink
 
 {Day_Of_Week:
 - 0: {isNight : ->MondayNight | ->Monday }
@@ -36,6 +36,27 @@ why would I go anywhere?
     ->DONE
 
 ===Tuesday===
+{tuesdayUni : ->postUni | ->preUni}
+
+    =preUni
+    I shouldn't leave now that I'm here
+    that would make no sense
+    ->DONE
+
+    =postUni
+    Okay, just think
+    think and breathe, you're okay Austin
+    the meltdown is over, It's done
+    Noah said to meet you at the cafe with-
+    oh no,
+    I've forgotten again!
+    Why do I keep forgetting these things?!
+    okay no, stop, breathe.
+    just catch the bus into town
+    you can figure it out from there.
+    ~busChosen(2)
+    ->DONE
+    
 ->DONE
 
 ===Wednesday===

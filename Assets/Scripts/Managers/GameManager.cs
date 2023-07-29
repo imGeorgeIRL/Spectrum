@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
 
     public static bool safeZoneActive = false;
 
+    public static bool isHavingMeltdown = false;
+
     //Time of day ******************************************
     public static bool isDayTime;
     public static bool goToSleep = false;
