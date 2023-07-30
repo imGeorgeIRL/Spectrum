@@ -124,6 +124,10 @@ public class RhythmGame : MonoBehaviour
  
     private void Update()
     {
+        if (GameManager.isTalking)
+        {
+            rhythmVisualCue.SetActive(false);
+        }
         if (GameManager.sensoryMetre > 75f && !GameManager.isTalking)
         {
             if (!visualCueActive)
@@ -138,7 +142,7 @@ public class RhythmGame : MonoBehaviour
                 StartGame();
 
             }
-
+            
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && isGreen && !hasSucceeded)

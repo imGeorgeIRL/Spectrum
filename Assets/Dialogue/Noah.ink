@@ -1,4 +1,4 @@
-INCLUDE globals.ink 
+INCLUDE globals.ink
 
 {Day_Of_Week:
 - 0: ->Monday
@@ -75,6 +75,24 @@ me too #speaker: Austin
 
 
 ===Tuesday===
+Woah, it's super dark in here
+where is everyone?
+...
+are you okay?
+...
+Austin?
+    no, no no nO NO! 
+    Why is everything going wrong today?!
+    why did nobody tell me class was cancelled?!
+huh? Class was cancelled?
+    I didn't know, I didn't know, I did-
+It's okay!
+    No it's not!
+    I- I dont handle changes, at all
+    and this is just too much
+can I...do anything? to help?
+    I think I just need to calm down a bit
+    ~calmDown(1)
 ->DONE
 
 ===Wednesday===

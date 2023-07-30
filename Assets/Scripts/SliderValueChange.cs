@@ -26,14 +26,23 @@ public class SliderValueChange : MonoBehaviour
             increaseInterval = 2f;
         }
 
-
+        if (GameManager.sensoryMetre >= 80)
+        {
+            GameManager.isHavingMeltdown = true;
+        }
+        else
+        {
+            GameManager.isHavingMeltdown = false;
+        }
         
+
     }
 
     private IEnumerator IncreaseSliderValue()
     {
+
         isIncreasing = true;
-        if(GameManager.socialBattery <=100f && GameManager.socialBattery > 50)
+        if (GameManager.socialBattery <= 100f && GameManager.socialBattery > 50)
         {
             if (GameManager.safeZoneActive)
             {
@@ -51,7 +60,7 @@ public class SliderValueChange : MonoBehaviour
                 }
             }
         }
-        else if (GameManager.socialBattery <=50 && GameManager.socialBattery > 25)
+        else if (GameManager.socialBattery <= 50 && GameManager.socialBattery > 25)
         {
             if (GameManager.safeZoneActive)
             {
@@ -87,6 +96,26 @@ public class SliderValueChange : MonoBehaviour
                 }
             }
         }
+
+        if (GameManager.dayOfWeek == 1 && GameManager.loadedScene == "UniClassroom")
+        {
+            if (GameManager.calmingDown)
+            {
+                increaseRate = 0.7f;
+            }
+            else
+            {
+                if (GameManager.sensoryMetre >= 90f)
+                {
+                    increaseRate = 0f;
+                }
+                else
+                {
+                    increaseRate = 3f;
+                }
+            }
+        }
+
         GameManager.sensoryMetre += increaseRate;
         GameManager.sensoryMetre = Mathf.Clamp(GameManager.sensoryMetre, 0, 100);
         yield return new WaitForSeconds(increaseInterval);

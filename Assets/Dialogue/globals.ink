@@ -39,8 +39,10 @@ VAR tuesdayUni = false
 VAR noah_Interractions = 0
 VAR spokenToNoah = false
 EXTERNAL timeSkip(skip)
+EXTERNAL calmDown(calm)
 
 
+//MISC
 EXTERNAL makeChoice(choice)
 
 

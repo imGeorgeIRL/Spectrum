@@ -14,9 +14,16 @@ public class NoahDialogueHide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager.spokenToMiller)
+        if (GameManager.dayOfWeek == 0)
         {
-            noahDialogue.SetActive(false);
+            if (!GameManager.spokenToMiller)
+            {
+                noahDialogue.SetActive(false);
+            }
+            else
+            {
+                noahDialogue.SetActive(true);
+            }
         }
         else
         {

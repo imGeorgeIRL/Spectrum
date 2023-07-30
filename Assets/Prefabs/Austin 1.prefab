@@ -291,7 +291,7 @@ MonoBehaviour:
   cueObject: {fileID: 1731178772919400174}
   ringPrefab: {fileID: 6830379857877301846, guid: dc9f25bd358f62b4686a9b0632e9d892, type: 3}
   starArray: []
-  dialogueManager: {fileID: 0}
+  dialogueTriggerArray: []
 --- !u!114 &6477968107928155683
 MonoBehaviour:
   m_ObjectHideFlags: 0

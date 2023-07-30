@@ -155,7 +155,14 @@ public class InkExternalFunctions
                 GameManager.talkedToMum = true;
                 mum -= 1;
             }
-
+        });
+        story.BindExternalFunction("calmDown", (int calm) =>
+        {
+            if (calm == 1)
+            {
+                GameManager.calmingDown = true;
+                calm -= 1;
+            }
         });
     }
 

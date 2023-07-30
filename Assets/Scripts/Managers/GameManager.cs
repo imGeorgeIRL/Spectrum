@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     public static bool safeZoneActive = false;
 
     public static bool isHavingMeltdown = false;
+    public static bool talkingToNoah = false;
+    public static bool calmingDown = false;
 
     //Time of day ******************************************
     public static bool isDayTime;
@@ -127,7 +129,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.N))
         {
             sensoryMetre += 10f;
-            socialBattery -= 10f;
+            
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.P))
