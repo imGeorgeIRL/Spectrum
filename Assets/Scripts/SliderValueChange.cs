@@ -26,7 +26,7 @@ public class SliderValueChange : MonoBehaviour
             increaseInterval = 2f;
         }
 
-        if (GameManager.sensoryMetre >= 80)
+        if (GameManager.sensoryMetre >= 90)
         {
             GameManager.isHavingMeltdown = true;
         }
@@ -105,7 +105,7 @@ public class SliderValueChange : MonoBehaviour
             }
             else
             {
-                if (GameManager.sensoryMetre >= 90f)
+                if (GameManager.sensoryMetre >= 91f)
                 {
                     increaseRate = 0f;
                 }

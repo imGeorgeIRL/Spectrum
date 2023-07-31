@@ -51,6 +51,7 @@ public class DialogueManager : MonoBehaviour
 
     private const string SPEAKER_TAG = "speaker";
     private const string FONT_TAG = "font";
+    private const string SIZE_TAG = "size";
 
     private DialogueVariables dialogueVariables;
     private InkExternalFunctions inkExternalFunctions;
@@ -223,6 +224,21 @@ public class DialogueManager : MonoBehaviour
                         dialogueText.font = trashHand;
                     }
                     break;
+                case SIZE_TAG:
+                    if (splitTag[1] == "small")
+                    {
+                        dialogueText.fontSize = 10;
+                    }
+                    else if (splitTag[1] == "normal")
+                    {
+                        dialogueText.fontSize = 20;
+                    }
+                    else if (splitTag[1] == "big")
+                    {
+                        dialogueText.fontSize = 25;
+                    }
+                    break;
+
                 default:
                     Debug.LogWarning("Tag came in but is not being properly handled: " + tag);
                     break;

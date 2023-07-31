@@ -24,15 +24,13 @@ public class PostProcessingController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.sensoryMetre >= 80f && GameManager.sensoryMetre <= 95)
+        if (GameManager.sensoryMetre >= 80f && GameManager.sensoryMetre <= 90)
         {
             UpdatePostProcessingSettings();
         }
-        else if (GameManager.sensoryMetre >= 95)
+        else if (GameManager.sensoryMetre >= 90)
         {
-            //mainCamera.orthographicSize = 3f;
-           //mainCamera.transform.position = new Vector3(transform.position.x, -1.84f, transform.position.z);
-
+            MeltdownPostProcessing();
         }
         else
         {
@@ -41,7 +39,26 @@ public class PostProcessingController : MonoBehaviour
             //mainCamera.transform.position = new Vector3(transform.position.x, 0.41f, transform.position.z);
         }
     }
+    public void MeltdownPostProcessing()
+    {
+        if (postProcessVol == null)
+        {
+            return;
+        }
 
+        PostProcessProfile profile = postProcessVol.profile;
+
+        if (profile == null)
+        {
+            return;
+        }
+
+        if (profile.TryGetSettings(out ChromaticAberration chromatic))
+        {
+            chromatic.intensity.value = 0.3f;
+        }
+        
+    }
     public void UpdatePostProcessingSettings()
     {
         if (postProcessVol == null)
@@ -68,6 +85,10 @@ public class PostProcessingController : MonoBehaviour
             grain.size.value = grainSize;
         }
 
+        if (profile.TryGetSettings(out ChromaticAberration chromatic))
+        {
+            chromatic.intensity.value = 0f;
+        }
 
     }
 
@@ -96,7 +117,10 @@ public class PostProcessingController : MonoBehaviour
             grain.intensity.value = 0.17f;
             grain.size.value = 0.91f;
         }
-
+        if (profile.TryGetSettings(out ChromaticAberration chromatic))
+        {
+            chromatic.intensity.value = 0f;
+        }
 
     }
 }

@@ -39,12 +39,12 @@ why would I go anywhere?
 {tuesdayUni : ->postUni | ->preUni}
 
     =preUni
-    I shouldn't leave now that I'm here
+    I shouldn't leave now that I'm here #speaker: Austin
     that would make no sense
     ->DONE
 
     =postUni
-    Okay, just think
+    Okay, just think #speaker: Austin
     think and breathe, you're okay Austin
     the meltdown is over, It's done
     Noah said to meet you at the cafe with-

@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     public static bool rhythmActive;
 
     public static bool isSitting = false;
-
     public static bool isTalking;
 
     public static bool spokenToMiller;
@@ -25,13 +24,14 @@ public class GameManager : MonoBehaviour
     public static bool isHavingMeltdown = false;
     public static bool talkingToNoah = false;
     public static bool calmingDown = false;
+    public static bool noahWalkAway = false;
 
     //Time of day ******************************************
     public static bool isDayTime;
     public static bool goToSleep = false;
 
     public static int dayOfWeek = 1;
-
+    public static string sceneOfDay = "";
     //Scene loading *****************************************
     public static bool transitionFromBedroom;
     private static string _loadedScene;

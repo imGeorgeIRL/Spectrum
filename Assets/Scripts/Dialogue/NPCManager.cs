@@ -6,6 +6,7 @@ public class NPCManager : MonoBehaviour
 {
 
     public GameObject[] npcArray;
+    public GameObject[] npcDialogueArray;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,16 @@ public class NPCManager : MonoBehaviour
                 npc.SetActive(false);
             }
 
+        }
+
+
+
+        if (GameManager.dayOfWeek == 1 && GameManager.sceneOfDay == "cafeTuesday")
+        {
+            foreach (GameObject dialogue in npcDialogueArray)
+            {
+                dialogue.SetActive(false);
+            }
         }
     }
 }

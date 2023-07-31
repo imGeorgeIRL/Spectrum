@@ -6536,6 +6536,10 @@ MonoBehaviour:
   - {fileID: 1001770100}
   - {fileID: 24606546}
   - {fileID: 584309381}
+  npcDialogueArray:
+  - {fileID: 3916675291991789633}
+  - {fileID: 1074431291}
+  - {fileID: 305538613}
 --- !u!114 &1445529012
 MonoBehaviour:
   m_ObjectHideFlags: 0

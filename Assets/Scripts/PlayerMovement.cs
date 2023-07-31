@@ -59,7 +59,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Direction", 0f);
             animator.SetBool("isWalking", false);
             animator.SetBool("isPanic", true);
-            
             rb.velocity = Vector2.zero;
             animator.speed = 3f;
         }
@@ -160,7 +159,16 @@ public class PlayerMovement : MonoBehaviour
     }
     private void SitDown()
     {
-        transform.position = new Vector3(-4.68f, 0.36f, 0f);
+        if (GameManager.loadedScene == "UniClassroom")
+        {
+            transform.position = new Vector3(-4.68f, 0.36f, 0f);
+        }
+        else if (GameManager.loadedScene == "Cafe")
+        {
+            transform.position = new Vector3(-3.68f, -1.03f, -1.29f);
+            transform.localScale = new Vector3(0.428f, 0.428f, 0.428f);
+        }
+        
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         animator.SetBool("isSitting", true);
         //animator.Play("ANIM_Austin_Sit");

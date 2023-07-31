@@ -164,19 +164,32 @@ public class InkExternalFunctions
                 calm -= 1;
             }
         });
+        story.BindExternalFunction("noahWalkAway", (int walk) =>
+        {
+            if (walk == 1)
+            {
+                GameManager.noahWalkAway = true;
+                walk -= 1;
+            }
+        });
     }
 
     public void Unbind(Story story)
     {
         story.UnbindExternalFunction("makeChoice");
         story.UnbindExternalFunction("busChosen");
-        //Debug.Log("Choice made was " + GameManager.choiceSelected);
         story.UnbindExternalFunction("spokeTo");
         story.UnbindExternalFunction("turnNight");
         story.UnbindExternalFunction("sittingDown");
         story.UnbindExternalFunction("bedTime");
         story.UnbindExternalFunction("watchTv");
         story.UnbindExternalFunction("timeSkip");
+        story.UnbindExternalFunction("drMiller");
+        story.UnbindExternalFunction("calendarInteract");
+        story.UnbindExternalFunction("tvChoice");
+        story.UnbindExternalFunction("talkedToMum");
+        story.UnbindExternalFunction("calmDown");
+        story.UnbindExternalFunction("noahWalkAway");
     }
 
     

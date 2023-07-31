@@ -25,7 +25,12 @@ okay... #speaker:Austin
 ->DONE
 
 ===Tuesday===
-
+He's still laughing at me #speaker:Gerald
+always sitting up there 
+ha 
+ha 
+ha 
+... #speaker:Austin
 ->DONE
 
 ===Wednesday===

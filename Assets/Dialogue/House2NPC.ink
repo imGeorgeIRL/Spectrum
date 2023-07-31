@@ -41,6 +41,7 @@ I'm not destructive, and im certainly not loud #speaker:Austin
 yeah well we'll see about that. #speaker:Charles
 ~spokeTo(1)
 ~houseNPC2 = true
+->DONE
 
 =Tuesday2
 hrmmph #speaker:Charles
