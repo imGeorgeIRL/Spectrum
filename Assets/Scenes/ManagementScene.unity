@@ -530,7 +530,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 59.9}
+  m_AnchoredPosition: {x: 0, y: 124.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &499259170
@@ -1471,14 +1471,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1662466271}
-  panicAudio: {fileID: 8300000, guid: 60a965f57c1c82243a4c4ca398e3e89e, type: 3}
+  panicAudio: {fileID: 8300000, guid: a0c1cdbda40b57c479fa4b0db1ea5b58, type: 3}
+  deepConvoAudio: {fileID: 8300000, guid: 489377337660a1c45b085edcad4165e1, type: 3}
   sceneAudioClips:
   - sceneName: Bedroom
     audioClip: {fileID: 8300000, guid: ec9c24b089a393442bc0098fa33eccbc, type: 3}
   - sceneName: LoungeKitchen
     audioClip: {fileID: 8300000, guid: ec9c24b089a393442bc0098fa33eccbc, type: 3}
   - sceneName: Outside
-    audioClip: {fileID: 8300000, guid: f4bf1526490b45d4d8ffce108bc365da, type: 3}
+    audioClip: {fileID: 8300000, guid: 1cc73765f23659a4c88eec9813624291, type: 3}
   - sceneName: BusTerminal
     audioClip: {fileID: 8300000, guid: 9af165ecb784fb140a2883ceb217a708, type: 3}
   - sceneName: TownCentre

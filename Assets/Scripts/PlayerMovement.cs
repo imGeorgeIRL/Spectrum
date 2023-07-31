@@ -55,16 +55,13 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         
-        if (GameManager.sensoryMetre >= 85f)
+        if (GameManager.sensoryMetre >= 85f && !GameManager.canMoveWhileMeltdown)
         {
-            if (!GameManager.rhythmDeactivate)
-            {
-                animator.SetFloat("Direction", 0f);
-                animator.SetBool("isWalking", false);
-                animator.SetBool("isPanic", true);
-                rb.velocity = Vector2.zero;
-                animator.speed = 3f;
-            }
+            animator.SetFloat("Direction", 0f);
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isPanic", true);
+            rb.velocity = Vector2.zero;
+            animator.speed = 3f;
         }
         else
         {

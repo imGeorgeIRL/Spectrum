@@ -13,6 +13,8 @@ public class AudioManager : MonoBehaviour
     private AudioLowPassFilter lowPassFilter;
     private AudioEchoFilter echoFilter;
 
+    private bool isPanicMusicPlaying = false;
+
     [System.Serializable]
     public class SceneAudioClip
     {
@@ -21,10 +23,12 @@ public class AudioManager : MonoBehaviour
     }
 
     public AudioClip panicAudio;
+    public AudioClip deepConvoAudio;
+
     public List<SceneAudioClip> sceneAudioClips = new List<SceneAudioClip>();
     private Dictionary<string, AudioClip> audioClipMap = new Dictionary<string, AudioClip>();
 
-    public static float musicVolume = 0.35f;
+    public static float musicVolume = 1f;
     
 
     //************************************************************************\\
@@ -85,6 +89,7 @@ public class AudioManager : MonoBehaviour
             lowPassFilter.enabled = false;
             echoFilter.enabled = false;
         }
+        
 
         switch (currentScene)
         {
@@ -92,21 +97,32 @@ public class AudioManager : MonoBehaviour
                 audioSource.volume = (musicVolume);
                 break;
             default:
-                Debug.LogWarning("No case for " + currentScene);
                 break;
+        }
+
+        if (GameManager.isHavingMeltdown && !isPanicMusicPlaying && GameManager.loadedScene == "Cafe")
+        {
+            isPanicMusicPlaying = true; 
+            audioSource.Stop();
+            audioSource.clip = panicAudio;
+            audioSource.Play();
+            audioSource.volume = (musicVolume * 2);
+            audioSource.loop = true;
+        }
+        if (GameManager.safeZoneActive && GameManager.isHavingMeltdown && isPanicMusicPlaying)
+        {
+            isPanicMusicPlaying = false;
+            audioSource.Stop();
+            audioSource.clip = deepConvoAudio;
+            audioSource.Play();
+            audioSource.volume = (musicVolume * 2);
+            audioSource.loop = true;
         }
     }
 
     private void PlaySceneAudio(string sceneName)
     {
-        if (GameManager.sensoryMetre >= 85f)
-        {
-            audioSource.Stop();
-            audioSource.clip = panicAudio;
-            audioSource.Play();
-            audioSource.loop = true;
-            return;
-        }
+        
         if (audioClipMap.ContainsKey(sceneName))
         {
             AudioClip audioClip = audioClipMap[sceneName];
@@ -143,6 +159,10 @@ public class AudioManager : MonoBehaviour
         }
         if ((previousScene == "UniEntrance" && currentScene == "UniClassroom") ||
             (previousScene == "UniClassroom" && currentScene == "UniEntrance"))
+        {
+            return true;
+        }
+        if (previousScene == "Cafe" && currentScene == "TownCentre" && GameManager.isHavingMeltdown)
         {
             return true;
         }

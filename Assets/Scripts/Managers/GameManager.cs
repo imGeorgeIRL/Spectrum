@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     public static bool noahWalkAway = false;
 
     public static bool rhythmDeactivate = false;
-
+    public static bool canMoveWhileMeltdown = false;
     //Time of day ******************************************
     public static bool isDayTime;
     public static bool goToSleep = false;

@@ -123,6 +123,10 @@ public class DialogueManager : MonoBehaviour
         {
             ContinueStory();
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ExitDialogueMode();
+        }
     }
     
     private void ExitDialogueMode()

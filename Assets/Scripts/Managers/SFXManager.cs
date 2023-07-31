@@ -105,17 +105,6 @@ public class SFXManager : MonoBehaviour
 
     private bool ShouldMusicContinue(string previousScene, string currentScene)
     {
-        // Check the specific cases where music should continue between scenes
-        if ((previousScene == "Bedroom" && currentScene == "LoungeKitchen") ||
-            (previousScene == "LoungeKitchen" && currentScene == "Bedroom"))
-        {
-            return true;
-        }
-        if ((previousScene == "UniEntrance" && currentScene == "UniClassroom") ||
-            (previousScene == "UniClassroom" && currentScene == "UniEntrance"))
-        {
-            return true;
-        }
         return false;
     }
 

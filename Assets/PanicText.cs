@@ -19,7 +19,9 @@ public class PanicText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.isHavingMeltdown && !coroutinePlaying)
+        if (GameManager.isHavingMeltdown 
+            && !coroutinePlaying 
+            && GameManager.loadedScene != "UniClassroom")
         {
             StartCoroutine(PanicTextDisplay());
         }

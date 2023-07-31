@@ -9,8 +9,8 @@ public class PostProcessingController : MonoBehaviour
     //private float cameraZoom;
     public PostProcessVolume postProcessVol;
 
-    private float vignetteIntensity = 0.5f;
-    private float vignetteSmoothness = 0.5f;
+    private float vignetteIntensity = 0.3f;
+    private float vignetteSmoothness = 0.7f;
 
     private float grainIntensity = 0.5f;
     private float grainSize = 1.7f;
@@ -24,7 +24,7 @@ public class PostProcessingController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.sensoryMetre >= 70f && GameManager.sensoryMetre <= 85)
+        if (GameManager.sensoryMetre >= 80f && GameManager.sensoryMetre <= 85)
         {
             UpdatePostProcessingSettings();
         }

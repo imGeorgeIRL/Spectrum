@@ -118,6 +118,7 @@ public class NoahMovement : MonoBehaviour
             isMoving = false;
             noahCanMove = false;
             GameManager.noahWalkAway = false;
+            GameManager.talkingToNoah = true;
         }
     }
 }

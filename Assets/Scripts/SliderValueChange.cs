@@ -46,6 +46,10 @@ public class SliderValueChange : MonoBehaviour
         if(GameManager.loadedScene == "Cafe")
         {
             GameManager.rhythmDeactivate = true;
+            if (GameManager.isHavingMeltdown)
+            {
+                GameManager.canMoveWhileMeltdown = true;
+            }
         }
 
         if (GameManager.rhythmDeactivate)
