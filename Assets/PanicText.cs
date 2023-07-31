@@ -25,6 +25,10 @@ public class PanicText : MonoBehaviour
         {
             StartCoroutine(PanicTextDisplay());
         }
+        if (GameManager.safeZoneActive)
+        {
+            StopCoroutine(PanicTextDisplay());
+        }
     }
 
     private IEnumerator PanicTextDisplay()

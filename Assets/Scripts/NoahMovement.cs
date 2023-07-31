@@ -6,6 +6,7 @@ public class NoahMovement : MonoBehaviour
 {
     [SerializeField] private GameObject austin;
     [SerializeField] private GameObject wall;
+    [SerializeField] private GameObject doorDialogue;
     [SerializeField] private Transform leavingTransform;
     private BoxCollider2D wallCollider;
     private float moveSpeed = 4f;
@@ -19,6 +20,7 @@ public class NoahMovement : MonoBehaviour
     private bool noahCanMove = true;
 
     private RhythmGame rhythmGame;
+    
 
     
     // Start is called before the first frame update
@@ -30,7 +32,10 @@ public class NoahMovement : MonoBehaviour
         wallCollider = wall.GetComponentInChildren<BoxCollider2D>();
         rhythmGame = austin.GetComponent<RhythmGame>();
 
-        
+        if (GameManager.dayOfWeek == 1)
+        {
+            doorDialogue.SetActive(false);
+        }
     }
 
     private IEnumerator WaitForAustin()
@@ -60,6 +65,7 @@ public class NoahMovement : MonoBehaviour
         {
             MoveAwayFromAustin();
             GameManager.sceneOfDay = "cafeTuesday";
+            doorDialogue.SetActive(true);
         }
         if (GameManager.calmingDown)
         {

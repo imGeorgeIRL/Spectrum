@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
 
     public static int dayOfWeek = 1;
     public static string sceneOfDay = "";
+
+    public static bool tuesdayMeltdown = false;
     //Scene loading *****************************************
     public static bool transitionFromBedroom;
     private static string _loadedScene;

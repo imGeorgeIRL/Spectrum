@@ -51,6 +51,10 @@ public class SliderValueChange : MonoBehaviour
                 GameManager.canMoveWhileMeltdown = true;
             }
         }
+        if (GameManager.loadedScene == "TownCentre" && GameManager.tuesdayMeltdown)
+        {
+            rhythmGame.enabled = false;
+        }
 
         if (GameManager.rhythmDeactivate)
         {
@@ -145,6 +149,7 @@ public class SliderValueChange : MonoBehaviour
             if (GameManager.sensoryMetre >= 85)
             {
                 increaseRate = 0f;
+                GameManager.tuesdayMeltdown = true;
             }
             else
             {

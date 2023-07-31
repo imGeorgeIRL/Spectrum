@@ -76,7 +76,7 @@ me too #speaker: Austin
 
 ===Tuesday===
 {orderedDrink: ->Tuesday4 }
-{noahInCafe: ->Tuesday4 }
+{noahInCafe: ->Tuesday3 }
 {spokenToNoah : ->Tuesday2 | ->Tuesday1 }
 
 =Tuesday1

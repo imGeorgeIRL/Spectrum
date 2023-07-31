@@ -1285,6 +1285,7 @@ GameObject:
   - component: {fileID: 220511260}
   - component: {fileID: 220511259}
   - component: {fileID: 220511262}
+  - component: {fileID: 220511264}
   - component: {fileID: 220511263}
   m_Layer: 0
   m_Name: Main Camera
@@ -1434,6 +1435,18 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &220511264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220511258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e85ce60a69b577947b6bfef53abeab43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &266807014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3664,6 +3677,17 @@ PrefabInstance:
 --- !u!114 &764720195 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4502435458499820903, guid: 9d0b4ebc641893f4886346a42c3d3940, type: 3}
+  m_PrefabInstance: {fileID: 764720194}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &764720196 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 700372442843526863, guid: 9d0b4ebc641893f4886346a42c3d3940, type: 3}
   m_PrefabInstance: {fileID: 764720194}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -7652,6 +7676,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 764720195}
     - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+      propertyPath: socialSlider
+      value: 
+      objectReference: {fileID: 764720196}
+    - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+      propertyPath: sensorySlider
+      value: 
+      objectReference: {fileID: 764720195}
+    - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
       propertyPath: starArray.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -7669,7 +7701,7 @@ PrefabInstance:
       objectReference: {fileID: 1709910083}
     - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
       propertyPath: dialogueTriggerArray.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
       propertyPath: dialogueTriggerArray.Array.data[0]
@@ -7682,15 +7714,15 @@ PrefabInstance:
     - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
       propertyPath: dialogueTriggerArray.Array.data[2]
       value: 
-      objectReference: {fileID: 761420388}
+      objectReference: {fileID: 3916675291991789633}
     - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
       propertyPath: dialogueTriggerArray.Array.data[3]
       value: 
-      objectReference: {fileID: 3916675291991789633}
+      objectReference: {fileID: 1074431291}
     - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
       propertyPath: dialogueTriggerArray.Array.data[4]
       value: 
-      objectReference: {fileID: 1074431291}
+      objectReference: {fileID: 305538613}
     - target: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
       propertyPath: dialogueTriggerArray.Array.data[5]
       value: 
