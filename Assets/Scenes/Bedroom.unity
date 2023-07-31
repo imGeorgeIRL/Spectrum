@@ -2317,6 +2317,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4502435458499820901, guid: 9d0b4ebc641893f4886346a42c3d3940, type: 3}
+      propertyPath: austin
+      value: 
+      objectReference: {fileID: 117615553992633997}
     - target: {fileID: 4502435458703237022, guid: 9d0b4ebc641893f4886346a42c3d3940, type: 3}
       propertyPath: m_Name
       value: Managers
@@ -2890,7 +2894,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4717966836091943169, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
   m_PrefabInstance: {fileID: 117615553992633992}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 117615553992633997}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a29f493d382d92478c7bece40977878, type: 3}
@@ -2909,6 +2913,11 @@ GameObject:
 --- !u!1 &117615553992633996 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3031424812146096075, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+  m_PrefabInstance: {fileID: 117615553992633992}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &117615553992633997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 117615555137660391, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
   m_PrefabInstance: {fileID: 117615553992633992}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1042192149739918236

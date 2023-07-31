@@ -1663,6 +1663,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4502435458499820901, guid: 9d0b4ebc641893f4886346a42c3d3940, type: 3}
+      propertyPath: austin
+      value: 
+      objectReference: {fileID: 645132823}
     - target: {fileID: 4502435458703237022, guid: 9d0b4ebc641893f4886346a42c3d3940, type: 3}
       propertyPath: m_Name
       value: Managers
@@ -2891,6 +2895,11 @@ PrefabInstance:
       objectReference: {fileID: 894608847}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+--- !u!1 &645132823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 117615555137660391, guid: ab9f61c48eb2518439060b188af84d2b, type: 3}
+  m_PrefabInstance: {fileID: 645132822}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &652200456
 GameObject:
   m_ObjectHideFlags: 0
@@ -10465,8 +10474,6 @@ MonoBehaviour:
   character: {fileID: 616355531}
   minX: 0
   maxX: 84.54
-  minY: 0
-  maxY: 0
 --- !u!114 &1943595531
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     public static bool calmingDown = false;
     public static bool noahWalkAway = false;
 
+    public static bool rhythmDeactivate = false;
+
     //Time of day ******************************************
     public static bool isDayTime;
     public static bool goToSleep = false;
@@ -54,11 +56,6 @@ public class GameManager : MonoBehaviour
 
     public static bool timeSkip;
     public static string timeSkipDestination;
-    //Task Manager **********************************************
-
-    public static bool eatenBreakfast, goneToUni, madeAFriend;
-
-
 
     //Bus stuff***************************************************
 

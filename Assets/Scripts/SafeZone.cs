@@ -15,7 +15,10 @@ public class SafeZone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (GameManager.rhythmDeactivate && GameManager.safeZoneActive)
+        {
+            GameManager.rhythmDeactivate = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

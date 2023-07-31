@@ -72,6 +72,9 @@ public class SFXManager : MonoBehaviour
             case "UniEntrance":
                 clipVol = (sfxVolume * 1);
                 break;
+            case "Cafe":
+                clipVol = (sfxVolume * 0.5f);
+                break;
             default:
                 clipVol = (sfxVolume * 1);
                 break;

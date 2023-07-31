@@ -23,7 +23,7 @@ public class CameraShake : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.sensoryMetre >= 90f)
+        if (GameManager.sensoryMetre >= 85f)
         {
             Shake();
         }

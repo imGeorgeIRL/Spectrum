@@ -56,11 +56,6 @@ public class NoahMovement : MonoBehaviour
             wallCollider.enabled = true;
         }
 
-        if(Input.GetKeyDown(KeyCode.M))
-        {
-            GameManager.isHavingMeltdown = true;
-        }
-
         if (GameManager.noahWalkAway)
         {
             MoveAwayFromAustin();

@@ -13,10 +13,16 @@ public class SliderValueChange : MonoBehaviour
     private bool isIncreasing = false;
     public DialogueManager dialogueManager;
 
+    public GameObject austin;
+    private RhythmGame rhythmGame;
 
+    private void Start()
+    {
+        rhythmGame = austin.GetComponent<RhythmGame>();
+    }
     private void Update()
     {
-        if (!isIncreasing && !dialogueManager.dialogueIsPlaying)
+        if (!isIncreasing)
         {
             StartCoroutine(IncreaseSliderValue());
         }
@@ -26,7 +32,8 @@ public class SliderValueChange : MonoBehaviour
             increaseInterval = 2f;
         }
 
-        if (GameManager.sensoryMetre >= 90)
+        //if the sensory metre is higher than 90, then austin has a meltdown. 
+        if (GameManager.sensoryMetre >= 85)
         {
             GameManager.isHavingMeltdown = true;
         }
@@ -35,7 +42,20 @@ public class SliderValueChange : MonoBehaviour
             GameManager.isHavingMeltdown = false;
         }
         
+        //if austin is havinga meltdown and the loaded scene is cafe, then deactivate the rhythm game
+        if(GameManager.loadedScene == "Cafe")
+        {
+            GameManager.rhythmDeactivate = true;
+        }
 
+        if (GameManager.rhythmDeactivate)
+        {
+            rhythmGame.enabled = false;
+        }
+        else
+        {
+            rhythmGame.enabled = true;
+        }
     }
 
     private IEnumerator IncreaseSliderValue()
@@ -113,6 +133,18 @@ public class SliderValueChange : MonoBehaviour
                 {
                     increaseRate = 3f;
                 }
+            }
+        }
+
+        if (GameManager.dayOfWeek == 1 && GameManager.loadedScene == "Cafe")
+        {
+            if (GameManager.sensoryMetre >= 85)
+            {
+                increaseRate = 0f;
+            }
+            else
+            {
+                increaseRate = 3f;
             }
         }
 

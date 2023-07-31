@@ -54,13 +54,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.sensoryMetre >= 95f)
+        
+        if (GameManager.sensoryMetre >= 85f)
         {
-            animator.SetFloat("Direction", 0f);
-            animator.SetBool("isWalking", false);
-            animator.SetBool("isPanic", true);
-            rb.velocity = Vector2.zero;
-            animator.speed = 3f;
+            if (!GameManager.rhythmDeactivate)
+            {
+                animator.SetFloat("Direction", 0f);
+                animator.SetBool("isWalking", false);
+                animator.SetBool("isPanic", true);
+                rb.velocity = Vector2.zero;
+                animator.speed = 3f;
+            }
         }
         else
         {
@@ -127,6 +131,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 animator.SetBool("isTalking", false);
             }
+            //*****************************************************
 
             if (GameManager.isSitting && GameManager.loadedScene == "UniClassroom" && !hasSat)
             {
@@ -135,6 +140,15 @@ public class PlayerMovement : MonoBehaviour
                 SitDown();
                 hasSat = true;
             }
+            else if (GameManager.isSitting && GameManager.loadedScene == "Cafe" && !hasSat)
+            {
+                positionBeforeSit = transform.position;
+                Debug.Log("Position saved at " + positionBeforeSit);
+                SitDown();
+                hasSat = true;
+            }
+
+            //******************************************************
 
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
             {
@@ -144,8 +158,6 @@ public class PlayerMovement : MonoBehaviour
                     StandUp();
                 }
             }
-
-
         }
     }
 

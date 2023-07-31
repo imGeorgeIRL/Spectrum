@@ -50,6 +50,8 @@ VAR drink = ""
 VAR size = ""
 VAR cost = 0
 
+VAR orderedDrink = false
+
 
 //MISC
 EXTERNAL makeChoice(choice)

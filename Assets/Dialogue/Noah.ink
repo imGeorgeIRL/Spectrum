@@ -75,8 +75,9 @@ me too #speaker: Austin
 
 
 ===Tuesday===
-{spokenToNoah : ->Tuesday2 | ->Tuesday1 }
+{orderedDrink: ->Tuesday4 }
 {noahInCafe: ->Tuesday4 }
+{spokenToNoah : ->Tuesday2 | ->Tuesday1 }
 
 =Tuesday1
     Woah, it's super dark in here #speaker: Noah
@@ -102,46 +103,45 @@ me too #speaker: Austin
 
     =Tuesday2
     {tuesdayUni : ->Tuesday3}
-    Hey, how you feeling?
-        *I dont know
+    Hey, how you feeling?#speaker: Noah
+        *I dont know#speaker: Austin
             It's really hard to just 
             I dont know,
             know? explain how im feeling?
-        *drained
+        *drained#speaker: Austin
             That took a lot out of me
             like emotionally
             and physically I guess
-        *I'm okay
+        *I'm okay#speaker: Austin
             I just, dont handle change well
             I have this plan in my head
             and whenever something doesn't stick to it
             I freak out
-    -That's alright mate, I get it
-    I'm sorry you had to witness That
-    no no, don't apologise, it's fine!
+    - That's alright mate, I get it#speaker: Noah
+    I'm sorry you had to witness That#speaker: Austin
+    no no, don't apologise, it's fine!#speaker: Noah
     Do you wanna grab some lunch?
-        *yeah sure
+        *yeah sure#speaker: Austin
             I should probably eat something
-        *okay
+        *okay#speaker: Austin
             This is usually when I would eat lunch
-        *I dont know
+        *I dont know#speaker: Austin
             I'm feeling kinda tired
-                come on mate, you gotta eat something
-            alright, fine
-    - Awesome!
+                come on mate, you gotta eat something#speaker: Noah
+            alright, fine#speaker: Austin
+    - Awesome!#speaker: Noah
     There's this cafe in town I like to go to
     I can't remember the name of it, 
     but it has a green shade out front
     I gotta run a few errands, but meet me there for lunch!
-        Alright, sure
-    Seeya then buddy!
+        Alright, sure#speaker: Austin
+    Seeya then buddy!#speaker: Noah
     ~tuesdayUni = true
     ~noahWalkAway(1)
     ~noahInCafe = true
     ->DONE
 
     =Tuesday3
-    //{noahInCafe: ->Tuesday4 }
     Hey! You made it! #speaker:Noah #size:small
     hey, It's really loud in here #speaker: Austn #size:normal
     yeah, sorry, it's usually not this busy #speaker:Noah #size:small
@@ -153,18 +153,19 @@ me too #speaker: Austin
     ->DONE
     
     =Tuesday4
-    what did you get?
-    I got a {size} {drink}
-    oh yum, I got a caramel latte
-    dude take a seat,
+    what did you get?#speaker:Noah #size:small
+    I got a {size} {drink} #speaker: Austin #size:normal
+    oh yum, I got a caramel latte#speaker:Noah #size:small
+    dude take a seat, #speaker: Austin #size:normal
     ~sittingDown(1)
     So...physics huh 
-    huh? I can't hear you over all this noise
-    what noise? It's pretty quiet in here
-    I can't focus on anything you're saying
-    should I talk louder?
-    No I think that would make it worse
-    I'm sorry, I gotta go!
+    huh? I can't hear you over all this noise#speaker: Austin #size:normal
+    what noise? It's pretty quiet in here#speaker:Noah #size:small
+    I can't focus on anything you're saying#speaker: Austin #size:normal
+    should I talk louder?#speaker:Noah #size:small
+    No I think that would make it worse#speaker: Austin #size:normal
+    I'm sorry, I gotta go!#speaker: Austin #size:normal
+    o-okay, wait! #speaker:Noah #size:small
     ->DONE
 ->DONE
 

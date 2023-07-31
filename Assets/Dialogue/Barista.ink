@@ -1,6 +1,10 @@
 INCLUDE globals.ink
 
+->Main
+===Main===
+{orderedDrink : ->Ordered | ->Ordering}
 
+=Ordering
 Hi, what can I get for you? #speaker: Barista #size:small
 oh um, can I get a #speaker:Austin #size:normal
     *Flat White 
@@ -43,3 +47,11 @@ which table are you at? #speaker: Barista #size:small
 the one just to my left, #speaker:Austin #size:normal
 so one {size}, {drink} will come to {cost} dollars #speaker: Barista #size:small
 thank you #speaker:Austin #size:normal
+~orderedDrink = true
+->DONE 
+
+=Ordered
+I'll bring your drink to you when it's ready #speaker: Barista #size:small
+->DONE
+
+->DONE

@@ -24,11 +24,11 @@ public class PostProcessingController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.sensoryMetre >= 80f && GameManager.sensoryMetre <= 90)
+        if (GameManager.sensoryMetre >= 70f && GameManager.sensoryMetre <= 85)
         {
             UpdatePostProcessingSettings();
         }
-        else if (GameManager.sensoryMetre >= 90)
+        else if (GameManager.sensoryMetre >= 85)
         {
             MeltdownPostProcessing();
         }

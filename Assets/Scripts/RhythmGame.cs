@@ -128,7 +128,7 @@ public class RhythmGame : MonoBehaviour
         {
             rhythmVisualCue.SetActive(false);
         }
-        if (GameManager.sensoryMetre > 75f && !GameManager.isTalking)
+        if (GameManager.sensoryMetre >= 80f && !GameManager.isTalking)
         {
             if (!visualCueActive)
             {

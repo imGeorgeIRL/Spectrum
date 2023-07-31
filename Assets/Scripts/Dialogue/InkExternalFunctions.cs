@@ -70,10 +70,7 @@ public class InkExternalFunctions
             if (sit == 1)
             {
                 GameManager.isSitting = true;
-            }
-            else if (sit == 0)
-            {
-                GameManager.isSitting = false;
+                sit -= 1;
             }
         });
 

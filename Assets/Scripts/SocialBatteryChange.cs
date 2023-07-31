@@ -16,7 +16,7 @@ public class SocialBatteryChange : MonoBehaviour
 
     private void Update()
     {
-        if (!isIncreasing && !dialogueManager.dialogueIsPlaying)
+        if (!isIncreasing)
         {
             StartCoroutine(IncreaseSliderValue());
         }

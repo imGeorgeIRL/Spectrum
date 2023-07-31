@@ -28,8 +28,8 @@ dialogue
 
 
 ===Tuesday===
-{isNight : ->TuesdayNight }
-Okay what do I have today?
+{isNight : ->TuesdayNight } 
+Okay what do I have today? #speaker:Austin
 Uni again, go figure
 I think I might have enough time to go into town
 (if I can remember what bus to catch)
@@ -37,7 +37,7 @@ but I'll decide when I get to the bus stop
 ->DONE
 
 ===TuesdayNight===
-What's on tomorrow?
+What's on tomorrow? #speaker:Austin
 just a bunch of errands
 grocery and clothes shopping
 ->DONE

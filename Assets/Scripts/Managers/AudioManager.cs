@@ -20,6 +20,7 @@ public class AudioManager : MonoBehaviour
         public AudioClip audioClip;
     }
 
+    public AudioClip panicAudio;
     public List<SceneAudioClip> sceneAudioClips = new List<SceneAudioClip>();
     private Dictionary<string, AudioClip> audioClipMap = new Dictionary<string, AudioClip>();
 
@@ -84,10 +85,28 @@ public class AudioManager : MonoBehaviour
             lowPassFilter.enabled = false;
             echoFilter.enabled = false;
         }
+
+        switch (currentScene)
+        {
+            case "Cafe":
+                audioSource.volume = (musicVolume);
+                break;
+            default:
+                Debug.LogWarning("No case for " + currentScene);
+                break;
+        }
     }
 
     private void PlaySceneAudio(string sceneName)
     {
+        if (GameManager.sensoryMetre >= 85f)
+        {
+            audioSource.Stop();
+            audioSource.clip = panicAudio;
+            audioSource.Play();
+            audioSource.loop = true;
+            return;
+        }
         if (audioClipMap.ContainsKey(sceneName))
         {
             AudioClip audioClip = audioClipMap[sceneName];
