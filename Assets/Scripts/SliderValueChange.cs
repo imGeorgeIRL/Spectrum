@@ -51,9 +51,24 @@ public class SliderValueChange : MonoBehaviour
                 GameManager.canMoveWhileMeltdown = true;
             }
         }
-        if (GameManager.loadedScene == "TownCentre" && GameManager.tuesdayMeltdown)
+        if (GameManager.loadedScene == "TownCentre")
         {
-            rhythmGame.enabled = false;
+            if (GameManager.tuesdayMeltdown)
+            {
+                if (GameManager.safeZoneActive)
+                {
+                    rhythmGame.enabled = true;
+                    //GameManager.tuesdayMeltdown = false;
+                }
+                else
+                {
+                    rhythmGame.enabled = false;
+                }
+            }
+            else
+            {
+                rhythmGame.enabled = true;
+            }
         }
 
         if (GameManager.rhythmDeactivate)

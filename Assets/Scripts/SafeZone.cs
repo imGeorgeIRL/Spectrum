@@ -19,6 +19,8 @@ public class SafeZone : MonoBehaviour
         {
             GameManager.rhythmDeactivate = false;
         }
+        
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

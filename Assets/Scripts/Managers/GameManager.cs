@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     public static bool safeZoneActive = false;
 
     public static bool isHavingMeltdown = false;
-    public static bool talkingToNoah = false;
+    public static bool talkingToNoah = true; //CHANGED FOR TESTING, SHOULD BE INIT TO FALSE
     public static bool calmingDown = false;
     public static bool noahWalkAway = false;
 
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     public static bool goToSleep = false;
 
     public static int dayOfWeek = 1;
-    public static string sceneOfDay = "";
+    public static string sceneOfDay = "cafeTuesday"; //THIS IS CHANGED FOR TESTING PURPOSES
 
     public static bool tuesdayMeltdown = false;
     //Scene loading *****************************************

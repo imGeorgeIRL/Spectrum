@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 positionBeforeSit;
     private bool hasSat;
 
-
+    private bool isLyingDown = false;
     
     // ******************************************************************************************
     private void Awake()
@@ -51,16 +51,32 @@ public class PlayerMovement : MonoBehaviour
     //    ReenterRoom();
     //}
 
+    private IEnumerator WaitToLieDown()
+    {
+        isLyingDown = true;
+        yield return new WaitForSeconds(3);
+        animator.SetBool("Meltdown", true);
+        rb.velocity = Vector2.zero;
+    }
 
     private void Update()
     {
-        
+        if (GameManager.dayOfWeek == 1 && GameManager.safeZoneActive && GameManager.tuesdayMeltdown)
+        {
+            if (!isLyingDown) 
+            {
+                StartCoroutine(WaitToLieDown());
+            }
+
+        }
+
         if (GameManager.sensoryMetre >= 85f && !GameManager.canMoveWhileMeltdown)
         {
             animator.SetFloat("Direction", 0f);
             animator.SetBool("isWalking", false);
             animator.SetBool("isPanic", true);
             rb.velocity = Vector2.zero;
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
             animator.speed = 3f;
         }
         else
@@ -161,10 +177,12 @@ public class PlayerMovement : MonoBehaviour
     private void StandUp()
     {
         hasSat = false;
+        isLyingDown = false;
         transform.position = new Vector3(-4.68f, 0.94f, 0f);
         rb.constraints = RigidbodyConstraints2D.None;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         animator.SetBool("isSitting", false);
+        animator.SetBool("Meltdown", false);
     }
     private void SitDown()
     {

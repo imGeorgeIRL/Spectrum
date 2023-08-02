@@ -35,12 +35,12 @@ VAR isLateToClass = false
 VAR FoundBus = false
 EXTERNAL busChosen(bus)
 
-VAR tuesdayUni = false 
+VAR tuesdayUni = true //var changed for testing 
 
 //NOAH 
 VAR noah_Interractions = 0
-VAR spokenToNoah = false 
-VAR noahInCafe = false
+VAR spokenToNoah = true //var changed for testing 
+VAR noahInCafe = true //var changed testing
 EXTERNAL timeSkip(skip)
 EXTERNAL calmDown(calm)
 EXTERNAL noahWalkAway(walk)

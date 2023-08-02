@@ -27,7 +27,8 @@ public class PanicText : MonoBehaviour
         }
         if (GameManager.safeZoneActive)
         {
-            StopCoroutine(PanicTextDisplay());
+            //StopCoroutine(PanicTextDisplay());
+            return;
         }
     }
 
