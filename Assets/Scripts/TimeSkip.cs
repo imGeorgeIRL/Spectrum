@@ -24,6 +24,12 @@ public class TimeSkip : MonoBehaviour
                     GameManager.timeSkipDestination = "UniEntrance";
                     StartCoroutine(WaitForTimeSkip());
                     break;
+                case "TownCentre":
+                    hasSkipped = true;
+                    GameManager.timeSkipDestination = "LoungeKitchen";
+                    StartCoroutine(WaitForTimeSkip());
+                    GameManager.isDayTime = false;
+                    break;
 
                 default:
                     hasSkipped = true;

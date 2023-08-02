@@ -31,11 +31,13 @@ public class RhythmGame : MonoBehaviour
 
     private GameObject currentRing;
 
-    private void Start()
+    private void Awake()
     {
         rhythmVisualCue.SetActive(false);
-        cueObject.SetActive(false);
-        
+        cueObject.SetActive(false);        
+    }
+    private void Start()
+    {        
         sensorySlider.value = GameManager.sensoryMetre;
         socialSlider.value = GameManager.socialBattery;
         foreach (GameObject star in starArray)
@@ -128,21 +130,25 @@ public class RhythmGame : MonoBehaviour
         {
             rhythmVisualCue.SetActive(false);
         }
-        if (GameManager.sensoryMetre >= 80f && !GameManager.isTalking)
+        if (!GameManager.tuesdayMeltdown)
         {
-            if (!visualCueActive)
+            if (GameManager.isHavingMeltdown && !GameManager.isTalking)
             {
-                rhythmVisualCue.SetActive(true);
-                visualCueActive = true;
-            }
-            
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                
-                StartGame();
+                if (!visualCueActive)
+                {
+                    rhythmVisualCue.SetActive(true);
+                    visualCueActive = true;
+                }
 
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    StartGame();
+                }
             }
-            
+        }
+        else
+        {
+            rhythmVisualCue.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && isGreen && !hasSucceeded)

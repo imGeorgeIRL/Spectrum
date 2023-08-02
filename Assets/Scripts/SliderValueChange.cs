@@ -35,35 +35,19 @@ public class SliderValueChange : MonoBehaviour
         //if the sensory metre is higher than 90, then austin has a meltdown. 
         if (GameManager.sensoryMetre >= 85)
         {
-            GameManager.isHavingMeltdown = true;
+            GameManager.isHavingMeltdown = true;            
         }
         else
         {
             GameManager.isHavingMeltdown = false;
         }
         
-        //if austin is havinga meltdown and the loaded scene is cafe, then deactivate the rhythm game
-        if(GameManager.loadedScene == "Cafe")
+        if (GameManager.loadedScene == "TownCentre" || GameManager.loadedScene == "Cafe")
         {
-            GameManager.rhythmDeactivate = true;
-            if (GameManager.isHavingMeltdown)
+            if (GameManager.isHavingMeltdown && GameManager.dayOfWeek == 1)
             {
-                GameManager.canMoveWhileMeltdown = true;
-            }
-        }
-        if (GameManager.loadedScene == "TownCentre")
-        {
-            if (GameManager.tuesdayMeltdown)
-            {
-                if (GameManager.safeZoneActive)
-                {
-                    rhythmGame.enabled = true;
-                    //GameManager.tuesdayMeltdown = false;
-                }
-                else
-                {
-                    rhythmGame.enabled = false;
-                }
+                rhythmGame.enabled = false;
+                GameManager.tuesdayMeltdown = true;
             }
             else
             {
@@ -71,13 +55,13 @@ public class SliderValueChange : MonoBehaviour
             }
         }
 
-        if (GameManager.rhythmDeactivate)
+        if (GameManager.isHavingMeltdown)
         {
-            rhythmGame.enabled = false;
+            //Debug.LogWarning("having a meltdown");
         }
         else
         {
-            rhythmGame.enabled = true;
+            //Debug.LogError("NO MORE MELTDOWN");
         }
     }
 
@@ -164,7 +148,7 @@ public class SliderValueChange : MonoBehaviour
             if (GameManager.sensoryMetre >= 85)
             {
                 increaseRate = 0f;
-                GameManager.tuesdayMeltdown = true;
+                //GameManager.tuesdayMeltdown = true;
             }
             else
             {

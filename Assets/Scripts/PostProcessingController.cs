@@ -57,7 +57,19 @@ public class PostProcessingController : MonoBehaviour
         {
             chromatic.intensity.value = 0.3f;
         }
-        
+
+        if (profile.TryGetSettings(out Vignette vignette))
+        {
+            vignette.intensity.value = vignetteIntensity;
+            vignette.smoothness.value = vignetteSmoothness;
+        }
+
+        if (profile.TryGetSettings(out Grain grain))
+        {
+            grain.intensity.value = grainIntensity;
+            grain.size.value = grainSize;
+        }
+
     }
     public void UpdatePostProcessingSettings()
     {

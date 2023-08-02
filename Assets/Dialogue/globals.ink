@@ -45,6 +45,10 @@ EXTERNAL timeSkip(skip)
 EXTERNAL calmDown(calm)
 EXTERNAL noahWalkAway(walk)
 
+VAR deepConversation = false
+EXTERNAL deepConvoBreak(breaks)
+VAR deepConvoPause = false
+
 //CAFE 
 VAR drink = ""
 VAR size = ""

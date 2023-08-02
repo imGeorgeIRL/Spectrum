@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 oldPosition = transform.position;
 
         animator.SetBool("isMeltdown", true);
-        Vector3 newPosition = new Vector3 (oldPosition.x, oldPosition.y + 2, oldPosition.z);
+        Vector3 newPosition = new Vector3 (oldPosition.x, oldPosition.y + 1, oldPosition.z);
         transform.position = newPosition;
         rb.velocity = Vector2.zero;
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
@@ -75,12 +75,12 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        if (GameManager.sensoryMetre >= 85f && !GameManager.canMoveWhileMeltdown)
+        if (GameManager.sensoryMetre >= 85f && GameManager.dayOfWeek != 1)
         {
             animator.SetFloat("Direction", 0f);
             animator.SetBool("isWalking", false);
             animator.SetBool("isPanic", true);
-            rb.velocity = Vector2.zero;       
+            rb.velocity = Vector2.zero;
             animator.speed = 3f;
         }
         else

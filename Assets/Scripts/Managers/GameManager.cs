@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public static bool talkingToNoah = true; //CHANGED FOR TESTING, SHOULD BE INIT TO FALSE
     public static bool calmingDown = false;
     public static bool noahWalkAway = false;
+    public static bool noahSitOnGround = false;
 
     public static bool rhythmDeactivate = false;
     public static bool canMoveWhileMeltdown = false;
@@ -80,7 +81,7 @@ public class GameManager : MonoBehaviour
     public static bool interactedWithWardrobe;
 
     public static bool talkedToMum = false;
-
+    public static bool triggerDialogue = false;
 
 
     private void Awake()

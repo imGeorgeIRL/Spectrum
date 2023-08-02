@@ -75,6 +75,8 @@ me too #speaker: Austin
 
 
 ===Tuesday===
+{deepConvoPause : ->Tuesday6 }
+{deepConversation: ->Tuesday5 }
 {orderedDrink: ->Tuesday4 }
 {noahInCafe: ->Tuesday3 }
 {spokenToNoah : ->Tuesday2 | ->Tuesday1 }
@@ -156,9 +158,9 @@ me too #speaker: Austin
     what did you get?#speaker:Noah #size:small
     I got a {size} {drink} #speaker: Austin #size:normal
     oh yum, I got a caramel latte#speaker:Noah #size:small
-    dude take a seat, #speaker: Austin #size:normal
+    dude take a seat, #speaker:Noah #size:small
     ~sittingDown(1)
-    So...physics huh 
+    So...physics huh #speaker:Noah #size:small
     huh? I can't hear you over all this noise#speaker: Austin #size:normal
     what noise? It's pretty quiet in here#speaker:Noah #size:small
     I can't focus on anything you're saying#speaker: Austin #size:normal
@@ -166,6 +168,85 @@ me too #speaker: Austin
     No I think that would make it worse#speaker: Austin #size:normal
     I'm sorry, I gotta go!#speaker: Austin #size:normal
     o-okay, wait! #speaker:Noah #size:small
+    ~deepConversation = true
+    ->DONE
+    
+    =Tuesday5
+        Hey! Are you okay? #speaker:Noah #size:normal
+    No #speaker: Austin
+        Everything just get too much in there? #speaker:Noah
+    yes #speaker: Austin
+    wanna talk about it? #speaker:Noah
+    ... #speaker: Austin
+    do you know what a meltdown is?
+        No, not really #speaker:Noah
+    you know that feeling #speaker: Austin
+    when it feels like the whole world is collapsing
+    right on top of you?
+    like, it feels like you're standing
+    on really thin ice,
+    and someone is about to throw a rock on it.
+        You've lost me #speaker:Noah
+    Basically, its like #speaker: Austin
+    the intensity of everything
+    gets cranked up all the way
+        right... #speaker:Noah
+    so, sounds are super loud
+    and I can't block anything out.
+    Everything is brigher,
+    smells are too intense,
+    anything touching me feels like sandpaper
+    or burning.
+    It's all so overwhelming that I either
+    freak out, or shut down.
+        can you do anything to like, #speaker:Noah
+        block anything out?
+    I usually have noise cancelling headphones #speaker: Austin
+    but they broke in the move here
+        oh, that sucks, im sorry #speaker:Noah
+        what do you wanna do now?
+    Just lie here for a bit and calm down #speaker: Austin
+        okay
+    ~deepConvoBreak(1) //maybe add a sunset?? or just night
+    ~deepConvoPause = true
+    ->DONE
+    
+    =Tuesday6
+        You like space right? #speaker:Noah
+    yeah #speaker: Austin
+        Obviously, #speaker:Noah
+        why else would you be studying astrophysics
+        and space science?
+        anyway
+        do you like black holes?
+    //switch to austin sitting up
+    Yes, they're my favourite thing ever! #speaker: Austin
+        Me too! #speaker:Noah #size:big
+        sorry, #size:normal
+        Me too! #size:small
+    I had a dream once when I was a kid #speaker: Austin #size:normal
+    where I dove head first 
+    right into a black hole
+    and I distinctly remember
+    being about to cross the event horizon,
+    seeing this...infinite darkness ahead of me
+    I woke up and just...knew
+    that I had to do everything I could
+    to know everything I could about the universe.
+    I may not know people, but I know space.
+        Me, personally, #speaker:Noah
+        I think astrobiology is my calling.
+        I want to be the guy that discovers new plant life
+        on other planets, cataloguing them
+        like the sci-fi Charles Darwin
+        only cooler
+        and more ginger!
+    <shake> hahahaha! </shake> #speaker: Austin
+        I like you Austin, #speaker:Noah
+        I'm glad we're friends.
+    friends? #speaker: Austin
+        yeah, friends! #speaker:Noah
+        ~timeSkip(1)
     ->DONE
 ->DONE
 

@@ -46,7 +46,7 @@ public class NoahMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.isHavingMeltdown && noahCanMove)
+        if (GameManager.isHavingMeltdown && noahCanMove && GameManager.loadedScene == "UniClassroom")
         {
             MoveTowardsAustin();
         }

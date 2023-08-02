@@ -169,6 +169,14 @@ public class InkExternalFunctions
                 walk -= 1;
             }
         });
+        story.BindExternalFunction("deepConvoBreak", (int breaks) =>
+        {
+            if (breaks == 1)
+            {
+                GameManager.noahSitOnGround = true;
+                breaks -= 1;
+            }
+        });
     }
 
     public void Unbind(Story story)
