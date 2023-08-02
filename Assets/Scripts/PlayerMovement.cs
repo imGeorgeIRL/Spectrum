@@ -55,13 +55,18 @@ public class PlayerMovement : MonoBehaviour
     {
         isLyingDown = true;
         yield return new WaitForSeconds(3);
-        animator.SetBool("Meltdown", true);
+        Vector3 oldPosition = transform.position;
+
+        animator.SetBool("isMeltdown", true);
+        Vector3 newPosition = new Vector3 (oldPosition.x, oldPosition.y + 2, oldPosition.z);
+        transform.position = newPosition;
         rb.velocity = Vector2.zero;
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 
     private void Update()
     {
-        if (GameManager.dayOfWeek == 1 && GameManager.safeZoneActive && GameManager.tuesdayMeltdown)
+        if (GameManager.dayOfWeek == 1 && GameManager.safeZoneActive && GameManager.isHavingMeltdown)
         {
             if (!isLyingDown) 
             {
@@ -75,8 +80,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Direction", 0f);
             animator.SetBool("isWalking", false);
             animator.SetBool("isPanic", true);
-            rb.velocity = Vector2.zero;
-            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            rb.velocity = Vector2.zero;       
             animator.speed = 3f;
         }
         else
@@ -182,7 +186,7 @@ public class PlayerMovement : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.None;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         animator.SetBool("isSitting", false);
-        animator.SetBool("Meltdown", false);
+        animator.SetBool("isMeltdown", false);
     }
     private void SitDown()
     {

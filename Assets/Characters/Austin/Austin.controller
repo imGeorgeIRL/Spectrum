@@ -26,10 +26,10 @@ AnimatorStateMachine:
     m_Position: {x: 200, y: 370, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4614623977060677675}
-    m_Position: {x: 440, y: 220, z: 0}
+    m_Position: {x: -70, y: 250, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1888731718893787176}
-    m_Position: {x: -60, y: 220, z: 0}
+    m_Position: {x: 440, y: 260, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -6051545680789232147}
@@ -338,8 +338,8 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Meltdown
-    m_Type: 9
+  - m_Name: isMeltdown
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -477,11 +477,11 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 3
+  - m_ConditionMode: 4
     m_ConditionEvent: Direction
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: Meltdown
+    m_ConditionEvent: isMeltdown
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4614623977060677675}
@@ -505,11 +505,11 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 4
+  - m_ConditionMode: 3
     m_ConditionEvent: Direction
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: Meltdown
+    m_ConditionEvent: isMeltdown
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1888731718893787176}
