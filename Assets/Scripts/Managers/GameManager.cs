@@ -83,6 +83,8 @@ public class GameManager : MonoBehaviour
     public static bool talkedToMum = false;
     public static bool triggerDialogue = false;
 
+    public static bool inRangeOfClothes = false;
+
 
     private void Awake()
     {
