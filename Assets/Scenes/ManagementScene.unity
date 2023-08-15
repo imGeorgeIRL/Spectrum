@@ -1490,6 +1490,8 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 82796e76556a9f04f9a91c27291bbd7a, type: 3}
   - sceneName: Cafe
     audioClip: {fileID: 8300000, guid: 23a9bdead99bbaa4b9df23f7577a92b0, type: 3}
+  - sceneName: Observatory
+    audioClip: {fileID: 8300000, guid: ef31115f1b538c24d80fc8bea76644fc, type: 3}
 --- !u!169 &1662466273
 AudioLowPassFilter:
   m_ObjectHideFlags: 0
