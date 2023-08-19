@@ -7,10 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        string lastLoadedScene = PlayerPrefs.GetString("lastLoadedScene", "Bedroom");
-
-        SceneManager.LoadScene(lastLoadedScene);
-        GameManager.loadedScene = "Bedroom";
+        SceneManager.LoadScene("ContentWarning");        
     }
 
     public void QuitGame()

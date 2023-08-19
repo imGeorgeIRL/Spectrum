@@ -3025,6 +3025,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 296588555220327412, guid: 2c357d29dc2aee0438d2929928124d03, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 296588555220327412, guid: 2c357d29dc2aee0438d2929928124d03, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 296588555220327412, guid: 2c357d29dc2aee0438d2929928124d03, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2550194419545025084, guid: 2c357d29dc2aee0438d2929928124d03, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -3072,6 +3084,34 @@ PrefabInstance:
     - target: {fileID: 2550194419545025085, guid: 2c357d29dc2aee0438d2929928124d03, type: 3}
       propertyPath: m_Name
       value: UI MENUS
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360706726251610393, guid: 2c357d29dc2aee0438d2929928124d03, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3360706726251610393, guid: 2c357d29dc2aee0438d2929928124d03, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176408140572814637, guid: 2c357d29dc2aee0438d2929928124d03, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176408140572814637, guid: 2c357d29dc2aee0438d2929928124d03, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357732126247081419, guid: 2c357d29dc2aee0438d2929928124d03, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357732126247081419, guid: 2c357d29dc2aee0438d2929928124d03, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7357732126247081419, guid: 2c357d29dc2aee0438d2929928124d03, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c357d29dc2aee0438d2929928124d03, type: 3}

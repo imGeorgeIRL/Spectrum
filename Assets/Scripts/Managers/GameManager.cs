@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
 
     public static bool tuesdayMeltdown = false;
     //Scene loading *****************************************
+    public static string firstSceneInSession;
     public static bool transitionFromBedroom;
     private static string _loadedScene;
     public static string loadedScene 

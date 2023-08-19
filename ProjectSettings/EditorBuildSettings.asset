@@ -38,4 +38,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cafe.unity
     guid: fcc51c273b0a6ab4fa0cd84c743cbe16
+  - enabled: 1
+    path: Assets/Scenes/ContentWarning.unity
+    guid: af14e8fbceb8c5040a39ffef2a0b1a1a
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 1d1f7162769551f40b39ed5870fd3c91
+  - enabled: 1
+    path: Assets/Scenes/Observatory.unity
+    guid: 26c9f21bccda3df46820c7aed978c120
+  - enabled: 1
+    path: Assets/Scenes/ThreadsCo.unity
+    guid: a701e1d700742484d9f2e0a52f8032b2
   m_configObjects: {}
