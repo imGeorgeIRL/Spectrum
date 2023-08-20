@@ -116,29 +116,29 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            if (!isDayTime)
-            {
-                isDayTime = true;
-            }
-            else
-            {
-                isDayTime = false;
-            }
+        //if (Input.GetKeyDown(KeyCode.T))
+        //{
+        //    if (!isDayTime)
+        //    {
+        //        isDayTime = true;
+        //    }
+        //    else
+        //    {
+        //        isDayTime = false;
+        //    }
 
-        }
+        //}
 
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            sensoryMetre += 10f;
+        //if (Input.GetKeyDown(KeyCode.N))
+        //{
+        //    sensoryMetre += 10f;
             
-        }
+        //}
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.P))
-        {
-            PlayerPrefs.DeleteAll();
-        }
+        //if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.P))
+        //{
+        //    PlayerPrefs.DeleteAll();
+        //}
     }
 
     public IEnumerator StartLoadingScreen()

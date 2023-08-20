@@ -97,9 +97,9 @@ public class BlackScreen : MonoBehaviour
             GameManager.interactedWithWardrobe = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            StartCoroutine(BlackScreenEnable());
-        }
+        //if (Input.GetKeyDown(KeyCode.H))
+        //{
+        //    StartCoroutine(BlackScreenEnable());
+        //}
     }
 }

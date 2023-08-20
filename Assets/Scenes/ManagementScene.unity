@@ -389,6 +389,7 @@ GameObject:
   - component: {fileID: 226951796}
   - component: {fileID: 226951797}
   - component: {fileID: 1983541994561043318}
+  - component: {fileID: 1983541994561043319}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1755,3 +1756,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e05b87c9e215e14aad3a55ad683a022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1983541994561043319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226951795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f189545f4415dce448e1d9d71b63cc62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  folderName: SOS_Screenshots

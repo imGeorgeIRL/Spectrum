@@ -18,4 +18,14 @@ public class MainMenu : MonoBehaviour
         
     }
 
+    public void GoToCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
+    public void ClearSave()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene("ContentWarning");
+    }
 }

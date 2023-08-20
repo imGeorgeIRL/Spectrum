@@ -42,9 +42,9 @@ public class StartupManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            Debug.Log("Current scene is " + GameManager.loadedScene);
-        }
+        //if (Input.GetKeyDown(KeyCode.U))
+        //{
+        //    Debug.Log("Current scene is " + GameManager.loadedScene);
+        //}
     }
 }

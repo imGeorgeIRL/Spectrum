@@ -17,11 +17,11 @@ public class HandController : MonoBehaviour
         Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);
         transform.Translate(moveDirection * handMoveSpeed * Time.deltaTime);
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetBool("Grab", true);
         }
-        if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
             anim.SetBool("Grab", false);
         }

@@ -33,6 +33,16 @@ public class TransitionToHand : MonoBehaviour
             austin.SetActive(!isHandMode);
             hand.SetActive(isHandMode);
         }
+        else if (GameManager.inRangeOfClothes && Input.GetKeyDown(KeyCode.E))
+        {
+            isHandMode = !isHandMode;
+
+            mainCamera.enabled = isHandMode;
+            handCamera.enabled = !isHandMode;
+
+            austin.SetActive(isHandMode);
+            hand.SetActive(!isHandMode);
+        }
 
     }
 }
