@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     public static bool isDayTime;
     public static bool goToSleep = false;
 
-    public static int dayOfWeek = 1;
+    public static int dayOfWeek = 0;
     public static string sceneOfDay = "cafeTuesday"; //THIS IS CHANGED FOR TESTING PURPOSES
 
     public static bool tuesdayMeltdown = false;
