@@ -46,12 +46,18 @@ anyway, sleep time!
 
 
 ===Tuesday===
-That was
+That was #speaker: Austin
     *[awful]
     *[terrible]
     *[horrible]
 -It's not even my bed time yet 
 but I really just need to sleep.
+I really just dont know
+why everything is going wrong.
+My meltdown today probably scared Noah off
+My one chance at making a friend
+and I ruined it by just being me. 
+~Day_Of_Week = 2
 ~bedTime(1)
 ~calendar_Interactions = 0
 ~isBedTime = false
@@ -60,6 +66,13 @@ but I really just need to sleep.
 ~isNight = false
 ~bus_Chosen = false
 ~FoundBus = false
+~ houseNPC1 = false
+~ houseNPC2 = false
+~ houseNPC3 = false
+~ townNPC1 = false
+~ townNPC2 = false
+~ townNPC3 = false
+~noah_Interractions = 0
 ->DONE
 
 ===Wednesday===

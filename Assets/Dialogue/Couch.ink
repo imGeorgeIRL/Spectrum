@@ -40,6 +40,9 @@ Should I watch some Tv? #speaker: Austin
 
     
 ===Tuesday===
+Should I watch some- #speaker: Austin
+no, just sleep.
+It's just gonna make me feel worse.
 ->DONE
 
 ===Wednesday===

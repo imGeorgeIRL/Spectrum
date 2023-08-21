@@ -4,8 +4,6 @@ INCLUDE globals.ink
 - 0: -> Monday
 - 1: -> Tuesday
 - 2: -> Wednesday
-- 3: -> Thursday
-- 4: -> Friday
 }
 
 
@@ -28,7 +26,6 @@ dialogue
 
 
 ===Tuesday===
-{isNight : ->TuesdayNight } 
 Okay what do I have today? #speaker:Austin
 Uni again, go figure
 I think I might have enough time to go into town
@@ -36,17 +33,16 @@ I think I might have enough time to go into town
 but I'll decide when I get to the bus stop
 ->DONE
 
-===TuesdayNight===
-What's on tomorrow? #speaker:Austin
-just a bunch of errands
-grocery and clothes shopping
-->DONE
 
 ===Wednesday===
-->DONE
-
-===Thursday===
-->DONE
-
-===Friday===
+okay, today needs to go well
+because I am not having a good time
+I dont suppose I'll run into Noah
+not that he would want to talk to me
+not after yesterday.
+Anyway, I have to buy some new clothes today
+my favourite shirt is getting holes in it.
+I think there's a clothing store in town
+Strings and, no, cloth an- no,
+something like that.
 ->DONE

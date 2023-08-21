@@ -27,8 +27,8 @@ public class TimeSkip : MonoBehaviour
                 case "TownCentre":
                     hasSkipped = true;
                     GameManager.timeSkipDestination = "LoungeKitchen";
-                    StartCoroutine(WaitForTimeSkip());
-                    GameManager.isDayTime = false;
+                    StartCoroutine(WaitForNightSkip());
+                    
                     break;
 
                 default:
@@ -50,5 +50,17 @@ public class TimeSkip : MonoBehaviour
         GameManager.SaveSensoryMetre();
         GameManager.SaveSocialBattery();
         GameManager.timeSkip = false;  
+    }
+    
+    private IEnumerator WaitForNightSkip()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.UnloadSceneAsync(GameManager.loadedScene);
+        SceneManager.LoadSceneAsync(GameManager.timeSkipDestination, LoadSceneMode.Additive);
+        GameManager.loadedScene = GameManager.timeSkipDestination;
+        GameManager.isDayTime = false;
+        GameManager.SaveSensoryMetre();
+        GameManager.SaveSocialBattery();
+        GameManager.timeSkip = false;
     }
 }

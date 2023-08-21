@@ -2,10 +2,7 @@ INCLUDE globals.ink
 
 {Day_Of_Week:
 - 0: -> Monday 
-- 1: -> Tuesday
-- 2: -> Wednesday
-- 3: -> Thursday
-- 4: -> Friday
+
 }
 
 ===Monday===
@@ -55,23 +52,13 @@ thank you #speaker: Austin
     ->DONE
     
 ===Monday2===
-You can just take a seat over there,
+You can just take a seat over there, #speaker: Miller
 class is about to start.
 ->DONE
 
 ===Monday2Late===
-Just take a seat over by the door,
+Just take a seat over by the door, #speaker: Miller
 class has already started.
 ->DONE
 
-===Tuesday===
-->DONE
 
-===Wednesday===
-->DONE
-
-===Thursday===
-->DONE
-
-===Friday===
-->DONE

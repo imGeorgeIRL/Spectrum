@@ -1,5 +1,5 @@
 // GENERAL
-VAR Day_Of_Week = 0 //changed for testing purposes
+VAR Day_Of_Week = 1 //changed for testing purposes
 
 VAR cafeOnMonday = false //changed for testing
 VAR busOnMonday = false

@@ -4,8 +4,6 @@ INCLUDE globals.ink
 - 0: ->Monday
 - 1: -> Tuesday
 - 2: -> Wednesday
-- 3: -> Thursday
-- 4: -> Friday
 }
 
 ===Monday===
@@ -48,10 +46,32 @@ hrmmph #speaker:Charles
 ->DONE
 
 ===Wednesday===
+{houseNPC2: ->Wednesday2 }
+Mr. Charles? #speaker:Austin
+Huh? Oh it's you, #speaker:Charles
+why do you keep bothering me?
+bothering you? #speaker:Austin
+Yes, you keep talking to me, #speaker:Charles
+and never about anything interesting.
+What do you find interesting? #speaker:Austin
+stars, space, and football. #speaker:Charles
+I love the first two, football not so much #speaker:Austin
+...
+Mr charles, did you know
+that they recently found an exoplanet
+in the habitable zone of it's star?
+and it's amazing because
+are you done yet? #speaker:Charles
+huh? #speaker:Austin
+I said I liked them, not that I wanted to talk about them #speaker:Charles
+now scram.
+oh, im sorry. #speaker:Austin
+~spokeTo(1)
+~houseNPC2 = true
 ->DONE
 
-===Thursday===
-->DONE
-
-===Friday===
+=Wednesday2
+If you so much as mention space #speaker:Charles
+I'll start screaming
+<shake>scram!</shake>
 ->DONE

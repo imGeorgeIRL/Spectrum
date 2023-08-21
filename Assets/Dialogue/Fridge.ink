@@ -71,8 +71,9 @@ hmm, i've already eaten...#speaker:Austin
         ->DONE
 ->DONE
 
-
+//TUESDAY ---------------------------------
 ===Tuesday===
+{ isNight : ->TuesdayNight }
 { fridge_Interactions == 1 : ->Tuesday2 | ->Tuesday1}
 
 =Tuesday1
@@ -105,11 +106,37 @@ I should probably head off soon!
 
 ===TuesdayNight===
 I should really eat something #speaker:Austin
-but I think I just want to go to sleep
-put today behind me.
+but I think I just want to go to sleep.
+I'm so <dangle a=0.5>exhausted</dangle> from today.
 ->DONE
 
 ===Wednesday===
+{ fridge_Interactions == 1 : ->Wednesday2 | ->Wednesday1}
+
+    =Wednesday1
+    Breakfast time, what should I have today? #speaker: Austin
+    *[Cereal]
+        Which one?
+            ** [Fruity loops]
+                oh, I'm out
+                guess i'll have corn flakes instead...
+                ~ fridge_Interactions = 1
+                ->DONE
+            ** [Corn Flakes]
+                They're kinda stale...
+                did I forget to close it?
+                ~ fridge_Interactions = 1
+                ->DONE
+    *[Toast]
+        is that...mould on my bread?
+        I'll just pick it off
+        I think thats okay...
+        ~ fridge_Interactions = 1
+        ->DONE
+
+
+    =Wednesday2
+    ->DONE
 ->DONE
 
 ===Thursday===
