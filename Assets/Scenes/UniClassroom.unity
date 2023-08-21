@@ -2143,6 +2143,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 789970000}
     m_Modifications:
+    - target: {fileID: 3859289087607955381, guid: 91847d021558bec44a67c116fca950ec, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.19852298
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859289087607955381, guid: 91847d021558bec44a67c116fca950ec, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.19852298
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859289087607955381, guid: 91847d021558bec44a67c116fca950ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859289087607955381, guid: 91847d021558bec44a67c116fca950ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859289087607955382, guid: 91847d021558bec44a67c116fca950ec, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 55b4657960df28748afc7eb6c16c08c6, type: 3}
     - target: {fileID: 3859289088094872852, guid: 91847d021558bec44a67c116fca950ec, type: 3}
       propertyPath: m_Name
       value: DoorInteract Zone
@@ -2620,6 +2640,14 @@ PrefabInstance:
     - target: {fileID: 1123743645324737855, guid: 96d7ad30ef37b8941afafe1c706f0086, type: 3}
       propertyPath: m_Name
       value: DIALOGUE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1123743646323419538, guid: 96d7ad30ef37b8941afafe1c706f0086, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1123743646323419538, guid: 96d7ad30ef37b8941afafe1c706f0086, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.85
       objectReference: {fileID: 0}
     - target: {fileID: 1123743646323419538, guid: 96d7ad30ef37b8941afafe1c706f0086, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4513,6 +4541,14 @@ PrefabInstance:
       propertyPath: leavingTransform
       value: 
       objectReference: {fileID: 1545039243}
+    - target: {fileID: 6431053488959122920, guid: c4095ba9ce796c045b8c3f9fe3926d42, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 6431053488959122920, guid: c4095ba9ce796c045b8c3f9fe3926d42, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4095ba9ce796c045b8c3f9fe3926d42, type: 3}
 --- !u!1001 &6244214458476079238
@@ -4604,11 +4640,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1123743646323419538, guid: 96d7ad30ef37b8941afafe1c706f0086, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.69
+      value: -0.24
       objectReference: {fileID: 0}
     - target: {fileID: 1123743646323419538, guid: 96d7ad30ef37b8941afafe1c706f0086, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.07
+      value: 6.26
       objectReference: {fileID: 0}
     - target: {fileID: 1123743646323419538, guid: 96d7ad30ef37b8941afafe1c706f0086, type: 3}
       propertyPath: m_LocalPosition.z

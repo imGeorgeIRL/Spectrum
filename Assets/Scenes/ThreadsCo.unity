@@ -793,6 +793,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1720765492}
     m_Modifications:
+    - target: {fileID: 3859289087607955381, guid: 91847d021558bec44a67c116fca950ec, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.21448699
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859289087607955381, guid: 91847d021558bec44a67c116fca950ec, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.21448699
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859289087607955381, guid: 91847d021558bec44a67c116fca950ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.3688
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859289087607955381, guid: 91847d021558bec44a67c116fca950ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.5088
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859289087607955382, guid: 91847d021558bec44a67c116fca950ec, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 55b4657960df28748afc7eb6c16c08c6, type: 3}
     - target: {fileID: 3859289088094872852, guid: 91847d021558bec44a67c116fca950ec, type: 3}
       propertyPath: m_Name
       value: DoorInteract Zone
@@ -4279,7 +4299,7 @@ GameObject:
   - component: {fileID: 825420686}
   - component: {fileID: 825420685}
   m_Layer: 0
-  m_Name: clothesDisplay
+  m_Name: CLOTHESDISPLAY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4500,8 +4520,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863479855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.77, y: 3.9, z: 0}
-  m_LocalScale: {x: 0.276757, y: 0.276757, z: 0.276757}
+  m_LocalPosition: {x: 6.79, y: 3.78, z: 0}
+  m_LocalScale: {x: 0.3700241, y: 0.3700241, z: 0.3700241}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 825420683}
@@ -4548,7 +4568,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 51db21cac70a9c24d8f794d18dd47be6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 55b4657960df28748afc7eb6c16c08c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

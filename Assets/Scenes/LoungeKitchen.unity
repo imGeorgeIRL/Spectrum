@@ -2947,23 +2947,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4021538660714308187, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.19
+      value: 0.31389898
       objectReference: {fileID: 0}
     - target: {fileID: 4021538660714308187, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.19
+      value: 0.31389898
       objectReference: {fileID: 0}
     - target: {fileID: 4021538660714308187, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.19
+      value: 0.31389898
       objectReference: {fileID: 0}
     - target: {fileID: 4021538660714308187, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.71
+      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: 4021538660714308187, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.66
+      value: 4.95
       objectReference: {fileID: 0}
     - target: {fileID: 4021538660714308187, guid: abb3dee045aa8fa48aa4b86bbe236d89, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -3822,6 +3822,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 503380702}
     m_Modifications:
+    - target: {fileID: 3859289087607955381, guid: 91847d021558bec44a67c116fca950ec, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.19065799
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859289087607955381, guid: 91847d021558bec44a67c116fca950ec, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.19065799
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859289087607955381, guid: 91847d021558bec44a67c116fca950ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859289087607955381, guid: 91847d021558bec44a67c116fca950ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859289087607955382, guid: 91847d021558bec44a67c116fca950ec, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 55b4657960df28748afc7eb6c16c08c6, type: 3}
     - target: {fileID: 3859289088094872852, guid: 91847d021558bec44a67c116fca950ec, type: 3}
       propertyPath: m_Name
       value: DoorInteract Zone
@@ -3939,6 +3959,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 5642359211092000322, guid: 3f4a8a4929b7b2a44b5ff9fbcacd6721, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2851846
+      objectReference: {fileID: 0}
+    - target: {fileID: 5642359211092000322, guid: 3f4a8a4929b7b2a44b5ff9fbcacd6721, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2851846
+      objectReference: {fileID: 0}
+    - target: {fileID: 5642359211092000322, guid: 3f4a8a4929b7b2a44b5ff9fbcacd6721, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2851846
+      objectReference: {fileID: 0}
+    - target: {fileID: 5642359211092000322, guid: 3f4a8a4929b7b2a44b5ff9fbcacd6721, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 5642359211092000322, guid: 3f4a8a4929b7b2a44b5ff9fbcacd6721, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 5642359211092000381, guid: 3f4a8a4929b7b2a44b5ff9fbcacd6721, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 55b4657960df28748afc7eb6c16c08c6, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f4a8a4929b7b2a44b5ff9fbcacd6721, type: 3}
 --- !u!1 &5966891732152750986

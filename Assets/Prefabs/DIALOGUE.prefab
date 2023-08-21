@@ -73,6 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   visualCue: {fileID: 1123743646323419539}
   inkJSON: {fileID: 4900000, guid: 5570633511c2c4f408bd943dd79f2bcb, type: 3}
+  triggerInkJSON: {fileID: 0}
 --- !u!1 &1123743645324737855
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,8 +132,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1123743646323419539}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.048, y: 3.972, z: -3.2741096}
-  m_LocalScale: {x: 0.10390337, y: 0.10390337, z: 0.10390337}
+  m_LocalPosition: {x: -0.2313, y: 3.7887, z: -3.2741096}
+  m_LocalScale: {x: 0.1772072, y: 0.1772072, z: 0.1772072}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1123743645324737854}
@@ -179,7 +180,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 9
-  m_Sprite: {fileID: 21300000, guid: 51db21cac70a9c24d8f794d18dd47be6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 55b4657960df28748afc7eb6c16c08c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

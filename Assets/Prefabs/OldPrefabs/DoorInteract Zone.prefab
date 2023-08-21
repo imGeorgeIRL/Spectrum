@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4021538660714308185}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.58, y: 4.72, z: -1.1795633}
-  m_LocalScale: {x: 0.1, y: 0.13, z: 0}
+  m_LocalPosition: {x: -0.504, y: 4.9, z: -1.1795633}
+  m_LocalScale: {x: 0.18116, y: 0.235508, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4021538660932786421}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 9
-  m_Sprite: {fileID: 21300000, guid: 51db21cac70a9c24d8f794d18dd47be6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 55b4657960df28748afc7eb6c16c08c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -157,5 +157,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visualCue: {fileID: 4021538660714308185}
-  bedroomSceneName: Bedroom
-  LoungeSceneName: LoungeKitchen
