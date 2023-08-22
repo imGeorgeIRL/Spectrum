@@ -1,5 +1,5 @@
 // GENERAL
-VAR Day_Of_Week = 1 //changed for testing purposes
+VAR Day_Of_Week = 2 //changed for testing purposes
 
 VAR cafeOnMonday = false //changed for testing
 VAR busOnMonday = false
@@ -77,8 +77,13 @@ VAR spokenToMiller = false
 
 //NPCS
 VAR houseNPC1 = false
+VAR donnyInteractions = 0
+
 VAR houseNPC2 = false
+VAR charlesInteractions = 0
+
 VAR houseNPC3 = false
+VAR sanjayInteractions = 0
 
 VAR townNPC1 = false
 VAR townNPC2 = false

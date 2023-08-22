@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     public static bool safeZoneActive = false;
 
     public static bool isHavingMeltdown = false;
-    public static bool talkingToNoah = true; //CHANGED FOR TESTING, SHOULD BE INIT TO FALSE
+    public static bool talkingToNoah = false; //CHANGED FOR TESTING, SHOULD BE INIT TO FALSE
     public static bool calmingDown = false;
     public static bool noahWalkAway = false;
     public static bool noahSitOnGround = false;
