@@ -16,6 +16,7 @@ public class DialogueTrigger : MonoBehaviour
     private bool triggerDialogueInRange = false;
     private bool isCoolDown = false;
     private bool waitForSit = false;
+
     private void Awake()
     {
         GameManager.isTalking = false;

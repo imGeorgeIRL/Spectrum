@@ -19,6 +19,7 @@ Curse the day this good for nothing town built that bus stop!
 ~spokeTo(1)
 ~houseNPC2 = true
 sorry...?#speaker:Austin
+~charlesInteractions = 1
 ->DONE
 
 
@@ -29,6 +30,7 @@ sorry! #speaker:Austin
 
 
 ===Tuesday===
+{charlesInteractions == 0: ->Monday}
 {houseNPC2: ->Tuesday2 }
 I'm keeping my eyes on you kid #speaker:Charles
 you youngins are all the same 
@@ -39,6 +41,7 @@ I'm not destructive, and im certainly not loud #speaker:Austin
 yeah well we'll see about that. #speaker:Charles
 ~spokeTo(1)
 ~houseNPC2 = true
+~charlesInteractions = 2
 ->DONE
 
 =Tuesday2
@@ -46,6 +49,8 @@ hrmmph #speaker:Charles
 ->DONE
 
 ===Wednesday===
+{charlesInteractions == 0: ->Monday}
+{charlesInteractions == 1: ->Tuesday}
 {houseNPC2: ->Wednesday2 }
 Mr. Charles? #speaker:Austin
 Huh? Oh it's you, #speaker:Charles
@@ -68,6 +73,7 @@ now scram.
 oh, im sorry. #speaker:Austin
 ~spokeTo(1)
 ~houseNPC2 = true
+~charlesInteractions = 3
 ->DONE
 
 =Wednesday2

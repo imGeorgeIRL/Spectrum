@@ -2,10 +2,9 @@ INCLUDE globals.ink
 
 {Day_Of_Week:
 - 0: ->Monday
-- 1: {cafeOnMonday : ->Tuesday | -> Monday }
+- 1: ->Tuesday
 - 2: -> Wednesday
-- 3: -> Thursday
-- 4: -> Friday
+
 }
 
 ===Monday===
@@ -19,6 +18,7 @@ Hi sweatheart, can I  help you? #speaker:Woman
     * [never mind...]
     Alright, suit yourself.#speaker:Woman
     ~townNPC1 = true
+    ~town1 = 1
     ->DONE
 
 ===Monday2===
@@ -27,6 +27,7 @@ sorry sweetheart.
 ->DONE
 
 ===Tuesday===
+{town1 == 0: ->Monday}
 {townNPC1 : ->Tuesday2 | ->Tuesday1}
 
 =Tuesday1
@@ -40,6 +41,7 @@ Thank you #speaker:Austin
 No problem.#speaker:Woman
 ~spokeTo(1)
 ~townNPC1 = true
+~town1 = 2
 ->DONE
 
 =Tuesday2
@@ -47,11 +49,22 @@ Hope you remember this time haha!#speaker:Woman
 ->DONE
 
 ===Wednesday===
+{town1 == 0: ->Monday}
+{town1 == 1: ->Tuesday}
+Look at you, third time's the charm! #speaker:Woman
+Lost again?
+Nope! I'm supposed to be here this time. #speaker:Austin
+Trying to find the clothing store
+what is it called? Cloth and co?
+Threads and co! #speaker:Woman
+Yes that's the one! Do you know where it is? #speaker:Austin
+Of course, it's just back the way you came from #speaker:Woman
+past the bus stop, you can't miss it.
+Thank you so much #speaker:Austin
+no worries sweetheart #speaker:Woman
+buy something nice for yourself.
+~town1 = 3
 ->DONE
 
-===Thursday===
-->DONE
 
-===Friday===
-->DONE
 

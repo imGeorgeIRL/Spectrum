@@ -41,6 +41,8 @@ i'm just gonna go home
     ->DONE
 
     =NotFound
+    Oh great...wrong bus
+    lets just cross 519 off the list.
     I Need to find out what bus I need to catch #speaker:Austin
     but talking to people just drains me.
     ->DONE

@@ -5,6 +5,8 @@ using UnityEngine;
 public class HideDoors : MonoBehaviour
 {
     public GameObject[] doorTriggers;
+
+    public GameObject threadsTrigger;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +38,15 @@ public class HideDoors : MonoBehaviour
                     door.SetActive(true);
                 }
             }
+        }
+
+        if (GameManager.dayOfWeek == 2)
+        {
+            threadsTrigger.SetActive(true);
+        }
+        else
+        {
+            threadsTrigger.SetActive(false);
         }
     }
 }

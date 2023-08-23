@@ -86,5 +86,12 @@ VAR houseNPC3 = false
 VAR sanjayInteractions = 0
 
 VAR townNPC1 = false
+VAR town1 = 2
+
 VAR townNPC2 = false
+VAR town2 = 2
+
 VAR townNPC3 = false
+VAR town3 = 2
+
+

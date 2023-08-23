@@ -4,8 +4,6 @@ INCLUDE globals.ink
 - 0: {isNight : ->MondayNight | ->Monday }
 - 1: -> Tuesday
 - 2: -> Wednesday
-- 3: -> Thursday
-- 4: -> Friday
 }
 
 
@@ -60,10 +58,9 @@ why would I go anywhere?
 ->DONE
 
 ===Wednesday===
+I haven't even been to the store yet!
+what was it called again?
+cotton & co?
 ->DONE
 
-===Thursday===
-->DONE
 
-===Friday===
-->DONE

@@ -15,6 +15,7 @@ Okay sir #speaker: Austin
 ~spokeTo(1)
 ~houseNPC1 = true
 <shake a=0.7> I mean Donny!! </shake>
+~donnyInteractions = 1
 ->DONE
 
 ===Monday2===
@@ -24,6 +25,7 @@ Yeah#speaker:Austin
 
 //TUESDAY
 ===Tuesday===
+{donnyInteractions == 0: ->Monday}
 {houseNPC1: ->Tuesday2 }
 Morning Austin! #speaker: Donny
 Hi Donny #speaker:Austin
@@ -33,6 +35,7 @@ Have a good one kid #speaker: Donny
 you too. #speaker:Austin
 ~spokeTo(1)
 ~houseNPC1 = true
+~donnyInteractions = 2
 ->DONE
 
 =Tuesday2
@@ -41,6 +44,8 @@ Have a stellar day kid! #speaker: Donny
 
 //WEDNESDAY
 ===Wednesday===
+{donnyInteractions == 0: ->Monday}
+{donnyInteractions == 1: ->Tuesday}
 {houseNPC1: ->Wednesday2 }
 Hey Austin, #speaker: Donny
 Hi Donny #speaker:Austin
@@ -55,6 +60,7 @@ Probably not, #speaker:Austin
 but i appreciate the vote of confidence.
 ~spokeTo(1)
 ~houseNPC1 = true
+~donnyInteractions = 3
 ->DONE
 
 =Wednesday2

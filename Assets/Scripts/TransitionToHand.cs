@@ -8,9 +8,11 @@ public class TransitionToHand : MonoBehaviour
     public Camera handCamera;
 
     public GameObject austin;
+
     public GameObject hand;
 
     private bool isHandMode = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,25 +25,33 @@ public class TransitionToHand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.inRangeOfClothes && Input.GetKeyDown(KeyCode.E))
+        if (GameManager.inRangeOfClothes && Input.GetKeyDown(KeyCode.E) && !isHandMode)
         {
-            isHandMode = !isHandMode;
+            //isHandMode = !isHandMode;
 
-            mainCamera.enabled = !isHandMode;
-            handCamera.enabled = isHandMode;
+            //mainCamera.enabled = !isHandMode;
+            //handCamera.enabled = isHandMode;
 
-            austin.SetActive(!isHandMode);
-            hand.SetActive(isHandMode);
+            //austin.SetActive(!isHandMode);
+            //hand.SetActive(isHandMode);
+
+            isHandMode = true;
+
+            mainCamera.enabled = false;
+            handCamera.enabled = true;
+
+            austin.SetActive(false);
+            hand.SetActive(true);
         }
-        else if (GameManager.inRangeOfClothes && Input.GetKeyDown(KeyCode.E))
+        else if (Input.GetKeyDown(KeyCode.E) && isHandMode)
         {
-            isHandMode = !isHandMode;
+            isHandMode = false;
 
-            mainCamera.enabled = isHandMode;
-            handCamera.enabled = !isHandMode;
+            mainCamera.enabled = true;
+            handCamera.enabled = false;
 
-            austin.SetActive(isHandMode);
-            hand.SetActive(!isHandMode);
+            austin.SetActive(true);
+            hand.SetActive(false);
         }
 
     }

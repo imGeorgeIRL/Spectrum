@@ -4,8 +4,6 @@ INCLUDE globals.ink
 - 0: -> Monday
 - 1: -> Tuesday
 - 2: -> Wednesday
-- 3: -> Thursday
-- 4: -> Friday
 }
 
 ===Monday===
@@ -32,26 +30,22 @@ Which one was it?!
 -> DONE
 
 ===Tuesday===
-Okay, lets see if my memory can tell me
+Okay, lets see if my memory can tell me #speaker: Austin
 which bus to catch this time...
-If I remember correctly it was the
-    *[519]
-    ~busChosen(1)
-
-    *[838]
-    ~busChosen(2)
-
-    *[827]
-    ~busChosen(3)
-
-- let's hope this is the right one.
+I'm not gonna think about it, 
+im gonna go with my gut, and my gut says
+its bus 519!
+ ~busChosen(1)
+ Wow, perfect timing!
+ let's hope this is the right one.
 ->DONE
 
 ===Wednesday===
+At this point I think i should know where im going #speaker: Austin
+if i remember corectly its bus 519
+that one should take me into town
+oh, here it comes
+~busChosen(1)
 ->DONE
 
-===Thursday===
-->DONE
 
-===Friday===
-->DONE
