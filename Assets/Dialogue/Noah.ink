@@ -96,7 +96,7 @@ me too #speaker: Austin
         <shake>I- I dont handle changes, at all</shake> #size: normal
         <shake>and this is just too much</shake>
     can I...do anything? to help? #speaker: Noah
-        I think I just need to calm down a bit #speaker: Austin
+        <shake>I think I just need to calm down a bit</shake> #speaker: Austin
         ~calmDown(1)
         ~spokenToNoah = true
     ->DONE

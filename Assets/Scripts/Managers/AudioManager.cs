@@ -166,6 +166,10 @@ public class AudioManager : MonoBehaviour
         {
             return true;
         }
+        if ((previousScene == "AfterObservatory" && currentScene == "Credits") || (previousScene == "Credits" && currentScene == "AfterObservatory"))
+        {
+            return true;
+        }
         return false;
     }
 }

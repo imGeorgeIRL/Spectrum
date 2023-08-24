@@ -58,7 +58,7 @@ public class RhythmGame : MonoBehaviour
         cueObject.SetActive(true);
         hasSucceeded = false;
         gameFinished = false;
-        
+        rhythmRunning = true;
         // Start the rhythm mechanic
         StartCoroutine(StartRhythmMechanic());
     }
@@ -126,6 +126,13 @@ public class RhythmGame : MonoBehaviour
  
     private void Update()
     {
+        if (!rhythmRunning)
+        {
+            foreach (GameObject star in starArray)
+            {
+                star.SetActive(false);
+            }
+        }
         if (GameManager.isTalking)
         {
             rhythmVisualCue.SetActive(false);

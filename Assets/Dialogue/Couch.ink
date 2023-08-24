@@ -3,9 +3,6 @@ INCLUDE globals.ink
 {Day_Of_Week:
 - 0: ->Monday
 - 1: -> Tuesday
-- 2: -> Wednesday
-- 3: -> Thursday
-- 4: -> Friday
 }
 
 ===Monday===
@@ -43,13 +40,4 @@ Should I watch some Tv? #speaker: Austin
 Should I watch some- #speaker: Austin
 no, just sleep.
 It's just gonna make me feel worse.
-->DONE
-
-===Wednesday===
-->DONE
-
-===Thursday===
-->DONE
-
-===Friday===
 ->DONE

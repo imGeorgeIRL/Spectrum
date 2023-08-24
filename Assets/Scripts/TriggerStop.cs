@@ -13,6 +13,7 @@ public class TriggerStop : MonoBehaviour
     [SerializeField] private TextAsset triggerInkJSON;
 
     private bool coroutinePlaying = false;
+    private bool faceForward = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,12 @@ public class TriggerStop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (GameManager.sitFaceForward && !faceForward)
+        {
+            faceForward = true;
+            animAust.SetTrigger("SitForward");
+            animNoh.SetTrigger("SitForward");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

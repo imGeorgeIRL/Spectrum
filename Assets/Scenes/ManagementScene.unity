@@ -365,6 +365,8 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 44e7384d63c47494c8576bfb264b75ea, type: 3}
   - sceneName: OutsideObservatory
     audioClip: {fileID: 8300000, guid: dff332dba0efa2e42abda3d4be5b8b2e, type: 3}
+  - sceneName: AfterObservatory
+    audioClip: {fileID: 8300000, guid: dff332dba0efa2e42abda3d4be5b8b2e, type: 3}
 --- !u!4 &207751792
 Transform:
   m_ObjectHideFlags: 0
@@ -1497,6 +1499,10 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: ef31115f1b538c24d80fc8bea76644fc, type: 3}
   - sceneName: ThreadsCo
     audioClip: {fileID: 8300000, guid: 4f490d0c331db8a498348bc23be5e29a, type: 3}
+  - sceneName: AfterObservatory
+    audioClip: {fileID: 8300000, guid: 5f9eeeda88350264eae20fa9320b1faf, type: 3}
+  - sceneName: Credits
+    audioClip: {fileID: 8300000, guid: 5f9eeeda88350264eae20fa9320b1faf, type: 3}
 --- !u!169 &1662466273
 AudioLowPassFilter:
   m_ObjectHideFlags: 0

@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public static bool waitingForDialogue = false;
     public static bool menuActive = false;
 
+    public static bool endOfGame = false;
+
     //Player stats *******************************************
     public static float sensoryMetre;
     public static float socialBattery;
@@ -36,7 +38,7 @@ public class GameManager : MonoBehaviour
     public static bool isDayTime;
     public static bool goToSleep = false;
 
-    public static int dayOfWeek = 2;
+    public static int dayOfWeek = 1;
     public static string sceneOfDay = "cafeTuesday"; //THIS IS CHANGED FOR TESTING PURPOSES
 
     public static bool tuesdayMeltdown = false;

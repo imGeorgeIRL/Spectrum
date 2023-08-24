@@ -4,8 +4,6 @@ INCLUDE globals.ink
 - 0: ->Monday
 - 1: -> Tuesday
 - 2: -> Wednesday
-- 3: -> Thursday
-- 4: -> Friday
 }
 
 ===Monday===
@@ -50,11 +48,7 @@ i'm just gonna go home
 ->DONE
 
 ===Wednesday===
+I feel like there's things I need to do...
 ->DONE
 
-===Thursday===
-->DONE
-
-===Friday===
-->DONE
 

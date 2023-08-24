@@ -3,7 +3,6 @@ INCLUDE globals.ink
 {Day_Of_Week:
 - 0: {isNight : ->MondayNight | ->Monday }
 - 1: -> Tuesday
-- 2: -> Wednesday
 }
 
 
@@ -57,10 +56,5 @@ why would I go anywhere?
     
 ->DONE
 
-===Wednesday===
-I haven't even been to the store yet!
-what was it called again?
-cotton & co?
-->DONE
 
 

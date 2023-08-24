@@ -10,9 +10,10 @@ that there was gonna be a meteor shower tonight
 actually, its supposed to start any minute
 should we just sit here and watch it? #speaker: Austin
 that sounds perfect honestly. #speaker: Noah
-~meteor(1)
+~watch(1)
 {boughtForNoah: ->gift}
 ->watching
+
 
 ===gift===
 I bought you a gift, here #speaker: Austin
@@ -21,7 +22,6 @@ Woah! Thank you! I love it! #speaker: Noah
 I thought you would like it #speaker: Austin
 I'm going to treasure this forever. #speaker: Noah
 You'd better #speaker: Austin
-~watch(1)
 ->watching
 
 
@@ -47,7 +47,7 @@ so they never took the time to see <shake a=0.2>me!</shake>
 but not you
 You try to understand me,
 and thats more than anyone has ever done.
-I dont find you off strange, or off putting or abrasive. #speaker: Noah
+I dont find you strange, or offputting or abrasive. #speaker: Noah
 you might not understand most people, 
 but that doesn't mean
 you dont know how to be a good friend

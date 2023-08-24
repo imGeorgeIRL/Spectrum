@@ -5,6 +5,8 @@ using UnityEngine;
 public class SittingNoahHide : MonoBehaviour
 {
     public GameObject noah;
+
+    public GameObject[] panicDialogues;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +19,18 @@ public class SittingNoahHide : MonoBehaviour
         if (GameManager.dayOfWeek != 0)
         {
             noah.SetActive(false);
+            foreach (GameObject go in panicDialogues)
+            {
+                go.SetActive(true);
+            }
         }
         else
         {
             noah.SetActive(true);
+            foreach (GameObject go in panicDialogues)
+            {
+                go.SetActive(false);
+            }
         }
     }
 }
