@@ -1,19 +1,24 @@
+using Ink.Parsed;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HandController : MonoBehaviour
 {
+    [Header("Ink JSON")]
+    [SerializeField] private TextAsset triggerInkJSON;
+
     public float handMoveSpeed = 3f;
     private Animator anim;
 
-    private bool goodTexture;
-    private bool badTexture;
+    private bool good;
+    private bool bad;
+    private bool makingChoice;
     private void Start()
     {
         anim = GetComponent<Animator>();
-        goodTexture = false;
-        badTexture = false; 
+        good = false;
+        bad = false; 
     }
     private void Update()
     {
@@ -23,16 +28,23 @@ public class HandController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            anim.SetBool("Grab", true);
-            if (goodTexture)
+            if (!makingChoice)
             {
-                //do fun stuff with visuals
-                Debug.LogWarning("good");
-            }
-            else if (badTexture)
-            {
-                //do not so fun stuff with visuals or screen shake??
-                Debug.LogWarning("bad");
+                anim.SetBool("Grab", true);
+                if (good)
+                {
+                    //do fun stuff with visuals
+                    Debug.LogWarning("good");
+                    GameManager.goodTexture = true;
+                    TriggerDialogue();
+                }
+                else if (bad)
+                {
+                    //do not so fun stuff with visuals or screen shake??
+                    Debug.LogWarning("bad");
+                    GameManager.badTexture = true;
+                    TriggerDialogue();
+                }
             }
         }
         if (Input.GetKeyUp(KeyCode.Space))
@@ -46,16 +58,34 @@ public class HandController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Trigger entered!");
         if (other.CompareTag("GoodTexture"))
         {
             Debug.Log("This is a good texture :)");
-            goodTexture = true;
+            good = true;
         }
         if (other.CompareTag("BadTexture"))
         {
             Debug.Log("YEEEEEEEOWCH bad texture :C");
-            badTexture = true;
+            bad = true;
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("GoodTexture"))
+        {
+            good = false;
+        }
+        if (other.CompareTag("BadTexture"))
+        {
+            bad = false;
+        }
+    }
+
+    private void TriggerDialogue()
+    {
+        makingChoice = true;
+        Debug.Log("is talking is " + GameManager.isTalking.ToString());
+        DialogueManager.GetInstance().EnterDialogueMode(triggerInkJSON);
     }
 }

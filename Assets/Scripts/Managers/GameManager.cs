@@ -37,6 +37,9 @@ public class GameManager : MonoBehaviour
     public static string sceneOfDay = "cafeTuesday"; //THIS IS CHANGED FOR TESTING PURPOSES
 
     public static bool tuesdayMeltdown = false;
+    //TEXTURES***********************************************
+    public static bool goodTexture;
+    public static bool badTexture;
     //Scene loading *****************************************
     public static string firstSceneInSession;
     public static bool transitionFromBedroom;
