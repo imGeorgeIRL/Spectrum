@@ -52,8 +52,11 @@ public class SFXManager : MonoBehaviour
     void Update()
     {
         string currentScene = GameManager.loadedScene;
+        //PlaySceneSFX(currentScene);
+
         if (currentScene != previousScene)
         {
+            audioSource.Stop();
             PlaySceneSFX(currentScene);
             previousScene = currentScene;
         }
@@ -88,12 +91,7 @@ public class SFXManager : MonoBehaviour
             AudioClip sfx = sfxClipMap[sceneName];
             if (sfx != null)
             {
-                if (ShouldMusicContinue(previousScene, sceneName))
-                {
-                    return;
-                }
-
-                audioSource.Stop();
+                
 
                 audioSource.clip = sfx;
                 audioSource.Play();
@@ -102,11 +100,4 @@ public class SFXManager : MonoBehaviour
             }
         }
     }
-
-    private bool ShouldMusicContinue(string previousScene, string currentScene)
-    {
-        return false;
-    }
-
-
 }

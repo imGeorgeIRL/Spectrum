@@ -102,3 +102,7 @@ VAR town3 = 2
 EXTERNAL spawnNoah(spawn)
 VAR NoahWednesdayTown = false
 
+//observatory
+VAR giftsBought = 0
+VAR boughtForNoah = false
+VAR brainyGizato = false

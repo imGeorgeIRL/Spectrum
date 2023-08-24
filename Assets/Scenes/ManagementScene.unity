@@ -363,6 +363,8 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 044698ae1a3ac4a4984c48bcd3a45ce1, type: 3}
   - sceneName: Cafe
     audioClip: {fileID: 8300000, guid: 44e7384d63c47494c8576bfb264b75ea, type: 3}
+  - sceneName: OutsideObservatory
+    audioClip: {fileID: 8300000, guid: dff332dba0efa2e42abda3d4be5b8b2e, type: 3}
 --- !u!4 &207751792
 Transform:
   m_ObjectHideFlags: 0

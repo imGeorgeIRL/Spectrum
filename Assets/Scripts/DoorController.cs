@@ -139,6 +139,14 @@ public class DoorController : MonoBehaviour
                     GameManager.SaveSensoryMetre();
                     GameManager.SaveSocialBattery();
                     break;
+                case "Observatory":
+                    SceneManager.UnloadSceneAsync(GameManager.loadedScene);
+                    GameManager.loadedScene = "Observatory";
+                    SceneManager.LoadSceneAsync("Observatory", LoadSceneMode.Additive);
+
+                    GameManager.SaveSensoryMetre();
+                    GameManager.SaveSocialBattery();
+                    break;
                 default:
                     Debug.LogWarning("No scene assigned for this door.");
                     break;

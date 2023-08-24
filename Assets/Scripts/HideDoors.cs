@@ -39,6 +39,13 @@ public class HideDoors : MonoBehaviour
                 }
             }
         }
+        else if (GameManager.dayOfWeek == 2)
+        {
+            foreach (GameObject door in doorTriggers)
+            {
+                door.SetActive(false);
+            }
+        }
 
         if (GameManager.dayOfWeek == 2)
         {

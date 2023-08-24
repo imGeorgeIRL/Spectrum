@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ThreadsCo.unity
     guid: a701e1d700742484d9f2e0a52f8032b2
+  - enabled: 1
+    path: Assets/Scenes/AfterObservatory.unity
+    guid: 6b4d4c4888c2011458e37ccca84a04ec
   m_configObjects: {}

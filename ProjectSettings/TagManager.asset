@@ -21,6 +21,8 @@ TagManager:
   - ThreadsCo
   - GoodTexture
   - BadTexture
+  - Observatory
+  - OutsideObservatory
   layers:
   - Default
   - TransparentFX
