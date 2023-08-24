@@ -24,12 +24,14 @@ public class UIManager : MonoBehaviour
                 isPaused = true;
                 Time.timeScale = 0f;
                 pauseMenu.SetActive(true); 
+                GameManager.menuActive = true;
             }
             else
             {
                 isPaused = false;
                 Time.timeScale = 1f;
                 pauseMenu.SetActive(false);
+                GameManager.menuActive = false;
             }
         }
     }

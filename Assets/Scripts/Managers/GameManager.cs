@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static bool gameManagerLoaded = false;
 
     public static bool waitingForDialogue = false;
+    public static bool menuActive = false;
 
     //Player stats *******************************************
     public static float sensoryMetre;
@@ -144,8 +145,11 @@ public class GameManager : MonoBehaviour
         //{
         //    PlayerPrefs.DeleteAll();
         //}
+
+        
     }
 
+   
     public IEnumerator StartLoadingScreen()
     {
         isTalking = false;

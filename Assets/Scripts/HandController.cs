@@ -13,6 +13,8 @@ public class HandController : MonoBehaviour
 
     private bool good;
     private bool bad;
+
+    private bool canGrab = true;
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -22,24 +24,26 @@ public class HandController : MonoBehaviour
     }
     private void Update()
     {
-        if (!GameManager.isTalking)
+        if (GameManager.waitingForDialogue)
+        {
+            StartCoroutine(WaitAfterDialogue());
+        }
+        if (canGrab)
         {
             // Hand movement logic
             Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);
             transform.Translate(moveDirection * handMoveSpeed * Time.deltaTime);
         }
-        else
-        {
-            handMoveSpeed = 0f;
-        }
+        
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (!GameManager.isTalking)
+            if (!GameManager.isTalking && canGrab)
             {
                 anim.SetBool("Grab", true);
                 if (good)
                 {
+                    canGrab = false;
                     //do fun stuff with visuals
                     Debug.LogWarning("good");
                     GameManager.goodTexture = true;
@@ -47,20 +51,27 @@ public class HandController : MonoBehaviour
                 }
                 else if (bad)
                 {
+                    canGrab = false;
                     //do not so fun stuff with visuals or screen shake??
                     Debug.LogWarning("bad");
                     GameManager.badTexture = true;
                     TriggerDialogue();
                 }
             }
+
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
             anim.SetBool("Grab", false);
         }
+    }
 
-
-        
+    private IEnumerator WaitAfterDialogue()
+    {
+        GameManager.waitingForDialogue = false;
+        yield return new WaitForSeconds(0.5f);
+        canGrab = true;     
+        GameManager.isTalking = false;   
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -82,12 +93,15 @@ public class HandController : MonoBehaviour
         if (other.CompareTag("GoodTexture"))
         {
             good = false;
-        }
+            Debug.Log("no more good texture");
+        } 
         if (other.CompareTag("BadTexture"))
         {
             bad = false;
+            Debug.Log("no more bad texture");
         }
-    }
+
+    } 
 
     public void TriggerDialogue()
     {
@@ -95,4 +109,6 @@ public class HandController : MonoBehaviour
         Debug.Log("is talking is " + GameManager.isTalking.ToString());
         DialogueManager.GetInstance().EnterDialogueMode(triggerInkJSON);
     }
+
+    
 }

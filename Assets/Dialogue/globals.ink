@@ -59,6 +59,7 @@ VAR orderedDrink = false
 //Threads
 VAR clothesChosen = 0
 EXTERNAL waitTime(time)
+VAR costOfClothes = 0
 
 //MISC
 EXTERNAL makeChoice(choice)
