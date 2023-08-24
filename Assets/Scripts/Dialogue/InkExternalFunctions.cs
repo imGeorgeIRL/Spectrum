@@ -177,6 +177,14 @@ public class InkExternalFunctions
                 breaks -= 1;
             }
         });
+	story.BindExternalFunction("waitTime", (int time) =>
+        {
+            if (time == 1)
+            {
+                GameManager.waitingForDialogue = true;
+                time -= 1;
+            }
+        });
     }
 
     public void Unbind(Story story)

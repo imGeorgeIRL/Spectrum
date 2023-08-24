@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public static bool gameManagerLoaded = false;
 
+    public static bool waitingForDialogue = false;
+
     //Player stats *******************************************
     public static float sensoryMetre;
     public static float socialBattery;
