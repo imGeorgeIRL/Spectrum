@@ -141,7 +141,7 @@ public class DialogueManager : MonoBehaviour
         
 
     }
-
+    
     private void ContinueStory()
     {
         

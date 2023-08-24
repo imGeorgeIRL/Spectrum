@@ -4336,7 +4336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aff7ce893604e0c4e87d153ad9ac9e90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerInkJSON: {fileID: 0}
+  triggerInkJSON: {fileID: 4900000, guid: bf855ba2ae27d114b986650900b9e08f, type: 3}
   handMoveSpeed: 4
 --- !u!61 &818245668
 BoxCollider2D:

@@ -56,6 +56,8 @@ VAR cost = 0
 
 VAR orderedDrink = false
 
+//Threads
+VAR clothesChosen = 0
 
 //MISC
 EXTERNAL makeChoice(choice)

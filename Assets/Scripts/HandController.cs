@@ -13,22 +13,29 @@ public class HandController : MonoBehaviour
 
     private bool good;
     private bool bad;
-    private bool makingChoice;
     private void Start()
     {
         anim = GetComponent<Animator>();
         good = false;
-        bad = false; 
+        bad = false;
+        
     }
     private void Update()
     {
-        // Hand movement logic
-        Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);
-        transform.Translate(moveDirection * handMoveSpeed * Time.deltaTime);
+        if (!GameManager.isTalking)
+        {
+            // Hand movement logic
+            Vector3 moveDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f);
+            transform.Translate(moveDirection * handMoveSpeed * Time.deltaTime);
+        }
+        else
+        {
+            handMoveSpeed = 0f;
+        }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (!makingChoice)
+            if (!GameManager.isTalking)
             {
                 anim.SetBool("Grab", true);
                 if (good)
@@ -82,9 +89,9 @@ public class HandController : MonoBehaviour
         }
     }
 
-    private void TriggerDialogue()
+    public void TriggerDialogue()
     {
-        makingChoice = true;
+        GameManager.isTalking = true;
         Debug.Log("is talking is " + GameManager.isTalking.ToString());
         DialogueManager.GetInstance().EnterDialogueMode(triggerInkJSON);
     }

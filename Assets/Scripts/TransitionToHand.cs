@@ -12,6 +12,7 @@ public class TransitionToHand : MonoBehaviour
     public GameObject hand;
 
     private bool isHandMode = false;
+    private HandController controller;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class TransitionToHand : MonoBehaviour
         handCamera.enabled = false;
         austin.SetActive(true);
         hand.SetActive(false);
+        controller = hand.GetComponent<HandController>();
     }
 
     // Update is called once per frame
@@ -42,6 +44,7 @@ public class TransitionToHand : MonoBehaviour
 
             austin.SetActive(false);
             hand.SetActive(true);
+            //controller.TriggerDialogue();
         }
         else if (Input.GetKeyDown(KeyCode.E) && isHandMode)
         {
