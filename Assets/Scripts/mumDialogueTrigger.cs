@@ -24,7 +24,7 @@ public class mumDialogueTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (inRangeOfMum && !DialogueManager.GetInstance().dialogueIsPlaying && !GameManager.talkedToMum)
+        if (inRangeOfMum && !DialogueManager.GetInstance().dialogueIsPlaying && !GameManager.talkedToMum && GameManager.isDayTime)
         {
             if (!phoneCall)
             {
@@ -32,6 +32,10 @@ public class mumDialogueTrigger : MonoBehaviour
                 phoneCall = true;
             }
             
+        }
+        else
+        {
+
         }
 
     }

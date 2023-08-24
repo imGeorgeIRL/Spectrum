@@ -98,4 +98,7 @@ VAR town2 = 2
 VAR townNPC3 = false
 VAR town3 = 2
 
+//Noah
+EXTERNAL spawnNoah(spawn)
+VAR NoahWednesdayTown = false
 

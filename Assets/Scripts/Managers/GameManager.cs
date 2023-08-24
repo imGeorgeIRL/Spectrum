@@ -92,6 +92,8 @@ public class GameManager : MonoBehaviour
 
     public static bool inRangeOfClothes = false;
 
+    //PEOPLE and STUFF
+    public static bool noahVisibleWednesday = false;
 
     private void Awake()
     {

@@ -4,8 +4,6 @@ INCLUDE globals.ink
 - 0: ->Monday
 - 1: -> Tuesday
 - 2: -> Wednesday
-- 3: -> Thursday
-- 4: -> Friday
 }
 
 
@@ -252,10 +250,74 @@ me too #speaker: Austin
 ->DONE
 
 ===Wednesday===
+{NoahWednesdayTown: ->Wednesday2}
+=Wednesday1
+    Oh hey! Fancy seeing you here! #speaker:Noah
+    hey... #speaker: Austin
+        *I'm sorry about yesterday #speaker: Austin
+            nonsense, I totally get It #speaker:Noah
+            I actually did some research last night about Autism
+            just so I could understand a little better
+                **no one has ever done that for me #speaker: Austin
+                    Well, one person has now! #speaker:Noah
+                **that's really cool of you! #speaker: Austin
+                    its the least I could do #speaker:Noah
+                    you're my friend and I wanna make you comfortable!
+                -- that means a lot to me honestly #speaker: Austin
+        *wait, you dont hate me? #speaker: Austin
+            what? why would I hate you? #speaker:Noah
+            because of yesterday, #speaker: Austin
+            I kind of ruined lunch
+            nonsense, you didnt ruin anything #speaker:Noah
+            besides, they let me take it to go
+        *How are you? #speaker: Austin
+            I'm good, just you know, #speaker:Noah
+            lollygagging, meandering, loitering
+            the usual
+            how about you? how you feeling from yesterday
+            I mean, i slept for about 12 hours, #speaker: Austin
+            and im a little tired still
+            but other than that, im feeling okay
+            that's good #speaker:Noah
+        - what'cha got there? #speaker: Austin
+        oh this? it's a book I just bought #speaker:Noah
+        what book did you buy? #speaker: Austin
+        It's called "Mysteries of the Universe" #speaker:Noah
+        oooh! that sounds cool #speaker: Austin
+        yeah! speaking of the universe #speaker:Noah
+        are you free tonight? 
+        yeah, why? #speaker: Austin
+        we should go to the observatory #speaker:Noah
+        they're doing an exhibition on planetary bodies! 
+            *yes! #speaker: Austin
+            *yes!!! #speaker: Austin
+            *yes!!!!!! #speaker: Austin
+        - Alright cool! I'll pick you up at 8, #speaker:Noah
+        just send me your address. 
+        Sure! #speaker: Austin
+        ~NoahWednesdayTown = true
+        ~timeSkip(1)
+        ->DONE
+    
+    =Wednesday2
+    Hey, I am <shake a=0.5>so</shake> sorry
+    I'm running a little late!
+    I thought I'd tell you just in case you were stressing
+    *I was stressing
+        I figured that you would be
+        It's all good,
+        thanks for letting me know!
+    *I was definitely <shake a=0.5>not</shake> stressing
+        Austin, You are bad at sarcasm
+        yeah...I'm stressing 
+        it's alright hahaha
+    -Ok, I'm pulling up to your house now
+    I'll see you in a second
+    the door is unlocked so let yourself in
+    aight
+    ~noah_Interractions = 2
+    ->DONE
+
+
 ->DONE
 
-===Thursday===
-->DONE
-
-===Friday===
-->DONE

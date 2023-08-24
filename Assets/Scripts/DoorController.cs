@@ -9,8 +9,6 @@ public class DoorController : MonoBehaviour
     private bool isPlayerInRange;
     public GameObject visualCue;
 
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         visualCue.SetActive(true);
@@ -120,6 +118,10 @@ public class DoorController : MonoBehaviour
 
                     GameManager.SaveSensoryMetre();
                     GameManager.SaveSocialBattery();
+                    if (GameManager.dayOfWeek == 2)
+                    {
+                        GameManager.noahVisibleWednesday = true;
+                    }
                     break;
                 case "CafeExteriorDoor":
                     SceneManager.UnloadSceneAsync(GameManager.loadedScene);
