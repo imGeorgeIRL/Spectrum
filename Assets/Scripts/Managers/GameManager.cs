@@ -94,6 +94,8 @@ public class GameManager : MonoBehaviour
 
     //PEOPLE and STUFF
     public static bool noahVisibleWednesday = false;
+    public static bool sitFaceForward = false;
+    public static bool meteorShower = false;
 
     private void Awake()
     {

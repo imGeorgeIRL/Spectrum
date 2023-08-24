@@ -9,20 +9,19 @@ INCLUDE globals.ink
 
 ===Zero===
 Okay, I can buy three things #speaker: Austin
-What should I look at first?
-    *Hats
-        They've got a really cool planet on the front!
-    *plushies
-        Which one?
-            **Black hole
-                Absolutely I am buying this for myself
-                No doubt about it
-                ~giftsBought = 1
-                ->DONE
-            **Astronaut
-                Look at him go!
-            **Rocketship
-                Wonder where it's headed?
+which shirt should I look at
+    *Black holes?
+        These are really soft!
+        which colour??
+            **white
+            **blue
+            **Red
+    *solar system?
+        These are really soft!
+        which colour??
+            **Orange
+            **Grey
+            **Green
     -should I buy it?
         *yes
             Should I give it to Noah?
@@ -43,19 +42,18 @@ What should I look at first?
 ===One===
 Two things left, #speaker: Austin
 what to buy?
-        *Hats
-        They've got a really cool planet on the front!
-    *plushies
-        Which one?
-            **Black hole
-                Absolutely I am buying this for myself
-                No doubt about it
-                ~giftsBought = 2
-                ->DONE
-            **Astronaut
-                Look at him go!
-            **Rocketship
-                Wonder where it's headed?
+        *Black holes?
+        These are really soft!
+        which colour??
+            **white
+            **blue
+            **Red
+    *solar system?
+        These are really soft!
+        which colour??
+            **Orange
+            **Grey
+            **Green
     -should I buy it?
         *yes
             Should I give it to Noah?
@@ -76,19 +74,18 @@ what to buy?
 ===Two===
 Last item, better make it good, #speaker: Austin
 What do they have?
-        *Hats
-        They've got a really cool planet on the front!
-    *plushies
-        Which one?
-            **Black hole
-                Absolutely I am buying this for myself
-                No doubt about it
-                ~giftsBought = 3
-                ->DONE
-            **Astronaut
-                Look at him go!
-            **Rocketship
-                Wonder where it's headed?
+        *Black holes?
+        These are really soft!
+        which colour??
+            **white
+            **blue
+            **Red
+    *solar system?
+        These are really soft!
+        which colour??
+            **Orange
+            **Grey
+            **Green
     -should I buy it?
         *yes
             Should I give it to Noah?

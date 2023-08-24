@@ -37,7 +37,7 @@ What should I look at first?
                     ->DONE
         *no
             I'll keep looking
-            ->Zero
+            ->DONE
 ->DONE
 
 ===One===
@@ -70,7 +70,7 @@ what to buy?
                     ->DONE
         *no
             I'll keep looking
-            ->Zero
+            ->DONE
 ->DONE
 
 ===Two===
@@ -103,7 +103,7 @@ What do they have?
                     ->DONE
         *no
             I'll keep looking
-            ->Zero
+            ->DONE
 ->DONE
 
 ===Three===

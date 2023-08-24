@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AfterObservatory.unity
     guid: 6b4d4c4888c2011458e37ccca84a04ec
+  - enabled: 1
+    path: Assets/Scenes/OutsideObservatory.unity
+    guid: cf4ecb536e2a75b41aae9369085dcb1e
   m_configObjects: {}

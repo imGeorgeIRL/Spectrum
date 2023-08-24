@@ -177,12 +177,28 @@ public class InkExternalFunctions
                 breaks -= 1;
             }
         });
-	story.BindExternalFunction("waitTime", (int time) =>
+	    story.BindExternalFunction("waitTime", (int time) =>
         {
             if (time == 1)
             {
                 GameManager.waitingForDialogue = true;
                 time -= 1;
+            }
+        });
+        story.BindExternalFunction("watch", (int sit) =>
+        {
+            if (sit == 1)
+            {
+                GameManager.sitFaceForward = true;
+                sit -= 1;
+            }
+        });
+        story.BindExternalFunction("meteor", (int shower) =>
+        {
+            if (shower == 1)
+            {
+                GameManager.meteorShower = true;
+                shower -= 1;
             }
         });
     }
@@ -203,6 +219,8 @@ public class InkExternalFunctions
         story.UnbindExternalFunction("talkedToMum");
         story.UnbindExternalFunction("calmDown");
         story.UnbindExternalFunction("noahWalkAway");
+        story.UnbindExternalFunction("deepConvoBreak");
+        story.UnbindExternalFunction("waitTime");
     }
 
     

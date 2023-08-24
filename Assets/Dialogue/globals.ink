@@ -106,3 +106,6 @@ VAR NoahWednesdayTown = false
 VAR giftsBought = 0
 VAR boughtForNoah = false
 VAR brainyGizato = false
+
+EXTERNAL watch(sit)
+EXTERNAL meteor(shower)
