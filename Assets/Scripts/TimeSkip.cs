@@ -26,7 +26,14 @@ public class TimeSkip : MonoBehaviour
                     break;
                 case "TownCentre":
                     hasSkipped = true;
-                    GameManager.timeSkipDestination = "Outside";
+                    if (GameManager.dayOfWeek == 1)
+                    {
+                        GameManager.timeSkipDestination = "Outside";
+                    }
+                    else if (GameManager.dayOfWeek == 2)
+                    {
+                        GameManager.timeSkipDestination = "LoungeKitchen";
+                    }
                     
                     StartCoroutine(WaitForNightSkip());
                     
@@ -52,7 +59,7 @@ public class TimeSkip : MonoBehaviour
         SceneManager.LoadSceneAsync(GameManager.timeSkipDestination, LoadSceneMode.Additive);
         GameManager.loadedScene = GameManager.timeSkipDestination;
 
-        GameManager.safeZoneActive = false;
+        
         GameManager.SaveSensoryMetre();
         GameManager.SaveSocialBattery();
         GameManager.timeSkip = false;  
@@ -61,6 +68,7 @@ public class TimeSkip : MonoBehaviour
     private IEnumerator WaitForNightSkip()
     {
         yield return new WaitForSeconds(3f);
+        GameManager.safeZoneActive = false;
         SceneManager.UnloadSceneAsync(GameManager.loadedScene);
         SceneManager.LoadSceneAsync(GameManager.timeSkipDestination, LoadSceneMode.Additive);
         GameManager.loadedScene = GameManager.timeSkipDestination;

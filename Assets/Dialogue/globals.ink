@@ -114,3 +114,4 @@ VAR brainyGizato = false
 
 EXTERNAL watch(sit)
 EXTERNAL meteor(shower)
+EXTERNAL panicText(panic)

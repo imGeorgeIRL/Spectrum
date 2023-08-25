@@ -99,6 +99,7 @@ public class GameManager : MonoBehaviour
     public static bool sitFaceForward = false;
     public static bool meteorShower = false;
 
+    public static bool startPanic = false;
     private void Awake()
     {
         if (instance != null && instance != this)

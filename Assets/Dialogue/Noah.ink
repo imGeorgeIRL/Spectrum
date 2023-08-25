@@ -158,14 +158,13 @@ me too #speaker: Austin
     oh yum, I got a caramel latte#speaker:Noah #size:small
     dude take a seat, #speaker:Noah #size:small
     ~sittingDown(1)
-    ~increaseSens(1)
     So...physics huh #speaker:Noah #size:small
     huh? I can't hear you over all this noise#speaker: Austin #size:normal
     what noise? It's pretty quiet in here#speaker:Noah #size:small
     I can't focus on anything you're saying#speaker: Austin #size:normal
     should I talk louder?#speaker:Noah #size:big
-    ~increaseSens(1)
     No I think that would make it worse#speaker: Austin #size:normal
+    ~panicText(1)
     I'm sorry, I gotta go!#speaker: Austin #size:normal
     o-okay, wait! #speaker:Noah #size:small
     ~deepConversation = true

@@ -216,6 +216,14 @@ public class InkExternalFunctions
                 sens -= 1;
             }
         });
+        story.BindExternalFunction("panicText", (int panic) =>
+        {
+            if (panic == 1)
+            {
+                GameManager.startPanic = true;
+                panic -= 1;
+            }
+        });
     }
 
     public void Unbind(Story story)

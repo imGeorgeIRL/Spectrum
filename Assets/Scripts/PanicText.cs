@@ -6,7 +6,7 @@ public class PanicText : MonoBehaviour
 {
     public GameObject[] textArray;
 
-    private bool coroutinePlaying;
+    private bool coroutinePlaying = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +19,7 @@ public class PanicText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.isHavingMeltdown 
-            && !coroutinePlaying 
-            && GameManager.loadedScene != "UniClassroom")
+        if (GameManager.startPanic)
         {
             if (!GameManager.isTalking)
             {
@@ -38,6 +36,7 @@ public class PanicText : MonoBehaviour
         if (GameManager.safeZoneActive)
         {
             StopCoroutine(PanicTextDisplay());
+            GameManager.startPanic = false;
             return;
         }
     }
