@@ -76,7 +76,10 @@ public class SFXManager : MonoBehaviour
                 clipVol = (sfxVolume * 1);
                 break;
             case "Cafe":
-                clipVol = (sfxVolume * 0.5f);
+                clipVol = (sfxVolume * 1.3f);
+                break;
+            case "AfterObservatory":
+                clipVol = (sfxVolume * 0.6f);
                 break;
             default:
                 clipVol = (sfxVolume * 1);

@@ -47,7 +47,7 @@ PlayerSettings:
   - logo: {fileID: 21300000, guid: 8b8db35640855aa428f89aa407862866, type: 3}
     duration: 2
   - logo: {fileID: 21300000, guid: e65f58962ca05d04ca99b4c800e3f00e, type: 3}
-    duration: 6
+    duration: 5
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1920
@@ -84,7 +84,7 @@ PlayerSettings:
   androidFullscreenMode: 1
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
-  runInBackground: 1
+  runInBackground: 0
   captureSingleScreen: 1
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
@@ -105,7 +105,7 @@ PlayerSettings:
   xboxEnableKinect: 0
   xboxEnableKinectAutoTracking: 0
   xboxEnableFitness: 0
-  visibleInBackground: 0
+  visibleInBackground: 1
   allowFullscreenSwitch: 1
   fullscreenMode: 0
   xboxSpeechDB: 0

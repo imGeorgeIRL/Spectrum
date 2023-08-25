@@ -23,11 +23,21 @@ public class PanicText : MonoBehaviour
             && !coroutinePlaying 
             && GameManager.loadedScene != "UniClassroom")
         {
-            StartCoroutine(PanicTextDisplay());
+            if (!GameManager.isTalking)
+            {
+                StartCoroutine(PanicTextDisplay());
+            } 
+            else
+            {
+                foreach (GameObject text in textArray)
+                {
+                    text.SetActive(false);
+                }
+            }
         }
         if (GameManager.safeZoneActive)
         {
-            //StopCoroutine(PanicTextDisplay());
+            StopCoroutine(PanicTextDisplay());
             return;
         }
     }

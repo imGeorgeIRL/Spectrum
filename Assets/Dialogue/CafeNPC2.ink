@@ -2,7 +2,7 @@ INCLUDE globals.ink
 
 {Day_Of_Week:
 - 0: -> Monday
-- 1: {cafeOnMonday : ->Tuesday | -> Monday }
+- 1: ->Tuesday
 - 2: -> Wednesday
 }
 

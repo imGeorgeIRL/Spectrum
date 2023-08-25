@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     public static bool safeZoneActive = false;
 
     public static bool isHavingMeltdown = false;
-    public static bool talkingToNoah = false; //CHANGED FOR TESTING, SHOULD BE INIT TO FALSE
+    public static bool talkingToNoah = false; 
     public static bool calmingDown = false;
     public static bool noahWalkAway = false;
     public static bool noahSitOnGround = false;
@@ -38,8 +38,8 @@ public class GameManager : MonoBehaviour
     public static bool isDayTime;
     public static bool goToSleep = false;
 
-    public static int dayOfWeek = 1;
-    public static string sceneOfDay = "cafeTuesday"; //THIS IS CHANGED FOR TESTING PURPOSES
+    public static int dayOfWeek = 0;
+    public static string sceneOfDay; //THIS IS CHANGED FOR TESTING PURPOSES
 
     public static bool tuesdayMeltdown = false;
     //TEXTURES***********************************************
@@ -106,7 +106,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
+        StartCoroutine(StartLoadingScreen());
         instance = this;
         //DontDestroyOnLoad(gameObject);
     }
@@ -119,7 +119,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        StartCoroutine(StartLoadingScreen());
+        
         LoadSensoryMetre();
         LoadSocialBattery();
         isDayTime = true;

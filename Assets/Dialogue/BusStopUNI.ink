@@ -52,6 +52,7 @@ why would I go anywhere?
     just catch the bus into town
     you can figure it out from there.
     ~busChosen(2)
+    ~decreaseSens(1)
     ->DONE
     
 ->DONE

@@ -67,7 +67,6 @@ Mine's Noah! #speaker:Noah
 ~timeSkip(1)
 me too #speaker: Austin
 ~spokenToNoah = true
-
 ->DONE
 
 
@@ -77,7 +76,8 @@ me too #speaker: Austin
 {deepConversation: ->Tuesday5 }
 {orderedDrink: ->Tuesday4 }
 {noahInCafe: ->Tuesday3 }
-{spokenToNoah : ->Tuesday2 | ->Tuesday1 }
+{spokenToNoah : ->Tuesday2}
+->Tuesday1
 
 =Tuesday1
     Woah, it's super dark in here #speaker: Noah
@@ -158,11 +158,13 @@ me too #speaker: Austin
     oh yum, I got a caramel latte#speaker:Noah #size:small
     dude take a seat, #speaker:Noah #size:small
     ~sittingDown(1)
+    ~increaseSens(1)
     So...physics huh #speaker:Noah #size:small
     huh? I can't hear you over all this noise#speaker: Austin #size:normal
     what noise? It's pretty quiet in here#speaker:Noah #size:small
     I can't focus on anything you're saying#speaker: Austin #size:normal
-    should I talk louder?#speaker:Noah #size:small
+    should I talk louder?#speaker:Noah #size:big
+    ~increaseSens(1)
     No I think that would make it worse#speaker: Austin #size:normal
     I'm sorry, I gotta go!#speaker: Austin #size:normal
     o-okay, wait! #speaker:Noah #size:small
@@ -251,6 +253,8 @@ me too #speaker: Austin
 
 ===Wednesday===
 {NoahWednesdayTown: ->Wednesday2}
+->Wednesday1
+
 =Wednesday1
     Oh hey! Fancy seeing you here! #speaker:Noah
     hey... #speaker: Austin
@@ -300,24 +304,23 @@ me too #speaker: Austin
         ->DONE
     
     =Wednesday2
-    Hey, I am <shake a=0.5>so</shake> sorry
+    Hey, I am <shake a=0.5>so</shake> sorry #speaker:Noah
     I'm running a little late!
     I thought I'd tell you just in case you were stressing
-    *I was stressing
-        I figured that you would be
-        It's all good,
+    *I was stressing #speaker: Austin
+        I figured that you would be #speaker:Noah
+        It's all good, #speaker: Austin
         thanks for letting me know!
-    *I was definitely <shake a=0.5>not</shake> stressing
-        Austin, You are bad at sarcasm
-        yeah...I'm stressing 
-        it's alright hahaha
-    -Ok, I'm pulling up to your house now
+    *I was definitely not stressing #speaker: Austin
+        Austin, You are bad at sarcasm #speaker:Noah
+        yeah...I'm stressing #speaker: Austin
+        it's alright hahaha #speaker:Noah
+    -Ok, I'm pulling up to your house now #speaker:Noah
     I'll see you in a second
-    the door is unlocked so let yourself in
-    aight
-    ~noah_Interractions = 2
+    I'll come out so you dont have to park #speaker: Austin
+    Alright, sounds good! #speaker:Noah
+    ~timeSkip(1)
     ->DONE
-
 
 ->DONE
 

@@ -200,6 +200,21 @@ public class InkExternalFunctions
                 GameManager.meteorShower = true;
                 shower -= 1;
             }
+        });story.BindExternalFunction("decreaseSens", (int sens) =>
+        {
+            if (sens == 1)
+            {
+                GameManager.sensoryMetre -= 20f;
+                sens -= 1;
+            }
+        });
+        story.BindExternalFunction("increaseSens", (int sens) =>
+        {
+            if (sens == 1)
+            {
+                GameManager.sensoryMetre += 20f;
+                sens -= 1;
+            }
         });
     }
 

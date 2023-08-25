@@ -67,7 +67,7 @@ public class RhythmGame : MonoBehaviour
     {
         rhythmVisualCue.SetActive(false);
         yield return new WaitForSeconds(Random.Range(1f, 3f));
-        if (!rhythmRunning && !gameFinished)
+        if (rhythmRunning && !gameFinished)
         {
             //hasSucceeded = false;
             GameObject ring = Instantiate(ringPrefab, transform.position, Quaternion.identity);

@@ -1,5 +1,5 @@
 // GENERAL
-VAR Day_Of_Week = 2 //changed for testing purposes
+VAR Day_Of_Week = 0 //changed for testing purposes
 
 VAR cafeOnMonday = false //changed for testing
 VAR busOnMonday = false
@@ -75,6 +75,11 @@ EXTERNAL sittingDown(sit)
 
 EXTERNAL drMiller(interact)
 
+
+
+EXTERNAL decreaseSens(sens)
+EXTERNAL increaseSens(sens)
+
 //UNI 
 VAR spokenToMiller = false
 
@@ -89,14 +94,14 @@ VAR charlesInteractions = 0
 VAR houseNPC3 = false
 VAR sanjayInteractions = 0
 
-VAR townNPC1 = false
-VAR town1 = 2
+VAR townNPC1 = false //ALL CHANGED FOR TESTING
+VAR town1 = 0
 
 VAR townNPC2 = false
-VAR town2 = 2
+VAR town2 = 0
 
 VAR townNPC3 = false
-VAR town3 = 2
+VAR town3 = 0
 
 //Noah
 EXTERNAL spawnNoah(spawn)

@@ -35,7 +35,7 @@ but I'll decide when I get to the bus stop
 
 
 ===Wednesday===
-okay, today needs to go well
+okay, today needs to go well #speaker:Austin
 because I am not having a good time
 I dont suppose I'll run into Noah
 not that he would want to talk to me

@@ -67,6 +67,7 @@ That Noah guy is
 === Wednesday2 ===
 I need to check my planner,#speaker:Austin
 I think I have some things to do today.
+~calendarInteract(1)
 -> END
 
 === Wednesday ===

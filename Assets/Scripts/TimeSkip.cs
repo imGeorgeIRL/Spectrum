@@ -26,11 +26,16 @@ public class TimeSkip : MonoBehaviour
                     break;
                 case "TownCentre":
                     hasSkipped = true;
-                    GameManager.timeSkipDestination = "LoungeKitchen";
+                    GameManager.timeSkipDestination = "Outside";
+                    
                     StartCoroutine(WaitForNightSkip());
                     
                     break;
-
+                case "LoungeKitchen":
+                    hasSkipped = true;
+                    GameManager.timeSkipDestination = "OutsideObservatory";
+                    StartCoroutine(WaitForNightSkip());
+                    break;
                 default:
                     hasSkipped = true;
                     Debug.LogWarning("No timeskip destination found");
@@ -47,6 +52,7 @@ public class TimeSkip : MonoBehaviour
         SceneManager.LoadSceneAsync(GameManager.timeSkipDestination, LoadSceneMode.Additive);
         GameManager.loadedScene = GameManager.timeSkipDestination;
 
+        GameManager.safeZoneActive = false;
         GameManager.SaveSensoryMetre();
         GameManager.SaveSocialBattery();
         GameManager.timeSkip = false;  

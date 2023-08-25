@@ -39,16 +39,16 @@ i'm just gonna go home
     ->DONE
 
     =NotFound
-    Oh great...wrong bus
+    Oh great...wrong bus #speaker:Austin
     lets just cross 519 off the list.
-    I Need to find out what bus I need to catch #speaker:Austin
+    I Need to find out what bus I need to catch
     but talking to people just drains me.
     ->DONE
 
 ->DONE
 
 ===Wednesday===
-I feel like there's things I need to do...
+I feel like there's things I need to do... #speaker:Austin
 ->DONE
 
 

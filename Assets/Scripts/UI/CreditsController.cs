@@ -21,7 +21,7 @@ public class CreditsController : MonoBehaviour
 
     private IEnumerator WaitForCredits()
     {
-        yield return new WaitForSeconds(60);
+        yield return new WaitForSeconds(72.69f);
         SceneManager.LoadScene("MainMenu");
     }
 }

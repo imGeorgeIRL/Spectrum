@@ -22,7 +22,7 @@ TagManager:
   - GoodTexture
   - BadTexture
   - Observatory
-  - OutsideObservatory
+  - AfterObservatory
   layers:
   - Default
   - TransparentFX
