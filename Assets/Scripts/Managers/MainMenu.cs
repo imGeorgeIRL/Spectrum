@@ -13,9 +13,7 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-        Debug.Log("Application Quit");
-        PlayerPrefs.DeleteAll();
-        
+        Debug.Log("Application Quit");        
     }
 
     public void GoToCredits()
@@ -26,6 +24,7 @@ public class MainMenu : MonoBehaviour
     public void ClearSave()
     {
         PlayerPrefs.DeleteAll();
+        GameManager.dayOfWeek = 0;
         SceneManager.LoadScene("ContentWarning");
     }
 }

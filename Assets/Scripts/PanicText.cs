@@ -21,8 +21,9 @@ public class PanicText : MonoBehaviour
     {
         if (GameManager.startPanic)
         {
-            if (!GameManager.isTalking)
+            if (!GameManager.isTalking && !coroutinePlaying)
             {
+                coroutinePlaying = true;
                 StartCoroutine(PanicTextDisplay());
             } 
             else
@@ -43,7 +44,6 @@ public class PanicText : MonoBehaviour
 
     private IEnumerator PanicTextDisplay()
     {
-        coroutinePlaying = true;
         GameObject text = textArray[Random.Range(0, textArray.Length)];
         text.SetActive(true);
         yield return new WaitForSeconds(3);

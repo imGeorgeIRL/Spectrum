@@ -11,21 +11,21 @@ Should I watch some Tv? #speaker: Austin
     what should I watch?
         **[space documentary?]
         ~tvChoice(1)
-            I think I have one on my watch list 
+            I think I have one on my watch list
+              ~watchTv(1)          
             its on <bounce a= 0.2>Black Holes</bounce>
-            ~watchTv(1)
             ->DONE
         **[The news?]
         ~tvChoice(2)
             I dont think theres much going on
+            ~watchTv(1)            
             but I could have a look I suppose.
-            ~watchTv(1)
             ->DONE
         **[Reality Tv?]
         ~tvChoice(3)
             maybe I should check it out,
+            ~watchTv(1)            
             see what all the fuss is about.
-            ~watchTv(1)
             ->DONE
     *[Nah, im pretty tired]
         {hasEatenDinner: 
