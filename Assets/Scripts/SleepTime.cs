@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class BlackScreen : MonoBehaviour
+public class SleepTime : MonoBehaviour
 {
     private float fadeDuration = 3f;
     public AnimationCurve fadeCurve;
@@ -13,6 +13,8 @@ public class BlackScreen : MonoBehaviour
 
     public TextMeshProUGUI dayText;
     private string day;
+
+    private bool coroutinePlaying;
     private void Start()
     {
         canvasGroup = GetComponent<CanvasGroup>();
@@ -84,14 +86,15 @@ public class BlackScreen : MonoBehaviour
         dayText.text = day;
         yield return new WaitForSeconds(5f);
         GameManager.isDayTime = true;
+        GameManager.goToSleep = false;
         canvasGroup.alpha = 0f;
     }
 
     private void Update()
     {
-        if (GameManager.goToSleep)
+        if (GameManager.goToSleep && !coroutinePlaying)
         {
-            GameManager.goToSleep = false; // Set to false immediately to avoid multiple coroutine calls
+            coroutinePlaying = true;
             GameManager.dayOfWeek += 1;
             StartCoroutine(NightToDay());
             GameManager.interactedWithWardrobe = false;

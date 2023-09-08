@@ -1,7 +1,7 @@
 // GENERAL
-VAR Day_Of_Week = 0 //changed for testing purposes
+VAR Day_Of_Week = 0 //should be 0
 
-VAR cafeOnMonday = false //changed for testing
+VAR cafeOnMonday = false 
 VAR busOnMonday = false
 
 VAR sceneInDay = ""
@@ -35,12 +35,12 @@ VAR isLateToClass = false
 VAR FoundBus = false
 EXTERNAL busChosen(bus)
 
-VAR tuesdayUni = false //var changed for testing 
+VAR tuesdayUni = false 
 
 //NOAH 
 VAR noah_Interractions = 0
-VAR spokenToNoah = false //var changed for testing 
-VAR noahInCafe = false //var changed testing
+VAR spokenToNoah = false 
+VAR noahInCafe = false 
 EXTERNAL timeSkip(skip)
 EXTERNAL calmDown(calm)
 EXTERNAL noahWalkAway(walk)
@@ -48,6 +48,7 @@ EXTERNAL noahWalkAway(walk)
 VAR deepConversation = false
 EXTERNAL deepConvoBreak(breaks)
 VAR deepConvoPause = false
+EXTERNAL tuesdayMeltdown(melt)
 
 //CAFE 
 VAR drink = ""

@@ -4,7 +4,6 @@ INCLUDE globals.ink
 - 0: ->Monday
 - 1: ->Tuesday
 - 2: -> Wednesday
-
 }
 
 ===Monday===
@@ -29,7 +28,6 @@ sorry sweetheart.
 ===Tuesday===
 {town1 == 0: ->Monday}
 {townNPC1 : ->Tuesday2 | ->Tuesday1}
-
 =Tuesday1
 Oh it's you again!#speaker:Woman
 Didn't find out which bus you needed?
@@ -47,7 +45,6 @@ No problem.#speaker:Woman
 =Tuesday2
 Hope you remember this time haha!#speaker:Woman
 ->DONE
-
 ===Wednesday===
 {town1 == 0: ->Monday}
 {town1 == 1: ->Tuesday}

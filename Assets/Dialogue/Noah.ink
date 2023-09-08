@@ -168,6 +168,7 @@ me too #speaker: Austin
     I'm sorry, I gotta go!#speaker: Austin #size:normal
     o-okay, wait! #speaker:Noah #size:small
     ~deepConversation = true
+    ~tuesdayMeltdown(1)
     ->DONE
     
     =Tuesday5

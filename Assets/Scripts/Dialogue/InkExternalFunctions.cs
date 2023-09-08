@@ -158,6 +158,7 @@ public class InkExternalFunctions
             if (calm == 1)
             {
                 GameManager.calmingDown = true;
+                GameManager.whiteboardInactive = true;
                 calm -= 1;
             }
         });
@@ -222,6 +223,14 @@ public class InkExternalFunctions
             {
                 GameManager.startPanic = true;
                 panic -= 1;
+            }
+        });
+        story.BindExternalFunction("tuesdayMeltdown", (int melt) =>
+        {
+            if (melt == 1)
+            {
+                GameManager.tuesdayMeltdown = true;
+                melt -= 1;
             }
         });
     }

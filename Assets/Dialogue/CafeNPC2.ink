@@ -34,7 +34,6 @@ you should really write that down somewhere!
 ===Tuesday===
 {town2 == 0: ->Monday}
 {townNPC2: ->Tuesday2 | ->Tuesday1}
-
 =Tuesday1
 Oh it's you again! #speaker: Guy 
 Cygnus kid!

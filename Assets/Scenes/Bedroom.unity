@@ -1203,9 +1203,9 @@ GameObject:
   m_Component:
   - component: {fileID: 926938052}
   - component: {fileID: 926938051}
-  - component: {fileID: 926938053}
+  - component: {fileID: 926938054}
   m_Layer: 0
-  m_Name: SOS_Bedroom_Bed
+  m_Name: BED
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1279,7 +1279,7 @@ Transform:
   m_Father: {fileID: 1541416046}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &926938053
+--- !u!114 &926938054
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1288,10 +1288,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 926938050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fadd72e84a0982459b610a454b64cb4, type: 3}
+  m_Script: {fileID: 11500000, guid: 6971938e9ffc3ee4bbf8dae7874afde2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueTrigger: {fileID: 834536889}
+  BedDialogueTrigger: {fileID: 834536889}
 --- !u!1 &997291888
 GameObject:
   m_ObjectHideFlags: 0

@@ -3611,6 +3611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e85ce60a69b577947b6bfef53abeab43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shakeDuration: 2
 --- !u!1 &1033769558
 GameObject:
   m_ObjectHideFlags: 0
@@ -5561,6 +5562,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1683433753}
   - component: {fileID: 1683433754}
+  - component: {fileID: 1683433755}
   m_Layer: 0
   m_Name: doorway
   m_TagString: Untagged
@@ -5599,6 +5601,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueSystem: {fileID: 1213999025}
+--- !u!114 &1683433755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683433752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a963fe2e8ab3b24383e90e5f4d75c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Door: {fileID: 1213999025}
 --- !u!1 &1729660207
 GameObject:
   m_ObjectHideFlags: 0

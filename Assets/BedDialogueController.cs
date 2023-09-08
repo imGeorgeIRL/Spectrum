@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NightDialogue : MonoBehaviour
+public class BedDialogueController : MonoBehaviour
 {
-    public GameObject tvDialogueTrigger;
+    public GameObject BedDialogueTrigger;
 
     // Start is called before the first frame update
     void Start()
     {
-        tvDialogueTrigger.SetActive(false);
+        BedDialogueTrigger.SetActive(false);
     }
 
     // Update is called once per frame
@@ -17,19 +17,18 @@ public class NightDialogue : MonoBehaviour
     {
         if (!GameManager.isDayTime)
         {
-            if (GameManager.watchingTv)
+            if (GameManager.goToSleep)
             {
-                tvDialogueTrigger.SetActive(false);
+                BedDialogueTrigger.SetActive(false);
             }
             else
             {
-                tvDialogueTrigger.SetActive(true);
-            }
-
+                BedDialogueTrigger.SetActive(true);
+            }            
         }
         else
         {
-            tvDialogueTrigger.SetActive(false);
+            BedDialogueTrigger.SetActive(false);
         }
     }
 }

@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
     public static bool noahWalkAway = false;
     public static bool noahSitOnGround = false;
 
+    public static bool whiteboardInactive = false;
+
     public static bool rhythmDeactivate = false;
     public static bool canMoveWhileMeltdown = false;
     //Time of day ******************************************
@@ -46,6 +48,9 @@ public class GameManager : MonoBehaviour
     public static bool goodTexture;
     public static bool badTexture;
     //Scene loading *****************************************
+    public static bool leftUniTuesday = false;
+
+
     public static string firstSceneInSession;
     public static bool transitionFromBedroom;
     private static string _loadedScene;
@@ -95,7 +100,7 @@ public class GameManager : MonoBehaviour
     public static bool inRangeOfClothes = false;
 
     //PEOPLE and STUFF
-    public static bool noahVisibleWednesday = false;
+    public static bool noahVisibleTuesday = false;
     public static bool sitFaceForward = false;
     public static bool meteorShower = false;
 
@@ -139,14 +144,14 @@ public class GameManager : MonoBehaviour
             {
                 isDayTime = false;
             }
+        }
 
-            //}
 
-            //if (Input.GetKeyDown(KeyCode.N))
-            //{
-            //    sensoryMetre += 10f;
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            sensoryMetre += 10f;
 
-            //}
+        }
 
             //if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.P))
             //{
@@ -154,7 +159,7 @@ public class GameManager : MonoBehaviour
             //}
 
 
-        }
+        
     }
    
     public IEnumerator StartLoadingScreen()

@@ -1547,7 +1547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fadd72e84a0982459b610a454b64cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueTrigger: {fileID: 201630910}
+  tvDialogueTrigger: {fileID: 201630910}
 --- !u!61 &558547047
 BoxCollider2D:
   m_ObjectHideFlags: 0

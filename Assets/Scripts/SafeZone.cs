@@ -25,6 +25,10 @@ public class SafeZone : MonoBehaviour
         {
             Debug.Log("Player Collision detected");
             GameManager.safeZoneActive = true;
+            if(GameManager.dayOfWeek == 1 && GameManager.tuesdayMeltdown)
+            {
+                GameManager.noahVisibleTuesday = true;
+            }
         }
     }
 

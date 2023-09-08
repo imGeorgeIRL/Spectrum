@@ -110,6 +110,12 @@ public class DoorController : MonoBehaviour
 
                     GameManager.SaveSensoryMetre();
                     GameManager.SaveSocialBattery();
+
+                    if (GameManager.dayOfWeek == 1)
+                    {
+                        GameManager.leftUniTuesday = true;
+                    }
+
                     break;
                 case "CafeInteriorDoor":
                     SceneManager.UnloadSceneAsync(GameManager.loadedScene);
@@ -118,10 +124,6 @@ public class DoorController : MonoBehaviour
 
                     GameManager.SaveSensoryMetre();
                     GameManager.SaveSocialBattery();
-                    if (GameManager.dayOfWeek == 2)
-                    {
-                        GameManager.noahVisibleWednesday = true;
-                    }
                     break;
                 case "CafeExteriorDoor":
                     SceneManager.UnloadSceneAsync(GameManager.loadedScene);

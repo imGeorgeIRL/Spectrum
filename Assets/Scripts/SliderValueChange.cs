@@ -35,7 +35,7 @@ public class SliderValueChange : MonoBehaviour
         //if the sensory metre is higher than 90, then austin has a meltdown. 
         if (GameManager.sensoryMetre >= 85)
         {
-            GameManager.isHavingMeltdown = true;            
+            GameManager.isHavingMeltdown = true;
         }
         else
         {
@@ -44,10 +44,9 @@ public class SliderValueChange : MonoBehaviour
         
         if (GameManager.loadedScene == "TownCentre" || GameManager.loadedScene == "Cafe")
         {
-            if (GameManager.isHavingMeltdown && GameManager.dayOfWeek == 1)
+            if (GameManager.tuesdayMeltdown)
             {
                 rhythmGame.enabled = false;
-                GameManager.tuesdayMeltdown = true;
             }
             else
             {
