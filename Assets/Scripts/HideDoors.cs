@@ -46,7 +46,7 @@ public class HideDoors : MonoBehaviour
                 door.SetActive(false);
             }
         }
-
+         //Threads
         if (GameManager.dayOfWeek == 2)
         {
             threadsTrigger.SetActive(true);
@@ -54,6 +54,15 @@ public class HideDoors : MonoBehaviour
         else
         {
             threadsTrigger.SetActive(false);
+        }
+
+        //Hiding other cafe's once youve gone into the right one
+
+        if (GameManager.enteredCafe)
+        {
+            doorTriggers[0].SetActive(false);
+            doorTriggers[1].SetActive(false);
+            doorTriggers[3].SetActive(false);
         }
     }
 }

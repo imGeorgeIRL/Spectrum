@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public static bool spokenToMiller;
 
     public static bool safeZoneActive = false;
+    public static bool enteredCafe = false;
 
     public static bool isHavingMeltdown = false;
     public static bool talkingToNoah = false; 

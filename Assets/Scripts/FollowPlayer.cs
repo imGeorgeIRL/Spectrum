@@ -11,6 +11,8 @@ public class FollowPlayer : MonoBehaviour
     private float delay = 1f;
     private float followDistance = 2f;
 
+    private bool isFollowing = false;
+
     private Vector2 targetPos;
     private Vector2 currentVelocity = Vector2.zero;
 
@@ -23,25 +25,43 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Calculate the target position with the offset
-        targetPos.x = player.position.x - followDistance * Mathf.Sign(player.position.x - transform.position.x);
-        targetPos.y = transform.position.y;
-
-        // Apply the delayed movement with smooth dampening
-        transform.position = Vector2.SmoothDamp(transform.position, targetPos, ref currentVelocity, delay, followSpeed);
-
-
         float horizontalDifference = player.position.x - transform.position.x;
 
-        if (Mathf.Abs(horizontalDifference) > (followDistance + 0.2f))
+        if (Mathf.Abs(horizontalDifference) > followDistance)
         {
-            animator.SetBool("Walking", true);
+            // Calculate the target position with the offset
+            targetPos.x = player.position.x - followDistance * Mathf.Sign(horizontalDifference);
+            targetPos.y = transform.position.y;
+
+            float offset = 0.1f; // Default offset
+
+            if (animator.GetFloat("Direction") < 0) // If the Direction parameter is negative (moving left)
+            {
+                offset = -0.1f; // Set a negative offset for left movement
+            }
+
+            // Apply the delayed movement with smooth dampening
+            transform.position = Vector2.SmoothDamp(transform.position, targetPos + new Vector2(offset, 0), ref currentVelocity, delay, followSpeed);
+
+            if (!isFollowing) //set isFollowing to the opposite of whatever it is currently
+            {
+                isFollowing = true;
+                animator.SetBool("Walking", true);
+            }
             animator.SetFloat("Direction", Mathf.Sign(horizontalDifference));
         }
         else
         {
-            animator.SetBool("Walking", false);
-            animator.SetFloat("Direction", 0);
+            // Stop the movement
+            currentVelocity = Vector2.zero;
+            if (isFollowing)
+            {
+                isFollowing = false;
+                animator.SetBool("Walking", false);
+            }
+            animator.SetFloat("Direction", Mathf.Sign(horizontalDifference));
         }
+
+        // Set the "Direction" parameter based on the horizontal difference
     }
 }

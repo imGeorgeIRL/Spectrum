@@ -130,6 +130,8 @@ public class DoorController : MonoBehaviour
                     GameManager.loadedScene = "Cafe";
                     SceneManager.LoadSceneAsync("Cafe", LoadSceneMode.Additive);
 
+                    GameManager.enteredCafe = true;
+
                     GameManager.SaveSensoryMetre();
                     GameManager.SaveSocialBattery();
                     break;
