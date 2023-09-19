@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
 
     public static bool endOfGame = false;
 
+    public static int preLoad = 0;
+
     //Player stats *******************************************
     public static float sensoryMetre;
     public static float socialBattery;
@@ -165,6 +167,7 @@ public class GameManager : MonoBehaviour
    
     public IEnumerator StartLoadingScreen()
     {
+        preLoad = 1;
         isTalking = false;
         loadingScreen.SetActive(true);
         yield return new WaitForSeconds(2);
