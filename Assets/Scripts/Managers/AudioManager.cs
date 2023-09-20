@@ -13,6 +13,9 @@ public class AudioManager : MonoBehaviour
     private AudioLowPassFilter lowPassFilter;
     private AudioEchoFilter echoFilter;
 
+    private bool isFading = false;
+    private float fadeDuration = 1.0f;
+
     private bool isPanicMusicPlaying = false;
 
     [System.Serializable]
@@ -120,6 +123,38 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    private IEnumerator CrossfadeToNewClip(AudioClip newClip, float fadeDuration)
+    {
+        isFading = true;
+        float startVolume = audioSource.volume;
+        float timer = 0f;
+
+        while (timer < fadeDuration)
+        {
+            timer += Time.deltaTime;
+            audioSource.volume = Mathf.Lerp(startVolume, 0f, timer / fadeDuration);
+            yield return null;
+        }
+
+        audioSource.Stop();
+
+        // Play the new clip
+        audioSource.clip = newClip;
+        audioSource.Play();
+
+        timer = 0f;
+
+        while (timer < fadeDuration)
+        {
+            timer += Time.deltaTime;
+            audioSource.volume = Mathf.Lerp(0f, musicVolume, timer / fadeDuration);
+            yield return null;
+        }
+
+        isFading = false;
+    }
+
+
     private void PlaySceneAudio(string sceneName)
     {
         
@@ -134,13 +169,16 @@ public class AudioManager : MonoBehaviour
                     // Music continues, no need to change the audio clip
                     return;
                 }
-
-                // Stop the previous clip if it's playing
-                audioSource.Stop();
+                if (!isFading)
+                {
+                    // Stop the previous clip if it's playing and fade it out
+                    StartCoroutine(CrossfadeToNewClip(audioClip, fadeDuration));
+                }
+                
 
                 // Play the new clip
-                audioSource.clip = audioClip;
-                audioSource.Play();
+                //audioSource.clip = audioClip;
+                //audioSource.Play();
                 audioSource.loop = true;
                 return;
             }

@@ -35,7 +35,7 @@ public class MoveFromContentWarning : MonoBehaviour
 
     private IEnumerator LoadNextScene()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(5);
         ContentWarning();
     }
 }
