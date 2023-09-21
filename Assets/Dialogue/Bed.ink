@@ -3,9 +3,6 @@ INCLUDE globals.ink
 {Day_Of_Week:
 - 0: ->Monday
 - 1: -> Tuesday
-- 2: -> Wednesday
-- 3: -> Thursday
-- 4: -> Friday
 }
 
 ===Monday===
@@ -73,15 +70,6 @@ and I ruined it by just being me.
 ~ townNPC2 = false
 ~ townNPC3 = false
 ~noah_Interractions = 0
-->DONE
-
-===Wednesday===
-->DONE
-
-===Thursday===
-->DONE
-
-===Friday===
 ->DONE
 
 

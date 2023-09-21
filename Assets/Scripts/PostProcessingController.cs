@@ -19,6 +19,8 @@ public class PostProcessingController : MonoBehaviour
     void Start()
     {
         postProcessVol = GetComponent<PostProcessVolume>();
+        
+
     }
 
     // Update is called once per frame
@@ -32,13 +34,49 @@ public class PostProcessingController : MonoBehaviour
         {
             MeltdownPostProcessing();
         }
+        else if (!GameManager.isDayTime &&
+            (GameManager.loadedScene == "Outside"||
+            GameManager.loadedScene == "TownCentre" ||
+            GameManager.loadedScene == "UniEntrance"))
+        {
+            NightPostProcessing();
+        }
         else
         {
             OldPostProcessingSettings();
            // mainCamera.orthographicSize = 6f;
             //mainCamera.transform.position = new Vector3(transform.position.x, 0.41f, transform.position.z);
         }
+
+        
+
     }
+
+    public void NightPostProcessing()
+    {
+        if (postProcessVol == null)
+        {
+            return;
+        }
+
+        PostProcessProfile profile = postProcessVol.profile;
+
+        if (profile == null)
+        {
+            return;
+        }
+
+        if (profile.TryGetSettings(out ColorGrading color))
+        {
+            float r = 77f / 255f;
+            float g = 111f / 255f;
+            float b = 159f / 255f;
+
+            // Set the HDR color filter value
+            color.colorFilter.value = new Color(r, g, b, 1.0f);
+        }
+    }
+    
     public void MeltdownPostProcessing()
     {
         if (postProcessVol == null)
@@ -133,7 +171,10 @@ public class PostProcessingController : MonoBehaviour
         {
             chromatic.intensity.value = 0f;
         }
-
+        if (profile.TryGetSettings(out ColorGrading color))
+        {
+            color.colorFilter.value = Color.white;
+        }
     }
 
 }

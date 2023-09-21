@@ -1048,7 +1048,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e2d5da1e311814dba71c726d625915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whiteboards: []
+  whiteboards:
+  - {fileID: 1493581485}
+  - {fileID: 198823877}
 --- !u!1 &534750942
 GameObject:
   m_ObjectHideFlags: 0

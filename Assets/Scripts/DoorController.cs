@@ -118,6 +118,10 @@ public class DoorController : MonoBehaviour
 
                     break;
                 case "CafeInteriorDoor":
+                    if (GameManager.loadedScene == "ThreadsCo")
+                    {
+                        GameManager.noahVisibleWednesday = true;
+                    }
                     SceneManager.UnloadSceneAsync(GameManager.loadedScene);
                     GameManager.loadedScene = "TownCentre";
                     SceneManager.LoadSceneAsync("TownCentre", LoadSceneMode.Additive);

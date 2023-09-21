@@ -1,5 +1,5 @@
 // GENERAL
-VAR Day_Of_Week = 0 //should be 0
+VAR Day_Of_Week = 2 //should be 0
 
 VAR cafeOnMonday = false 
 VAR busOnMonday = false
@@ -96,7 +96,7 @@ VAR houseNPC3 = false
 VAR sanjayInteractions = 0
 
 VAR townNPC1 = false 
-VAR town1 = 1 //should be 0
+VAR town1 = 0 //should be 0
 
 VAR townNPC2 = false
 VAR town2 = 0

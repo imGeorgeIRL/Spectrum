@@ -247,7 +247,7 @@ me too #speaker: Austin
     friends? #speaker: Austin
         yeah, friends! #speaker:Noah
         ~timeSkip(1)
-        ~isNight = true
+        //~isNight = true
     ->DONE
 ->DONE
 

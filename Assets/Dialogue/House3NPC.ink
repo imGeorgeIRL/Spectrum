@@ -1,13 +1,13 @@
 INCLUDE globals.ink 
 
-{Day_Of_Week:
-- 0: -> Monday
-- 1: -> Tuesday
-- 2: -> Wednesday
+{sanjayInteractions:
+- 0: ->Monday
+- 1: {houseNPC3: ->Monday2 | -> Tuesday}
+- 2: {houseNPC3: ->Tuesday2 | -> Wednesday}
+- 3: ->Wednesday2
 }
 
 ===Monday===
-{houseNPC3 : ->Monday2 }
 Just enjoying the morning #speaker:Sanjay
 I think I saw a kookaburra up in that tree
 He's laughing at me....
@@ -24,7 +24,6 @@ okay... #speaker:Austin
 ->DONE
 
 ===Tuesday===
-{sanjayInteractions == 0: ->Monday}
 He's still laughing at me #speaker:Sanjay
 always sitting up there 
 ha 
@@ -34,10 +33,14 @@ ha
 ~sanjayInteractions = 2
 ->DONE
 
+===Tuesday2===
+Are you okay? #speaker:Austin
+ha #size:small #speaker:Sanjay
+haha
+laughing at me #speaker:Sanjay #size:normal
+->DONE 
+
 ===Wednesday===
-{sanjayInteractions == 0: ->Monday}
-{sanjayInteractions == 1: -> Tuesday}
-{houseNPC3: ->Wednesday2}
 Oh, hey, youre new! #speaker:Sanjay
 what? #speaker:Austin
 I havent seen you around before #speaker:Sanjay

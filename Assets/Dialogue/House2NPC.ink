@@ -1,13 +1,13 @@
 INCLUDE globals.ink
 
-{Day_Of_Week:
+{charlesInteractions:
 - 0: ->Monday
-- 1: -> Tuesday
-- 2: -> Wednesday
+- 1: {houseNPC2: ->Monday2 | -> Tuesday}
+- 2: {houseNPC2: ->Tuesday2 | -> Wednesday}
+- 3: ->Wednesday2
 }
 
 ===Monday===
-{houseNPC2 : ->Monday2 }
 <shake>Hey you!</shake> what are you doing in front of my house?! #speaker:Charles
 Who? Me?#speaker:Austin
 Yes you!!#speaker:Charles
@@ -30,8 +30,6 @@ sorry! #speaker:Austin
 
 
 ===Tuesday===
-{charlesInteractions == 0: ->Monday}
-{houseNPC2: ->Tuesday2 }
 I'm keeping my eyes on you kid #speaker:Charles
 you youngins are all the same 
 destructive and loud
@@ -44,14 +42,11 @@ yeah well we'll see about that. #speaker:Charles
 ~charlesInteractions = 2
 ->DONE
 
-=Tuesday2
+===Tuesday2===
 hrmmph #speaker:Charles
 ->DONE
 
 ===Wednesday===
-{charlesInteractions == 0: ->Monday}
-{charlesInteractions == 1: ->Tuesday}
-{houseNPC2: ->Wednesday2 }
 Mr. Charles? #speaker:Austin
 Huh? Oh it's you, #speaker:Charles
 why do you keep bothering me?
@@ -76,7 +71,7 @@ oh, im sorry. #speaker:Austin
 ~charlesInteractions = 3
 ->DONE
 
-=Wednesday2
+===Wednesday2===
 If you so much as mention space #speaker:Charles
 I'll start screaming
 <shake>scram!</shake>

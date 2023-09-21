@@ -52,14 +52,14 @@ MonoBehaviour:
     overrideState: 0
     value: 1
   temperature:
-    overrideState: 1
+    overrideState: 0
     value: 17
   tint:
-    overrideState: 0
+    overrideState: 1
     value: 13
   colorFilter:
-    overrideState: 0
-    value: {r: 0.9339623, g: 0.79870945, b: 0.76214844, a: 1}
+    overrideState: 1
+    value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
     overrideState: 0
     value: 0

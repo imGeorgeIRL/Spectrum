@@ -139,7 +139,7 @@ public class RhythmGame : MonoBehaviour
         }
         if (!GameManager.tuesdayMeltdown)
         {
-            if (GameManager.sensoryMetre >= 75 && !GameManager.isTalking)
+            if (GameManager.sensoryMetre >= 75 && !GameManager.isTalking && GameManager.loadedScene != "Cafe")
             {
                 if (!visualCueActive)
                 {

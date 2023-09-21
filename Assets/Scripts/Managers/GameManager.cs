@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     public static bool isDayTime;
     public static bool goToSleep = false;
 
-    public static int dayOfWeek = 0; //CHANGED FOR TESTING, INIT TO 0
+    public static int dayOfWeek = 2; //CHANGED FOR TESTING, INIT TO 0
     public static string sceneOfDay; 
 
     public static bool tuesdayMeltdown = false;
@@ -104,6 +104,8 @@ public class GameManager : MonoBehaviour
 
     //PEOPLE and STUFF
     public static bool noahVisibleTuesday = false;
+    public static bool noahVisibleWednesday = false;
+
     public static bool sitFaceForward = false;
     public static bool meteorShower = false;
 
@@ -150,19 +152,19 @@ public class GameManager : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            sensoryMetre += 10f;
+        //if (Input.GetKeyDown(KeyCode.N))
+        //{
+        //    sensoryMetre += 10f;
 
-        }
+        //}
 
-            //if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.P))
-            //{
-            //    PlayerPrefs.DeleteAll();
-            //}
+        //if (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.P))
+        //{
+        //    PlayerPrefs.DeleteAll();
+        //}
 
 
-        
+
     }
    
     public IEnumerator StartLoadingScreen()

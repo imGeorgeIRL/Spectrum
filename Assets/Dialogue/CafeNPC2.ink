@@ -1,13 +1,13 @@
 INCLUDE globals.ink 
 
-{Day_Of_Week:
-- 0: -> Monday
-- 1: ->Tuesday
-- 2: -> Wednesday
+{town2:
+- 0: ->Monday
+- 1: {townNPC2: ->Monday2 | -> Tuesday}
+- 2: {townNPC2: ->Tuesday2 | -> Wednesday}
+- 3: ->Wednesday2
 }
 
 ===Monday===
-{townNPC2 : ->Monday2 }
 um... hi? #speaker: Guy 
 hi #speaker: Austin 
 can I help you? #speaker: Guy 
@@ -32,9 +32,6 @@ you should really write that down somewhere!
 ->DONE
 
 ===Tuesday===
-{town2 == 0: ->Monday}
-{townNPC2: ->Tuesday2 | ->Tuesday1}
-=Tuesday1
 Oh it's you again! #speaker: Guy 
 Cygnus kid!
 Yeah, thats me #speaker:Austin
@@ -51,13 +48,12 @@ Turn it into a song or something
         ~townNPC2 = true
         ~town2 = 1
 ->DONE
-=Tuesday2
+
+===Tuesday2===
 <wave a=0.2>"838, 838, thats the bus you need to take!"</wave> #speaker: Guy 
 ->DONE
 
 ===Wednesday===
-{town2 == 0: ->Monday}
-{town2 == 1: ->Tuesday}
 Oh man, you're not late again are you? #speaker: Guy 
 nope, no class today #speaker:Austin
 I just wanted to come over here and say hi
@@ -82,7 +78,13 @@ you too! wait- #speaker:Austin
 what's your name?
 oh, it's Guy! #speaker: Guy 
 cool! #speaker:Austin
+~townNPC2 = true
 ~town2 = 3
+->DONE
+
+===Wednesday2===
+Who knows, #speaker: Guy 
+you might make me like space!
 ->DONE
 
 

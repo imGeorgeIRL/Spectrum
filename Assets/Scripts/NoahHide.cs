@@ -15,7 +15,7 @@ public class NoahHide : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.dayOfWeek == 1 && GameManager.noahVisibleTuesday)
+        if ((GameManager.dayOfWeek == 1 && GameManager.noahVisibleTuesday) || (GameManager.noahVisibleWednesday && GameManager.dayOfWeek == 2))
         {
             wednesday.SetActive(true);
             

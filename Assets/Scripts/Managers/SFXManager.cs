@@ -67,7 +67,14 @@ public class SFXManager : MonoBehaviour
                 clipVol = (sfxVolume * 1);
                 break;
             case "UniClassroom":
-                clipVol = (sfxVolume * 0.5f);
+                if (GameManager.dayOfWeek == 1)
+                {
+                    clipVol = (sfxVolume * 0);
+                }
+                else
+                {
+                    clipVol = (sfxVolume * 0.5f);
+                }
                 break;
             case "TownCentre":
                 clipVol = (sfxVolume * 0.65f);

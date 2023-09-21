@@ -6135,7 +6135,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 16
   m_Sprite: {fileID: 21300000, guid: be13dde278ef3a34192452012aabbea3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12552,7 +12552,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0022734106, y: -0.27163935}
+  m_Offset: {x: -0.0022734106, y: -0.27393353}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -12563,7 +12563,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9954532, y: 0.4567213}
+  m_Size: {x: 0.9954532, y: 0.45213294}
   m_EdgeRadius: 0
 --- !u!1 &1599952820
 GameObject:
@@ -13940,7 +13940,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 16
   m_Sprite: {fileID: 21300000, guid: fd8c596bd5802394dab662407be84121, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -16128,7 +16128,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 16
   m_Sprite: {fileID: 21300000, guid: 6ba2ee089c1fd574b99a2cc1b344e417, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -16796,7 +16796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2830108668816867390, guid: 710e3d6d6c8b5e943bb9d9cd05b55724, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44
+      value: 60.71
       objectReference: {fileID: 0}
     - target: {fileID: 2830108668816867390, guid: 710e3d6d6c8b5e943bb9d9cd05b55724, type: 3}
       propertyPath: m_LocalPosition.y
@@ -16850,6 +16850,10 @@ PrefabInstance:
     - target: {fileID: 491320206003987775, guid: 283e0b6dae5e9814898251ec6ae7bd72, type: 3}
       propertyPath: m_Name
       value: Sky objects
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440068179198350281, guid: 283e0b6dae5e9814898251ec6ae7bd72, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8124947970368631921, guid: 283e0b6dae5e9814898251ec6ae7bd72, type: 3}
       propertyPath: m_RootOrder

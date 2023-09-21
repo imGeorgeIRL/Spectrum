@@ -1,13 +1,12 @@
 INCLUDE globals.ink 
-
-{Day_Of_Week:
+{donnyInteractions:
 - 0: ->Monday
-- 1: -> Tuesday
-- 2: -> Wednesday
+- 1: {houseNPC1: ->Monday2 | -> Tuesday}
+- 2: {houseNPC1: ->Tuesday2 | -> Wednesday}
+- 3: ->Wednesday2
 }
 
 ===Monday===
-{houseNPC1 : ->Monday2 }
 Good morning son! #speaker:Mr. Donaldson
 Good morning sir #speaker:Austin
 Please, call me Donny #speaker: Donny
@@ -25,8 +24,6 @@ Yeah#speaker:Austin
 
 //TUESDAY
 ===Tuesday===
-{donnyInteractions == 0: ->Monday}
-{houseNPC1: ->Tuesday2 }
 Morning Austin! #speaker: Donny
 Hi Donny #speaker:Austin
 Hey! you remembered! #speaker: Donny
@@ -38,15 +35,13 @@ you too. #speaker:Austin
 ~donnyInteractions = 2
 ->DONE
 
-=Tuesday2
-Have a stellar day kid! #speaker: Donny
+===Tuesday2===
+Have a stellar day kid! #speaker:Donny
+hehe, "stellar" #speaker:Austin
 ->DONE
 
 //WEDNESDAY
 ===Wednesday===
-{donnyInteractions == 0: ->Monday}
-{donnyInteractions == 1: ->Tuesday}
-{houseNPC1: ->Wednesday2 }
 Hey Austin, #speaker: Donny
 Hi Donny #speaker:Austin
 how's it going champ? #speaker: Donny
@@ -63,7 +58,7 @@ but i appreciate the vote of confidence.
 ~donnyInteractions = 3
 ->DONE
 
-=Wednesday2
+===Wednesday2===
 Chin up kid, #speaker: Donny
 can't see the stars looking down #speaker:Austin
 unless im looking into a telescope,

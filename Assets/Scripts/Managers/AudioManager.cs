@@ -10,6 +10,9 @@ public class AudioManager : MonoBehaviour
 
     private string previousScene;
     public AudioSource audioSource;
+
+    public AudioClip nightMusic;
+
     private AudioLowPassFilter lowPassFilter;
     private AudioEchoFilter echoFilter;
 
@@ -121,6 +124,7 @@ public class AudioManager : MonoBehaviour
             audioSource.volume = (musicVolume * 2);
             audioSource.loop = true;
         }
+        
     }
 
     private IEnumerator CrossfadeToNewClip(AudioClip newClip, float fadeDuration)
@@ -161,6 +165,13 @@ public class AudioManager : MonoBehaviour
         if (audioClipMap.ContainsKey(sceneName))
         {
             AudioClip audioClip = audioClipMap[sceneName];
+
+            if (!GameManager.isDayTime && GameManager.loadedScene == "Outside")
+            {
+                audioClip = nightMusic;
+            }
+
+                
             if (audioClip != null)
             {
                 // Check for special cases where music continues between scenes

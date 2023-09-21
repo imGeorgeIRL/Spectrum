@@ -33,9 +33,10 @@ public class mumDialogueTrigger : MonoBehaviour
             }
             
         }
-        else
+        
+        if (GameManager.talkedToMum)
         {
-
+            phoneCall = false;
         }
 
     }

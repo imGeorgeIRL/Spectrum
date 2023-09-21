@@ -49,6 +49,7 @@ public class NoahMovement : MonoBehaviour
         if (GameManager.isHavingMeltdown && noahCanMove && GameManager.loadedScene == "UniClassroom")
         {
             MoveTowardsAustin();
+            GameManager.whiteboardInactive = true;
         }
 
         if (isMoving)

@@ -82,6 +82,7 @@ public class SleepTime : MonoBehaviour
                 Debug.LogWarning("No case for this day");
                 break;
         }
+        GameManager.tuesdayMeltdown = false;
         Debug.LogWarning("Day of the week is " + day);
         dayText.text = day;
         yield return new WaitForSeconds(5f);
