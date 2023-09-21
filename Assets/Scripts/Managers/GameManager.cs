@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     public static bool isDayTime;
     public static bool goToSleep = false;
 
-    public static int dayOfWeek = 2; //CHANGED FOR TESTING, INIT TO 0
+    public static int dayOfWeek = 0; //CHANGED FOR TESTING, INIT TO 0
     public static string sceneOfDay; 
 
     public static bool tuesdayMeltdown = false;
@@ -139,17 +139,17 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            if (!isDayTime)
-            {
-                isDayTime = true;
-            }
-            else
-            {
-                isDayTime = false;
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.T))
+        //{
+        //    if (!isDayTime)
+        //    {
+        //        isDayTime = true;
+        //    }
+        //    else
+        //    {
+        //        isDayTime = false;
+        //    }
+        //}
 
 
         //if (Input.GetKeyDown(KeyCode.N))
