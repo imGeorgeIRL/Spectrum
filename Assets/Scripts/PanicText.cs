@@ -43,6 +43,7 @@ public class PanicText : MonoBehaviour
         {
             //StopCoroutine(PanicTextDisplay());
             GameManager.startPanic = false;
+            panic.SetActive(false);
             return;
         }
     }

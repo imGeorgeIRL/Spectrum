@@ -68,7 +68,7 @@ public class TimeSkip : MonoBehaviour
     private IEnumerator WaitForNightSkip()
     {
         yield return new WaitForSeconds(3f);
-        GameManager.safeZoneActive = false;
+        
         SceneManager.UnloadSceneAsync(GameManager.loadedScene);
         SceneManager.LoadSceneAsync(GameManager.timeSkipDestination, LoadSceneMode.Additive);
         GameManager.loadedScene = GameManager.timeSkipDestination;
@@ -76,5 +76,6 @@ public class TimeSkip : MonoBehaviour
         GameManager.SaveSensoryMetre();
         GameManager.SaveSocialBattery();
         GameManager.timeSkip = false;
+        GameManager.safeZoneActive = false;
     }
 }

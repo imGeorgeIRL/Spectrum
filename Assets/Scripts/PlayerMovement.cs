@@ -228,8 +228,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnDestroy()
     {
-        if (GameManager.loadedScene == "UniClassroom" || GameManager.safeZoneActive)
+        if (GameManager.loadedScene == "UniClassroom")
 {
+            return;
+        }
+        else if (GameManager.safeZoneActive)
+        {
             return;
         }
         else

@@ -1,5 +1,6 @@
 INCLUDE globals.ink 
 
+
 {town1:
 - 0: ->Monday
 - 1: {townNPC1: ->Monday2 | -> Tuesday}
@@ -9,6 +10,9 @@ INCLUDE globals.ink
 
 
 ===Monday===
+{Day_Of_Week:
+- 2: ->WednesdayNo
+}
 Hi sweatheart, can I  help you? #speaker:Woman
     * [Which bus do I need to catch to get to Cygnus University?]
     ~spokeTo(1)
@@ -27,6 +31,9 @@ sorry sweetheart.
 ->DONE
 
 ===Tuesday===
+{Day_Of_Week:
+- 2: ->WednesdayNo
+}
 Oh it's you again!#speaker:Woman
 Didn't find out which bus you needed?
 I did, I just <fade d=1>forgot</fade> again #speaker:Austin
@@ -45,6 +52,9 @@ Hope you remember this time haha!#speaker:Woman
 ->DONE
 
 ===Wednesday===
+{Day_Of_Week:
+- 2: ->WednesdayNo
+}
 Look at you, third time's the charm! #speaker:Woman
 Lost again?
 Nope! I'm supposed to be here this time. #speaker:Austin
@@ -66,4 +76,18 @@ I'm here most mornings #speaker:Woman
 if you ever need someone to chat to!
 ->DONE
 
+===WednesdayNo===
+Hey there
+what's up kid?
+I'm trying to find the clothing store
+what is it called? Cloth and co?
+Threads and co! #speaker:Woman
+Yes that's the one! Do you know where it is? #speaker:Austin
+Of course, it's just back the way you came from #speaker:Woman
+past the bus stop, you can't miss it.
+Thank you so much #speaker:Austin
+no worries sweetheart #speaker:Woman
+buy something nice for yourself.
+~townNPC1 = true
+->DONE
 

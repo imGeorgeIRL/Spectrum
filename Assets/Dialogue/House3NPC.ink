@@ -30,6 +30,7 @@ ha
 ha 
 ha 
 ... #speaker:Austin
+~houseNPC3 = true
 ~sanjayInteractions = 2
 ->DONE
 
@@ -62,6 +63,7 @@ spells autism.
 oh, youre right... strange #speaker:Austin
 yeah, I wonder if whoever named you did that on purpose #speaker:Sanjay
 hmm... #speaker:Austin
+~houseNPC3 = true
 ~sanjayInteractions = 3
 ->DONE
 

@@ -39,6 +39,7 @@ public class mumDialogueTrigger : MonoBehaviour
             phoneCall = false;
         }
 
+        audioSource.volume = SFXManager.sfxVolume;
     }
 
 

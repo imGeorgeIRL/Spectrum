@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     public static bool rhythmDeactivate = false;
     public static bool canMoveWhileMeltdown = false;
     //Time of day ******************************************
-    public static bool isDayTime;
+    public static bool isDayTime = true;
     public static bool goToSleep = false;
 
     public static int dayOfWeek = 0; //CHANGED FOR TESTING, INIT TO 0
@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
                 if (instance != null)
                 {
                     instance.StartCoroutine(instance.StartLoadingScreen());
-                    
+                    PlayerPrefs.SetInt("IsDayTime", isDayTime ? 1 : 0);
                 }
             }
         }
@@ -133,7 +133,10 @@ public class GameManager : MonoBehaviour
         
         LoadSensoryMetre();
         LoadSocialBattery();
-        isDayTime = true;
+        //isDayTime = true;
+        //GameManager.isDayTime = PlayerPrefs.GetInt("IsDayTime") == 1;
+        Debug.Log("Day time is " + isDayTime);
+
     }
 
     private void Update()
@@ -151,7 +154,7 @@ public class GameManager : MonoBehaviour
         //    }
         //}
 
-
+        
         //if (Input.GetKeyDown(KeyCode.N))
         //{
         //    sensoryMetre += 10f;
