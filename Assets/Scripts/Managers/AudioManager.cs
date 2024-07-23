@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -68,13 +69,14 @@ public class AudioManager : MonoBehaviour
 
     private void Update()
     {
+        bool watchingTv = DialogueLua.GetVariable("watchingTv").AsBool;
         string currentScene = GameManager.loadedScene;
         if (currentScene != previousScene)
         {
             PlaySceneAudio(currentScene);
             previousScene = currentScene;
         }
-        if (GameManager.watchingTv)
+        if (watchingTv)
         {
             audioSource.volume = 0f;
         }

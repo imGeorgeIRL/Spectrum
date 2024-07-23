@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,9 +16,13 @@ public class NightDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager.isDayTime)
+        bool watchedTv = DialogueLua.GetVariable("interactedWithTv").asBool;
+        bool watchingTv = DialogueLua.GetVariable("watchingTv").asBool;
+        bool isDay = DialogueLua.GetVariable("isDay").asBool;
+
+        if (!isDay)
         {
-            if (GameManager.watchingTv)
+            if (watchingTv || watchedTv)
             {
                 tvDialogueTrigger.SetActive(false);
             }

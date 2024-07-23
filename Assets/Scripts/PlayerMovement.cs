@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
@@ -66,6 +67,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        bool watchingTv = DialogueLua.GetVariable("watchingTv").AsBool;
+
         if (GameManager.dayOfWeek == 1 && GameManager.safeZoneActive && GameManager.isHavingMeltdown)
         {
             if (!isLyingDown) 
@@ -99,9 +102,9 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Direction", moveHorizontal);
             
 
-            if (GameManager.watchingTv)
+            if (watchingTv)
             {
-                GameManager.watchingTv = false;
+                DialogueLua.SetVariable("watchingTv", false);
             }
         }
 

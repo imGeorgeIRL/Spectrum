@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -141,20 +142,20 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        bool isDay = DialogueLua.GetVariable("isDay").asBool;
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            if (!isDay)
+            {
+                DialogueLua.SetVariable("isDay", true);
+            }
+            else
+            {
+                DialogueLua.SetVariable("isDay", false);
+            }
+        }
 
-        //if (Input.GetKeyDown(KeyCode.T))
-        //{
-        //    if (!isDayTime)
-        //    {
-        //        isDayTime = true;
-        //    }
-        //    else
-        //    {
-        //        isDayTime = false;
-        //    }
-        //}
 
-        
         //if (Input.GetKeyDown(KeyCode.N))
         //{
         //    sensoryMetre += 10f;

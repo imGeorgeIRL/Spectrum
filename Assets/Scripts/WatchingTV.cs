@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrushers.DialogueSystem;
 
 public class WatchingTV : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class WatchingTV : MonoBehaviour
     public GameObject character;
     private Animator animator;
     public GameObject tvScreen;
-    public GameObject dialogueSystem;
+
 
     private BoxCollider2D bx;
     private Renderer couchRenderer;
@@ -32,28 +33,52 @@ public class WatchingTV : MonoBehaviour
         sitPosition = new Vector3(-1.7f, 0.52f, 0f);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void WatchTv()
     {
-        if (GameManager.watchingTv && !watching)
+        string watchingWhat = DialogueLua.GetVariable("watchingWhat").AsString;
+        bool watchingTv = DialogueLua.GetVariable("watchingTv").AsBool;
+
+        if (watchingTv && !watching)
         {
-            dialogueSystem.SetActive(false);
-            if (GameManager.spaceDoc)
+            if (watchingWhat == "spaceDoc")
             {
                 clipID = 0;
             }
-            else if (GameManager.news)
+            else if (watchingWhat == "news")
             {
                 clipID = 1;
             }
-            else if (GameManager.realityTv)
+            else if (watchingWhat == "realityTv")
             {
                 clipID = 2;
             }
-            StartCoroutine(WatchTV());            
+            StartCoroutine(WatchTV());
         }
+    }
 
-        if (!GameManager.watchingTv && watching)
+    // Update is called once per frame
+    void Update()
+    {
+        bool watchingTv = DialogueLua.GetVariable("watchingTv").AsBool;
+        string watchingWhat = DialogueLua.GetVariable("watchingWhat").AsString;
+
+        if (watchingTv && !watching)
+        {
+            if (watchingWhat == "spaceDoc")
+            {
+                clipID = 0;
+            }
+            else if (watchingWhat == "news")
+            {
+                clipID = 1;
+            }
+            else if (watchingWhat == "realityTv")
+            {
+                clipID = 2;
+            }
+            StartCoroutine(WatchTV());
+        }
+        if (!watchingTv && watching)
         {
             watching = false;
             bx.enabled = false;
@@ -66,27 +91,24 @@ public class WatchingTV : MonoBehaviour
             tvScreen.SetActive(false);
             couchRenderer.sortingOrder = 3;
 
-            dialogueSystem.SetActive(true);
-            GameManager.watchingTv = false;
+         
 
-            if (GameManager.spaceDoc)
+            if (watchingWhat == "spaceDoc")
             {
                 GameManager.socialBattery += 15f;
                 GameManager.sensoryMetre -= 8f;
             }
-            else if (GameManager.news)
+            else if (watchingWhat == "news")
             {
                 GameManager.sensoryMetre += 5f;
                 GameManager.socialBattery -= 10f;
             }
-            else if (GameManager.realityTv)
+            else if (watchingWhat == "realityTv")
             {
                 GameManager.sensoryMetre += 15f;
             }
             audioSource.Stop();
-            GameManager.spaceDoc = false;
-            GameManager.news = false;
-            GameManager.realityTv = false;
+
         }
     }
 
@@ -119,6 +141,6 @@ public class WatchingTV : MonoBehaviour
         animator.SetBool("isSitting", false);
         tvScreen.SetActive(false);
         couchRenderer.sortingOrder = 3;
-        dialogueSystem.SetActive(true);
+
     }
 }

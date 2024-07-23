@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,8 @@ public class NightFilter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.isDayTime)
+        bool isDay = DialogueLua.GetVariable("isDay").asBool;
+        if (isDay)
         {            
             nightFilter.SetActive(false);          
         }
