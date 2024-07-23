@@ -102,6 +102,8 @@ GameObject:
   - component: {fileID: 4717966836091943169}
   - component: {fileID: 6477968107928155683}
   - component: {fileID: 6616796673252904820}
+  - component: {fileID: 117615553992633998}
+  - component: {fileID: 117615553992633999}
   m_Layer: 0
   m_Name: Austin 1
   m_TagString: Player
@@ -116,7 +118,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117615555137660391}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.69, y: -1, z: -1.29}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
@@ -290,8 +292,15 @@ MonoBehaviour:
   socialSlider: {fileID: 0}
   cueObject: {fileID: 1731178772919400174}
   ringPrefab: {fileID: 6830379857877301846, guid: dc9f25bd358f62b4686a9b0632e9d892, type: 3}
-  starArray: []
-  dialogueTriggerArray: []
+  starArray:
+  - {fileID: 3031424812146096075}
+  - {fileID: 3385342854153017588}
+  - {fileID: 24312484302808556}
+  dialogueTriggerArray:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &6477968107928155683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,6 +327,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5a4f644a83bfc4483c37b97789019f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &117615553992633998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117615555137660391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42f17d3292d455242a47944a59dea99c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagSpecificElements: []
+  layerSpecificElements: []
+--- !u!114 &117615553992633999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117615555137660391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 963d6358c55a0f44d8de57bee560f184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useDefaultGUI: 0
+  guiSkin: {fileID: 0}
+  guiStyleName: label
+  alignment: 1
+  color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  textStyle: 1
+  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
+  defaultUseMessage: E to Interract
+  useKey: 101
+  useButton: Fire2
+  enableTouch: 0
+  touchArea:
+    origin: 0
+    alignment: 0
+    x:
+      scale: 0
+      value: 0
+    y:
+      scale: 0
+      value: 0
+    width:
+      scale: 0
+      value: 0
+    height:
+      scale: 0
+      value: 0
+    minPixelWidth: 0
+    minPixelHeight: 0
+  broadcastToChildren: 1
+  actorTransform: {fileID: 0}
+  onSelectedUsable:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeselectedUsable:
+    m_PersistentCalls:
+      m_Calls: []
+  usablesInRange: []
 --- !u!1 &1731178772919400174
 GameObject:
   m_ObjectHideFlags: 0

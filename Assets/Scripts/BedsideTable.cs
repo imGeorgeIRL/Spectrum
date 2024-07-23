@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrushers.DialogueSystem;
 
 public class BedsideTable : MonoBehaviour
 {
@@ -14,13 +15,12 @@ public class BedsideTable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.interactedWithWardrobe && !GameManager.rhythmActive)
-        {
-            dialogueSystem.SetActive(true);
-        }
-        else
+        string dayOfWeek = DialogueLua.GetVariable("dayOfWeek").AsString;
+        bool isDay = DialogueLua.GetVariable("isDay").asBool;
+        if (dayOfWeek == "Tuesday" && !isDay)
         {
             dialogueSystem.SetActive(false);
         }
+        
     }
 }

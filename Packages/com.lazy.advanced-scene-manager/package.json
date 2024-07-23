@@ -1,0 +1,40 @@
+{
+  "name": "com.lazy.advanced-scene-manager",
+  "version": "2.2.0",
+  "displayName": "Advanced Scene Manager",
+  "description": "The Ultimate Unity Scene Manager!\n\nStreamline your Unity scene management and unlock new possibilities with Advanced Scene Manager. This actively supported asset is continuously updated to provide you with the best experience, saving you valuable time and simplifying your workflows. \n\nA good workflow is important for healthy development. We offer a complete, organized, easy-to-use, and time-saving scene management system to assist you in every need.",
+  "unity": "2022.2",
+  "documentationUrl": "https://github.com/Lazy-Solutions/AdvancedSceneManager/tree/2.0/",
+  "changelogUrl": "https://github.com/Lazy-Solutions/AdvancedSceneManager/releases/latest",
+  "keywords": [],
+  "author": {
+    "name": "Lazy Solutions",
+    "email": "",
+    "url": "https://github.com/Lazy-Solutions/AdvancedSceneManager"
+  },
+  "_upm": {
+    "changelog": "- Switched packaging to upm package format. ASM is now contained within /Packages/ folder.\n- Added Unity 6 support.\n- Added support for dependency injection. See AdvancedSceneManager.DependencyInjection namespace.\n- Fully dropped support for ASM legacy (1.9x).\n\nUI:\n- Rewrote parts of scene manager window to make use of dependency injection.\n- Added search view.\n- Added selection view.\n- Added option to disable hierarchy indicators.\n- Added some more buttons to header (most disabled by default).\n\nMonoBehaviour:\n- Added this.MoveHere(GameObject)\n- Added this.CreateHere(...)\n- Added this.CreateHere<TComponent>(...)\n\nScene import:\n- Improved scene import / un-import speed.\n- Added back whitelist for scene import.\n\nMisc:\n- Fixed many bugs.\n- Removed #ADVANCED_SCENE_MANAGER in favor of user defined Version Defines.\n- Fixed ScriptableSingleton error messages.\n- Removed startup loading scene, in favor of making splash screen take its role, simplifying startup. Added second default splash screen that is just a fade."
+  },
+  "samples": [
+    {
+      "displayName": "Level Select",
+      "description": "Setup a simple level select menu.",
+      "path": "Samples~/Level Select"
+    },
+    {
+      "displayName": "Preloading",
+      "description": "Setup preloading.",
+      "path": "Samples~/Preloading"
+    },
+    {
+      "displayName": "Scene Streaming",
+      "description": "Setup a scene streaming level.",
+      "path": "Samples~/Scene Streaming"
+    },
+    {
+      "displayName": "Netcode",
+      "description": "Setup integration with netcode for gameobjects.",
+      "path": "Samples~/Netcode"
+    }
+  ]
+}

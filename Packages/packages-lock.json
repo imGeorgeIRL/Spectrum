@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.lazy.advanced-scene-manager": {
+      "version": "file:com.lazy.advanced-scene-manager",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.unity.2d.animation": {
       "version": "7.0.10",
       "depth": 1,

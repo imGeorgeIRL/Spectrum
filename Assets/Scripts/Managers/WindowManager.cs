@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrushers.DialogueSystem;
 
 public class WindowManager : MonoBehaviour
 {
@@ -16,7 +17,8 @@ public class WindowManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.isDayTime)
+        bool isDay = DialogueLua.GetVariable("isDay").asBool;
+        if (isDay)
         {
             windowDay.SetActive(true);
             windowNight.SetActive(false);

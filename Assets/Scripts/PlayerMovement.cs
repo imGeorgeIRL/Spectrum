@@ -75,6 +75,39 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
+        //animator.SetBool("isPanic", false);
+        animator.speed = 1f;
+
+        float moveHorizontal = Input.GetAxis("Horizontal");
+
+        // Move the character horizontally
+        Vector2 movement = new Vector2(moveHorizontal * moveSpeed, rb.velocity.y);
+        rb.velocity = movement;
+
+
+        if (moveHorizontal != 0f)
+        {
+            if (moveHorizontal >= -0.1 && moveHorizontal <= 0.1)
+            {
+                animator.SetBool("isWalking", false);
+            }
+            else
+            {
+                animator.SetBool("isWalking", true);
+            }
+                
+            animator.SetFloat("Direction", moveHorizontal);
+            
+
+            if (GameManager.watchingTv)
+            {
+                GameManager.watchingTv = false;
+            }
+        }
+
+
+        
+
         if (GameManager.sensoryMetre >= 85f && GameManager.dayOfWeek != 1)
         {
             animator.SetFloat("Direction", 0f);
@@ -83,99 +116,45 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector2.zero;
             animator.speed = 3f;
         }
-        else
+
+
+        //if (!hasSat)
+        //{
+        //    animator.SetBool("isTalking", true);
+        //    rb.velocity = Vector2.zero;
+        //}
+        //else
+        //{
+        //    animator.SetBool("isTalking", false);
+        //}
+        //*****************************************************
+
+        if (GameManager.isSitting && GameManager.loadedScene == "UniClassroom" && !hasSat)
         {
-            if (DialogueManager.GetInstance().dialogueIsPlaying)
+            positionBeforeSit = transform.position;
+            Debug.Log("Position saved at " + positionBeforeSit);
+            SitDown();
+            hasSat = true;
+        }
+        else if (GameManager.isSitting && GameManager.loadedScene == "Cafe" && !hasSat)
+        {
+            positionBeforeSit = transform.position;
+            Debug.Log("Position saved at " + positionBeforeSit);
+            SitDown();
+            hasSat = true;
+        }
+
+        //******************************************************
+
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+        {
+            if (hasSat)
             {
-                animator.SetBool("isWalking", false);
-
-                //return;
-            }
-            else
-            {
-                animator.SetBool("isPanic", false);
-                animator.speed = 1f;
-
-                float moveHorizontal = Input.GetAxis("Horizontal");
-
-                // Move the character horizontally
-                Vector2 movement = new Vector2(moveHorizontal * moveSpeed, rb.velocity.y);
-                rb.velocity = movement;
-
-
-                if (moveHorizontal != 0f)
-                {
-                    bool isTalking = animator.GetBool("isTalking");
-                    if (GameManager.isTalking)
-                    {
-                        if (moveHorizontal > 0f)
-                        {
-                            animator.Play("ANIM_Austin_Idle_Right");
-                            animator.SetBool("isTalking", true);
-                        }
-                        else
-                        {
-                            animator.Play("ANIM_Austin_Idle_Left");
-                            animator.SetBool("isTalking", true);
-                        }
-                    }
-                    else
-                    {
-                        animator.SetBool("isWalking", true);
-                        animator.SetFloat("Direction", moveHorizontal);
-                        animator.SetBool("isTalking", false);
-
-                        if (GameManager.watchingTv)
-                        {
-                            GameManager.watchingTv = false;
-                        }
-                    }
-                }
-                else
-                {
-                    animator.SetBool("isWalking", false);
-
-                }
-
-            }
-
-            if (GameManager.isTalking && !hasSat)
-            {
-                animator.SetBool("isTalking", true);
-                rb.velocity = Vector2.zero;
-            }
-            else
-            {
-                animator.SetBool("isTalking", false);
-            }
-            //*****************************************************
-
-            if (GameManager.isSitting && GameManager.loadedScene == "UniClassroom" && !hasSat)
-            {
-                positionBeforeSit = transform.position;
-                Debug.Log("Position saved at " + positionBeforeSit);
-                SitDown();
-                hasSat = true;
-            }
-            else if (GameManager.isSitting && GameManager.loadedScene == "Cafe" && !hasSat)
-            {
-                positionBeforeSit = transform.position;
-                Debug.Log("Position saved at " + positionBeforeSit);
-                SitDown();
-                hasSat = true;
-            }
-
-            //******************************************************
-
-            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
-            {
-                if (hasSat)
-                {
-                    GameManager.isSitting = false;
-                    StandUp();
-                }
+                GameManager.isSitting = false;
+                StandUp();
             }
         }
+
     }
 
     private void StandUp()

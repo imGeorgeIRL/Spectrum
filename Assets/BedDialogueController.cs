@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrushers.DialogueSystem;
 
 public class BedDialogueController : MonoBehaviour
 {
@@ -15,9 +16,12 @@ public class BedDialogueController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GameManager.isDayTime)
+        bool isDay = DialogueLua.GetVariable("isDay").asBool;
+        bool bedTime = DialogueLua.GetVariable("BedTime").asBool;
+        if (!isDay)
         {
-            if (GameManager.goToSleep)
+            Debug.Log("It's night");
+            if (bedTime)
             {
                 BedDialogueTrigger.SetActive(false);
             }

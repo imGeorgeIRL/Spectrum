@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using PixelCrushers.DialogueSystem;
 
 public class SleepTime : MonoBehaviour
 {
@@ -86,24 +87,43 @@ public class SleepTime : MonoBehaviour
         Debug.LogWarning("Day of the week is " + day);
         dayText.text = day;
         yield return new WaitForSeconds(5f);
-        GameManager.isDayTime = true;
-        GameManager.goToSleep = false;
+        DialogueLua.SetVariable("isDay", true);
+        //GameManager.goToSleep = false;
         canvasGroup.alpha = 0f;
     }
 
     private void Update()
     {
-        if (GameManager.goToSleep && !coroutinePlaying)
+        bool bedTime = DialogueLua.GetVariable("BedTime").asBool;
+        if (bedTime && !coroutinePlaying)
         {
             coroutinePlaying = true;
             GameManager.dayOfWeek += 1;
             StartCoroutine(NightToDay());
             GameManager.interactedWithWardrobe = false;
+            DialogueLua.SetVariable("BedTime", false);
+            
+            if (!bedTime)
+            {
+                Debug.Log("Bed time is now False");
+            }
         }
+    }
 
-        //if (Input.GetKeyDown(KeyCode.H))
-        //{
-        //    StartCoroutine(BlackScreenEnable());
-        //}
+    public void BedTime()
+    {
+        if (!coroutinePlaying)
+        {
+            coroutinePlaying = true;
+            GameManager.dayOfWeek += 1;
+            StartCoroutine(NightToDay());
+            GameManager.interactedWithWardrobe = false;
+            DialogueLua.SetVariable("BedTime", false);
+            
+            if (DialogueLua.GetVariable("BedTime", false))
+            {
+                Debug.Log("Bed time is now False");
+            }
+        }
     }
 }

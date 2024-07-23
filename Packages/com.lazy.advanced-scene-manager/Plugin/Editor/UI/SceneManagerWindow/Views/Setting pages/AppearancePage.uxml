@@ -1,0 +1,32 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:GroupBox name="group-toolbar" text="Display ASM play button in toolbar">
+        <ui:VisualElement name="group-not-installed" style="background-color: rgba(0, 0, 0, 0);">
+            <ui:Label tabindex="-1" display-tooltip-when-elided="true" text="&lt;a href=&quot;https://github.com/marijnz/unity-toolbar-extender&quot;&gt;https://github.com/marijnz/unity-toolbar-extender&lt;/a&gt;" style="white-space: normal;" />
+            <ui:Label tabindex="-1" text="must be installed in order to put a play button in toolbar.&#10;&#10;Note: must be installed as a package." display-tooltip-when-elided="true" />
+        </ui:VisualElement>
+        <ui:VisualElement name="group-installed" style="background-color: rgba(0, 0, 0, 0); display: none;">
+            <ui:SliderInt picking-mode="Ignore" label="Toolbar button count:" value="1" high-value="5" name="slider-toolbar-button-count" show-input-field="true" low-value="0" inverted="false" binding-path="m_toolbarButtonCount" style="display: none;" />
+            <ui:Slider picking-mode="Ignore" label="Toolbar buttons offset:" value="0" high-value="100" name="slider-toolbar-button-offset" binding-path="m_toolbarPlayButtonOffset" show-input-field="true" low-value="-100" style="display: none;" />
+        </ui:VisualElement>
+    </ui:GroupBox>
+    <ui:GroupBox text="Display:" name="group-display">
+        <ui:Label tabindex="-1" text="Header:" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-style: bold; margin-bottom: 6px;" />
+        <ui:Toggle label="Search button" name="toggle-search-button" tooltip="Search bar can also be toggled by CTRL+F." binding-path="m_displaySearchButton" />
+        <ui:Toggle label="Always display search" name="toggle-always-display-search" binding-path="m_alwaysDisplaySearch" />
+        <ui:Toggle label="Overview button" name="toggle-overview-button-toggle" binding-path="m_displayOverviewButton" />
+        <ui:Toggle label="Dev build button" name="toggle-build-button" binding-path="m_displayDevBuildButton" />
+        <ui:Toggle label="Build profiles button" name="toggle-build-profiles-button" binding-path="m_displayBuildProfilesButton" />
+        <ui:Toggle label="Project settings button" name="toggle-project-settings-button" binding-path="m_displayProjectSettingsButton" />
+        <ui:Toggle label="Code editor button" name="toggle-code-button" binding-path="m_displayCodeEditorButton" />
+        <ui:Label tabindex="-1" text="Footer:" parse-escape-sequences="true" display-tooltip-when-elided="true" style="margin-bottom: 6px; -unity-font-style: bold; margin-top: 12px;" />
+        <ui:Toggle label="Profile button" name="toggle-profile-button" binding-path="m_displayProfileButton" />
+        <ui:Toggle label="Scene helper button" name="toggle-scene-helper-button" binding-path="m_displaySceneHelperButton" />
+        <ui:Label tabindex="-1" text="Collection header:" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-style: bold; margin-bottom: 6px; margin-top: 12px;" />
+        <ui:Toggle label="Play button" name="toggle-play-button" binding-path="m_displayCollectionPlayButton" />
+        <ui:Toggle label="Open button" name="toggle-open-button" binding-path="m_displayCollectionOpenButton" />
+        <ui:Toggle label="Open additive button" name="toggle-open-additive-button" binding-path="m_displayCollectionAdditiveButton" />
+        <ui:Toggle label="Include in build toggle" name="toggle-include-in-build-toggle" binding-path="m_displayIncludeInBuildToggle" style="display: none;" />
+        <ui:Label tabindex="-1" text="Hierarchy:" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-style: bold; margin-bottom: 6px; margin-top: 12px;" />
+        <ui:Toggle label="Indicators" name="toggle-display-hierarchy-indicators" binding-path="m_displayHierarchyIndicators" />
+    </ui:GroupBox>
+</ui:UXML>

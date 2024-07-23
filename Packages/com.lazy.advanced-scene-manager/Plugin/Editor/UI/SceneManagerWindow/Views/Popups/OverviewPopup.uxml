@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:ScrollView>
+        <ui:Foldout text="Imported scenes" name="foldout-imported" value="true" />
+        <ui:Foldout text="ASM scenes" name="foldout-asm" value="true" toggle-on-label-click="true" />
+        <ui:Foldout text="Unimported scenes" name="foldout-unimported" />
+    </ui:ScrollView>
+</ui:UXML>
