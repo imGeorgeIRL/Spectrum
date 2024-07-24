@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,27 +9,31 @@ public class BusSpawner : MonoBehaviour
     public Transform targetBusPosition;
 
     private bool busSpawned;
+    private int busNumber;
     // Start is called before the first frame update
     void Start()
     {
-        busSpawned = false;
+        
+        busNumber = DialogueLua.GetVariable("busChosen").asInt;
     }
+    
 
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.choiceSelected != 0 && GameManager.isbusChosen && !busSpawned)
-        {
-            SpawnBus();
-            busSpawned = true;
-            GameManager.isbusChosen = false;
-        }
+        
+        //if (busNumber != 0 && !busSpawned)
+        //{
+        //    SpawnBus();
+        //    busSpawned = true;
+            
+        //}
     }
 
     public void SpawnBus()
     {
         Instantiate(busPrefab, targetBusPosition.position, Quaternion.identity);
-        GameManager.isbusChosen = true;
-        busSpawned = false;
+        
+        
     }
 }

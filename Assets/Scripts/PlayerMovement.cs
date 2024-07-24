@@ -27,7 +27,9 @@ public class PlayerMovement : MonoBehaviour
     private bool hasSat;
 
     private bool isLyingDown = false;
-    
+
+    public bool isTalking;
+
     // ******************************************************************************************
     private void Awake()
     {
@@ -44,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
         savedXCoordinate = LoadSavedXCoordinate();
         SaveXCoordinate(transform.position.x);
         ReenterRoom();
-        
+
     }
 
     //private void OnEnable()
@@ -59,10 +61,19 @@ public class PlayerMovement : MonoBehaviour
         Vector3 oldPosition = transform.position;
 
         animator.SetBool("isMeltdown", true);
-        Vector3 newPosition = new Vector3 (oldPosition.x, oldPosition.y + 1, oldPosition.z);
+        Vector3 newPosition = new Vector3(oldPosition.x, oldPosition.y + 1, oldPosition.z);
         transform.position = newPosition;
         rb.velocity = Vector2.zero;
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
+    }
+
+    public void Talking()
+    {
+        isTalking = true;
+    }
+    public void StopTalking()
+    {
+        isTalking = false;
     }
 
     private void Update()
@@ -77,36 +88,48 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
-
-        //animator.SetBool("isPanic", false);
-        animator.speed = 1f;
-
-        float moveHorizontal = Input.GetAxis("Horizontal");
-
-        // Move the character horizontally
-        Vector2 movement = new Vector2(moveHorizontal * moveSpeed, rb.velocity.y);
-        rb.velocity = movement;
-
-
-        if (moveHorizontal != 0f)
+        if (!isTalking)
         {
-            if (moveHorizontal >= -0.1 && moveHorizontal <= 0.1)
+            //animator.SetBool("isPanic", false);
+            animator.speed = 1f;
+
+            float moveHorizontal = Input.GetAxis("Horizontal");
+
+            // Move the character horizontally
+            Vector2 movement = new Vector2(moveHorizontal * moveSpeed, rb.velocity.y);
+            rb.velocity = movement;
+
+
+            if (moveHorizontal != 0f)
             {
-                animator.SetBool("isWalking", false);
+                if (moveHorizontal >= -0.1 && moveHorizontal <= 0.1)
+                {
+                    animator.SetBool("isWalking", false);
+                }
+                else
+                {
+                    animator.SetBool("isWalking", true);
+                }
+
+                animator.SetFloat("Direction", moveHorizontal);
+
+
+                if (watchingTv)
+                {
+                    DialogueLua.SetVariable("watchingTv", false);
+                }
             }
             else
             {
-                animator.SetBool("isWalking", true);
-            }
-                
-            animator.SetFloat("Direction", moveHorizontal);
-            
-
-            if (watchingTv)
-            {
-                DialogueLua.SetVariable("watchingTv", false);
+                animator.SetBool("isWalking", false);
             }
         }
+        else
+        {
+            animator.SetBool("isWalking", false);
+            rb.velocity = Vector2.zero;
+        }
+
 
 
         

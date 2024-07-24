@@ -1,3 +1,4 @@
+using PixelCrushers.DialogueSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,12 +13,18 @@ public class BusDestination : MonoBehaviour
     private Rigidbody2D prefabRigidbody;
 
     private string sceneToLoad;
+
+    private int busNumber;
     // Start is called before the first frame update
     void Start()
     {
         prefabRigidbody = GetComponent<Rigidbody2D>();
+        busNumber = DialogueLua.GetVariable("busChosen").asInt;
     }
-
+    private void OnDisable()
+    {
+        busNumber = 0;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -60,22 +67,22 @@ public class BusDestination : MonoBehaviour
         {
             // Stop the prefab from moving
             isMoving = false;
-            Debug.Log("Choice selected: " + GameManager.choiceSelected);
+            Debug.Log("Choice selected: " + busNumber);
             if (GameManager.loadedScene == "Outside")
             {
-                switch (GameManager.choiceSelected)
+                switch (busNumber)
                 {
-                    case 1:
+                    case 519:
                         //leads to town centre
                         sceneToLoad = "TownCentre";
                         StartCoroutine(waitForBus());
                         break;
-                    case 2:
+                    case 838:
                         //leads to university
                         sceneToLoad = "UniEntrance";
                         StartCoroutine(waitForBus());
                         break;
-                    case 3:
+                    case 827:
                         //leads to bus terminal
                         sceneToLoad = "BusTerminal";
                         StartCoroutine(waitForBus());

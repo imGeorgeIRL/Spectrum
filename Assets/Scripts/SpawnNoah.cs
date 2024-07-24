@@ -1,3 +1,5 @@
+using PixelCrushers.DialogueSystem;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,9 +18,14 @@ public class SpawnNoah : MonoBehaviour
     private float stoppingDistance = 3f;
     private float moveSpeed = 4f;
     private bool isMoving = false;
+
+    private bool havingMeltdown;
+    private string dayOfWeek;
     // Start is called before the first frame update
     void Start()
     {
+        havingMeltdown = DialogueLua.GetVariable("havingMeltdown").asBool;
+        dayOfWeek = DialogueLua.GetVariable("dayOfWeek").asString;
         noahRenderer = noahPrefab.GetComponent<Renderer>();
         anim = noahPrefab.GetComponent<Animator>();
 
@@ -28,7 +35,7 @@ public class SpawnNoah : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.safeZoneActive && GameManager.isHavingMeltdown && GameManager.dayOfWeek == 1)
+        if (GameManager.safeZoneActive && havingMeltdown && dayOfWeek == "Tuesday")
         {
             if (!noahSpawned)
             {
