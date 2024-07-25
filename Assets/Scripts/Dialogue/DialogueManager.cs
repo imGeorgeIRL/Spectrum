@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.SearchService;
 using Febucci.UI.Core;
 using Febucci.UI;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -264,6 +265,25 @@ public class DialogueManager : MonoBehaviour
         {
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
+            
+
+            //adding listener for mouse click
+            Button choiceButton = choices[index].GetComponent<Button>();
+            if (choiceButton != null)
+            {
+                Debug.Log("Adding listener to choice button: " + index);
+                choiceButton.onClick.RemoveAllListeners();
+                int choiceIndex = index;
+                choiceButton.onClick.AddListener(() =>
+                {
+                    Debug.Log("Choice " + choiceIndex + " clicked.");
+                    MakeChoice(choiceIndex);
+                });
+            }
+            else
+            {
+                Debug.LogError("No Button component found on choice: " + index);
+            }
             index++;
         }
 
@@ -271,7 +291,7 @@ public class DialogueManager : MonoBehaviour
         {
             choices[i].gameObject.SetActive(false);
         }
-        StartCoroutine(SelectFirstChoice());
+        //StartCoroutine(SelectFirstChoice());
     }
 
     private IEnumerator SelectFirstChoice()
@@ -285,8 +305,13 @@ public class DialogueManager : MonoBehaviour
     {
         if (canContinueToNextLine)
         {
+            Debug.Log("Making choice: " + choiceIndex);
             currentStory.ChooseChoiceIndex(choiceIndex);
             ContinueStory();
+        }
+        else
+        {
+            Debug.LogWarning("Can't make choice yet. CanContinueToNextLine: " + canContinueToNextLine);
         }
     }
 
